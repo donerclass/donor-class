@@ -293,61 +293,208 @@ body {
 }
 
 /* ==========================================================================
-   Ad Banner Containers (Monetization Slots)
+   Monetization & Sponsorship Architecture (Header, Midpage, Sidebar, Grid)
    ========================================================================== */
 
 .ad-slot-wrapper {
-  background-color: rgba(14, 16, 23, 0.6);
+  background-color: rgba(11, 14, 21, 0.85);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
 }
 
 .ad-slot-leaderboard {
-  max-width: 728px;
-  height: 90px;
+  max-width: 760px;
+  min-height: 68px;
   margin: 0 auto;
-  background: linear-gradient(135deg, rgba(30, 37, 54, 0.7) 0%, rgba(20, 24, 36, 0.7) 100%);
-  border: 1px dashed var(--border-subtle);
+  background: linear-gradient(135deg, rgba(24, 30, 46, 0.85) 0%, rgba(15, 18, 28, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-sm);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
-  color: var(--text-muted);
-  font-size: 0.75rem;
+  padding: 0.6rem 1.25rem;
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.ad-label {
+.ad-slot-leaderboard:hover {
+  border-color: rgba(251, 191, 36, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.ad-sponsor-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.ad-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.ad-badge-sponsor {
   font-family: var(--font-mono);
   font-size: 0.65rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.5rem;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-sm);
+}
+
+.ad-meta-text {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
   color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.ad-pitch {
+.ad-pitch-title {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  text-align: center;
+  flex: 1;
 }
 
+.ad-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.ad-link-btn {
+  color: var(--accent-active);
+  font-weight: 700;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: rgba(220, 38, 38, 0.12);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.ad-link-btn:hover {
+  background: var(--accent-active);
+  color: #ffffff;
+  border-color: var(--accent-active);
+}
+
+/* Mid-Page Billboard Slot */
+.ad-slot-midpage-wrapper {
+  max-width: 1400px;
+  margin: 1.5rem auto 1.25rem auto;
+  padding: 0 var(--space-lg);
+}
+
+.ad-slot-midpage {
+  max-width: 980px;
+  min-height: 72px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(22, 28, 44, 0.85) 0%, rgba(14, 17, 26, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: border-color var(--transition-fast);
+}
+
+.ad-slot-midpage:hover {
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+/* Sidebar Medium Rectangle (300x250) */
 .ad-slot-sidebar {
   width: 100%;
-  height: 250px;
-  background: linear-gradient(135deg, rgba(30, 37, 54, 0.7) 0%, rgba(20, 24, 36, 0.7) 100%);
-  border: 1px dashed var(--border-subtle);
+  min-height: 220px;
+  background: linear-gradient(135deg, rgba(22, 28, 44, 0.9) 0%, rgba(13, 16, 26, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ad-sponsor-inner-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ad-sidebar-heading {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+
+.ad-sidebar-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.ad-sidebar-cta {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  text-decoration: none;
+}
+
+/* In-Feed Native Directory Sponsor Card */
+.sponsor-feed-card {
+  background: linear-gradient(135deg, rgba(26, 32, 50, 0.9) 0%, rgba(16, 20, 32, 0.95) 100%) !important;
+  border: 1px solid rgba(251, 191, 36, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sponsor-feed-card:hover {
+  border-color: #fbbf24 !important;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.16) !important;
+}
+
+@media (max-width: 768px) {
+  .ad-sponsor-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .ad-pitch-title {
+    font-size: 0.78rem;
+  }
+  .ad-cta-row {
+    font-size: 0.72rem;
+  }
 }
 
 /* ==========================================================================
@@ -421,8 +568,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 3.5rem;
-  -webkit-animation: marquee 50s linear infinite;
-  animation: marquee 50s linear infinite;
+  -webkit-animation: marquee 100s linear infinite;
+  animation: marquee 100s linear infinite;
   will-change: transform;
 }
 

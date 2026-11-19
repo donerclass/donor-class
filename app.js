@@ -642,7 +642,32 @@
     // Render cards (limit to first 120 for instant DOM responsiveness)
     const displayList = filtered.slice(0, 120);
 
-    displayList.forEach(c => {
+    displayList.forEach((c, idx) => {
+      // In-feed Native Sponsor Spotlight Card at position #8
+      if (idx === 8) {
+        const sponsorCard = document.createElement("div");
+        sponsorCard.className = "candidate-card sponsor-feed-card";
+        sponsorCard.innerHTML = `
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+              <span class="ad-badge-sponsor">Civic Spotlight</span>
+              <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-muted);">SPONSORED BRIEFING</span>
+            </div>
+            <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); line-height: 1.25; margin-bottom: 0.5rem;">
+              Support Nonpartisan Campaign Finance Transparency
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 0.75rem;">
+              Connect your organization, civic research initiative, or policy brief with 500,000+ informed voters, journalists, and institutional analysts.
+            </p>
+          </div>
+          <div style="margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">INQUIRE:</span>
+            <a href="mailto:advertise@donorclass.info" class="ad-link-btn" style="font-size: 0.75rem;">advertise@donorclass.info</a>
+          </div>
+        `;
+        grid.appendChild(sponsorCard);
+      }
+
       const card = document.createElement("div");
       card.className = "candidate-card";
 
