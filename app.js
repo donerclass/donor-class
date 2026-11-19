@@ -795,6 +795,10 @@
   const selectState = (stateCode) => {
     state.selectedState = state.selectedState === stateCode ? "all" : stateCode;
     updateUI();
+    // On mobile screens, smoothly scroll to the delegation inspector
+    if (window.innerWidth < 768 && state.selectedState !== "all") {
+      document.getElementById("inspector-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   // Update UI and Recolor
@@ -802,6 +806,12 @@
     // Update active sector CSS variable for global accent glow
     const sectorColor = getSectorColor(state.activeSector);
     document.documentElement.style.setProperty("--accent-active", sectorColor);
+
+    // Keep mobile state picker synced with current selection
+    const mobileSel = document.getElementById("mobile-state-select");
+    if (mobileSel && mobileSel.value !== state.selectedState) {
+      mobileSel.value = state.selectedState;
+    }
 
     const stateAggs = computeStateAggregations();
     renderScoreboard(stateAggs);
@@ -1137,6 +1147,33 @@
     });
   };
 
+  // Mobile Jump-to-State Selector Setup
+  const initMobileStatePicker = () => {
+    const sel = document.getElementById("mobile-state-select");
+    if (!sel || !STATE_NAMES) return;
+
+    sel.innerHTML = '<option value="all">-- All 50 States (National Overview) --</option>';
+
+    // Sort alphabetically by full state name
+    const sorted = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1]));
+
+    sorted.forEach(([code, name]) => {
+      const opt = document.createElement("option");
+      opt.value = code;
+      opt.textContent = `${name} (${code})`;
+      sel.appendChild(opt);
+    });
+
+    sel.addEventListener("change", (e) => {
+      const code = e.target.value;
+      state.selectedState = (!code || code === "all") ? "all" : code;
+      updateUI();
+      if (window.innerWidth < 768 && state.selectedState !== "all") {
+        document.getElementById("inspector-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  };
+
   // Initialization
   let savedTheme = "dark";
   try {
@@ -1145,6 +1182,7 @@
   applyTheme(savedTheme);
 
   initNewsTicker();
+  initMobileStatePicker();
   setupEventListeners();
   updateUI();
 })();
