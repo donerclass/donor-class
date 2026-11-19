@@ -993,6 +993,75 @@
       if (e.target === methModal) methModal.close();
     });
 
+    // Collaborations & Feedback Modal
+    const contactModal = document.getElementById("contact-modal");
+    const btnCollabHeader = document.getElementById("btn-collab-header");
+    const btnCollabTrigger = document.getElementById("btn-collab-trigger");
+    const btnCloseContact = document.getElementById("btn-close-contact");
+    const btnCopyEmail = document.getElementById("btn-copy-collab-email");
+    const contactForm = document.getElementById("contact-form");
+    const contactStatusMsg = document.getElementById("contact-status-msg");
+
+    if (contactModal) {
+      if (btnCollabHeader) {
+        btnCollabHeader.addEventListener("click", () => {
+          if (contactStatusMsg) contactStatusMsg.style.display = "none";
+          contactModal.showModal();
+        });
+      }
+      if (btnCollabTrigger) {
+        btnCollabTrigger.addEventListener("click", () => {
+          if (contactStatusMsg) contactStatusMsg.style.display = "none";
+          contactModal.showModal();
+        });
+      }
+      if (btnCloseContact) {
+        btnCloseContact.addEventListener("click", () => contactModal.close());
+      }
+      contactModal.addEventListener("click", (e) => {
+        if (e.target === contactModal) contactModal.close();
+      });
+
+      if (btnCopyEmail) {
+        btnCopyEmail.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText("collab@donorclass.info");
+            const originalText = btnCopyEmail.textContent;
+            btnCopyEmail.textContent = "Copied to Clipboard!";
+            setTimeout(() => {
+              btnCopyEmail.textContent = originalText;
+            }, 2500);
+          } catch (err) {
+            if (contactStatusMsg) {
+              contactStatusMsg.style.display = "block";
+              contactStatusMsg.textContent = "Email: collab@donorclass.info";
+            }
+          }
+        });
+      }
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const topic = document.getElementById("contact-topic")?.value || "Collab / Suggestion";
+          const name = document.getElementById("contact-name")?.value.trim() || "";
+          const email = document.getElementById("contact-email")?.value.trim() || "";
+          const msg = document.getElementById("contact-msg")?.value.trim() || "";
+
+          const subject = `[DONOR CLASS] ${topic}${name ? ' - ' + name : ''}`;
+          const body = `Name / Handle: ${name || 'N/A'}\nContact Email: ${email}\nTopic: ${topic}\n\nMessage:\n${msg}\n\n---\nSent via DONOR CLASS Platform`;
+
+          const mailtoUri = `mailto:collab@donorclass.info?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailtoUri;
+
+          if (contactStatusMsg) {
+            contactStatusMsg.style.display = "block";
+            contactStatusMsg.textContent = "Opening mail client... You can also email directly: collab@donorclass.info";
+          }
+        });
+      }
+    }
+
     // Export CSV
     document.getElementById("btn-export-csv").addEventListener("click", exportCSV);
 

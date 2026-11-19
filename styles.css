@@ -1538,6 +1538,144 @@ dialog::backdrop {
 }
 
 /* ==========================================================================
+   Collaboration & Suggestion Section
+   ========================================================================== */
+
+.collab-section {
+  max-width: 1400px;
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.collab-card {
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.collab-info {
+  max-width: 650px;
+}
+
+.badge-collab {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-active);
+  background-color: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.collab-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.collab-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.collab-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.btn-collab-launch {
+  font-size: 0.95rem;
+  padding: 0.7rem 1.4rem;
+}
+
+.collab-email-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.collab-mail-link {
+  color: var(--accent-active);
+  text-decoration: none;
+  font-family: var(--font-mono);
+}
+
+.collab-mail-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .collab-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+  .collab-cta-group {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .btn-collab-launch {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Form Styles for Modal */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.form-input {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.85rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--accent-active);
+  box-shadow: 0 0 0 2px var(--accent-active-glow);
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 

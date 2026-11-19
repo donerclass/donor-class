@@ -58,6 +58,9 @@
         <button class="btn btn-secondary" id="btn-export-csv" title="Export Current View as CSV">
           Export CSV
         </button>
+        <button class="btn btn-secondary" id="btn-collab-header" title="Collaborations, Suggestions & Feedback">
+          Collabs &amp; Suggestions
+        </button>
         <button class="btn btn-primary" id="btn-methodology" title="View FEC Data Methodology">
           Methodology
         </button>
@@ -70,7 +73,7 @@
     <div class="ad-slot-leaderboard" id="ad-leaderboard">
       <span class="ad-label">Advertisement / Sponsorship</span>
       <div class="ad-pitch">Independent Public Data Infrastructure — Support Non-Partisan Campaign Transparency</div>
-      <div style="font-size: 0.7rem; color: var(--text-muted);">IAB 728x90 Leaderboard Slot • Contact advertise@donorclass.io</div>
+      <div style="font-size: 0.7rem; color: var(--text-muted);">IAB 728x90 Leaderboard Slot • Contact advertise@donorclass.info</div>
     </div>
   </section>
 
@@ -415,6 +418,83 @@
       </p>
       <h4 style="font-family: var(--font-display); text-transform: uppercase; color: var(--text-primary); margin-top: 0.5rem;">Legal & Attribution</h4>
       <p style="font-size: 0.8rem; color: var(--text-muted);">All campaign contribution records are derived from official public disclosure filings submitted to the Federal Election Commission (FEC). Figures are updated on a rolling cycle basis.</p>
+    </div>
+  </dialog>
+
+  <!-- Community, Collaborations & Suggestions Section -->
+  <section class="collab-section" aria-label="Collaborations and Suggestions">
+    <div class="collab-card">
+      <div class="collab-info">
+        <span class="badge-collab">Civic Partnerships &amp; Input</span>
+        <h3 class="collab-title">Have a Suggestion, Story Lead, or Want to Collaborate?</h3>
+        <p class="collab-text">
+          Whether you are a creator, veteran, journalist, researcher, or voter, we welcome data inquiries, feature suggestions, research collaborations, and sponsorship proposals.
+        </p>
+      </div>
+      <div class="collab-cta-group">
+        <button class="btn btn-primary btn-collab-launch" id="btn-collab-trigger">
+          Send Suggestion / Pitch Collab
+        </button>
+        <div class="collab-email-sub">
+          Direct email: <a href="mailto:collab@donorclass.info" class="collab-mail-link">collab@donorclass.info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact, Collabs & Feedback Dialog -->
+  <dialog class="profile-modal" id="contact-modal" style="max-width: 580px;">
+    <div class="modal-header">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;">Collaborations &amp; Suggestions</h2>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Donor Class Community &amp; Research Desk</div>
+      </div>
+      <button class="btn-close" id="btn-close-contact" aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="modal-body" style="padding: 1.5rem;">
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0 0 1rem 0;">
+        We welcome partnership proposals from content creators, veterans, journalists, and civic researchers. Let us know how we can collaborate or what features you would like to see next.
+      </p>
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="contact-topic" class="form-label">Inquiry Type</label>
+          <select id="contact-topic" class="form-input">
+            <option value="Creator Collaboration / Social Partnership">Creator Collaboration / Social Partnership</option>
+            <option value="Feature Suggestion / Data Request">Feature Suggestion / Data Request</option>
+            <option value="Media / Press / Podcast Inquiry">Media / Press / Podcast Inquiry</option>
+            <option value="Data Verification / Story Lead">Data Verification / Story Lead</option>
+            <option value="Sponsorship / Advertising">Sponsorship / Advertising</option>
+            <option value="General Feedback">General Feedback</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-name" class="form-label">Your Name or Handle (Optional)</label>
+          <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex (@handle)">
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email" class="form-label">Your Email (for our reply)</label>
+          <input type="email" id="contact-email" class="form-input" placeholder="you@domain.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-msg" class="form-label">Message / Idea / Suggestion</label>
+          <textarea id="contact-msg" rows="4" class="form-input" placeholder="Tell us about your suggestion, collab idea, or feedback..." required></textarea>
+        </div>
+
+        <div class="form-actions" style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; margin-top: 0.75rem;">
+          <button type="button" class="btn btn-secondary" id="btn-copy-collab-email" title="Copy email address to clipboard">
+            Copy Email Address
+          </button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-contact">
+            Draft Email &rarr;
+          </button>
+        </div>
+      </form>
+
+      <div id="contact-status-msg" style="display: none; font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-active); text-align: center; margin-top: 0.75rem;"></div>
     </div>
   </dialog>
 
