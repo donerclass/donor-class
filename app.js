@@ -1040,6 +1040,13 @@
     const contactForm = document.getElementById("contact-form");
     const contactStatusMsg = document.getElementById("contact-status-msg");
 
+    // Ensure all dialogs start closed on load
+    try {
+      if (candModal && candModal.open) candModal.close();
+      if (methModal && methModal.open) methModal.close();
+      if (contactModal && contactModal.open) contactModal.close();
+    } catch (e) {}
+
     if (contactModal) {
       if (btnCollabHeader) {
         btnCollabHeader.addEventListener("click", () => {

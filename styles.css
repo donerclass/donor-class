@@ -1565,6 +1565,10 @@ body {
    Politician Profile Modal (<dialog>)
    ========================================================================== */
 
+dialog.profile-modal:not([open]) {
+  display: none !important;
+}
+
 dialog.profile-modal {
   margin: auto;
   border: 1px solid var(--border-strong);
@@ -1904,7 +1908,11 @@ html, body {
   }
 
   /* 2. Politician Profile Modal as iOS/Android Bottom Sheet */
-  dialog.profile-modal {
+  dialog.profile-modal:not([open]) {
+    display: none !important;
+  }
+
+  dialog.profile-modal[open] {
     position: fixed !important;
     bottom: 0 !important;
     top: auto !important;
@@ -1920,8 +1928,8 @@ html, body {
     border-left: none !important;
     border-right: none !important;
     box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.75) !important;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     animation: sheetSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
     overscroll-behavior: contain;
   }
