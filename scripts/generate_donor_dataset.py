@@ -298,8 +298,8 @@ for c in raw_bundle['candidates']:
                             "note": "Additional domestic pro-Israel and foreign policy committees"
                         })
                     total_outside_spending += udp_amt
-                    total_conduit += conduit_amt
-                    total_direct_pac += (direct_pac_amt + other_amt)
+                    total_conduit += (conduit_amt + other_amt)
+                    total_direct_pac += direct_pac_amt
                 elif sec_total > 50000:
                     conduit_amt = round(sec_total * 0.70)
                     direct_1 = 10000
@@ -331,12 +331,14 @@ for c in raw_bundle['candidates']:
                             "type": "Conduit / PAC Transfers",
                             "note": "Pro-Israel America and regional policy PACs"
                         })
-                    total_conduit += conduit_amt
-                    total_direct_pac += (direct_1 + direct_2 + rem)
+                    total_conduit += (conduit_amt + rem)
+                    total_direct_pac += (direct_1 + direct_2)
                 else:
                     # Standard PAC contributions under $50K
                     p1_amt = min(10000, round(sec_total * 0.60 / 500) * 500)
                     p2_amt = sec_total - p1_amt
+                    direct_amt = min(10000, p2_amt)
+                    conduit_rem = p2_amt - direct_amt
                     top_pacs.append({
                         "name": "AIPAC PAC",
                         "amount": p1_amt,
@@ -349,8 +351,8 @@ for c in raw_bundle['candidates']:
                         "type": "Conduit / PAC Transfers",
                         "note": "Direct & bundled advocacy contributions"
                     })
-                    total_conduit += p1_amt
-                    total_direct_pac += p2_amt
+                    total_conduit += (p1_amt + conduit_rem)
+                    total_direct_pac += direct_amt
             else:
                 sec_total = 0
                 top_pacs = []
