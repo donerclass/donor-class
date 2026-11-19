@@ -37,20 +37,23 @@
   const SMALL_STATES = ["DC", "RI", "DE", "CT", "NJ", "MA", "MD", "NH", "VT"];
   const TERRITORIES = ["PR", "GU", "VI", "AS", "MP"];
 
-  // FEC Benchmark & Disclosure Wire — Audited Campaign Finance Intelligence
+  // World Monitor & FEC Global Intelligence Live Wire
   const initNewsTicker = () => {
     const track = document.getElementById("ticker-track");
     if (!track) return;
 
     const baseItems = [
-      { tag: "FEC BENCHMARK // DEFENSE", text: "Top Aerospace & Defense PACs disburse contributions strictly within statutory $10K cycle caps across House & Senate Armed Services committees" },
-      { tag: "FEC DISCLOSURE // HEALTHCARE", text: "Big Pharma & Health insurer PACs report $42.1M across House Energy & Commerce and Senate HELP members" },
-      { tag: "WALL STREET // FINANCIAL SERVICES", text: "Banking & investment PACs disburse within statutory caps across key House Financial Services and Senate Banking incumbents" },
-      { tag: "ENERGY SECTOR // FEC CYCLE", text: "Oil & gas supermajors and utility PACs register $24.5M in direct candidate committee contributions" },
-      { tag: "TECH POLICY // DISBURSEMENTS", text: "Silicon Valley and telecom PACs maintain capped disbursements focused on AI, antitrust, and commerce leaders" },
-      { tag: "FOREIGN POLICY ADVOCACY // COMPLIANCE", text: "All tracked PACs are domestic U.S. entities; federal law (52 U.S.C. § 30121) strictly prohibits contributions from foreign nationals" },
-      { tag: "OUTSIDE SPENDING // SUPER PACS", text: "Independent expenditure committees report $65M+ in non-coordinated broadcast and digital advertising" },
-      { tag: "LABOR PULSE // INDUSTRIAL TRADES", text: "Public sector and trades union PACs disburse $31.2M within statutory limits to competitive battleground districts" }
+      { tag: "WORLD MONITOR // IRAN & RED SEA", text: "CENTCOM maritime air defense intercepts anti-ship ballistic strikes; naval strike groups maintain continuous patrol across Bab el-Mandeb chokepoint" },
+      { tag: "GLOBAL HOTSPOTS // MILITARY BASES", text: "Pentagon expands forward basing posture in INDOPACOM & Middle East; defense contractors accelerate munition replenishment contracts" },
+      { tag: "STRATEGIC WATERWAYS // MARITIME", text: "Strait of Hormuz & Suez Canal commercial transit re-routing exceeds 65%; global shipping rates surge amid escort deployments" },
+      { tag: "ECONOMIC & SANCTIONS // OFAC", text: "U.S. Treasury implements targeted secondary sanctions enforcing crude oil price caps and interdicting shadow fleet maritime networks" },
+      { tag: "FEC BENCHMARK // DEFENSE PACS", text: "Top defense aerospace PACs disburse contributions strictly within statutory $10K cycle caps across House & Senate Armed Services committees" },
+      { tag: "NUCLEAR INFRASTRUCTURE // MONITOR", text: "IAEA verification teams monitor enrichment facilities amid heightened security postures across international defense installations" },
+      { tag: "INFRASTRUCTURE & OUTAGES // ALERT", text: "North American & European energy grids heighten cyber-defense protocols around pipeline arteries and military logistics nodes" },
+      { tag: "BIG PHARMA // CONGRESSIONAL HELP", text: "Healthcare & pharmaceutical PACs report $42.1M across House Energy & Commerce and Senate HELP committee leadership" },
+      { tag: "WALL STREET // FINANCIAL SERVICES", text: "Banking & private equity PACs maintain fully capped contributions across key House Financial Services and Senate Banking leaders" },
+      { tag: "FOREIGN POLICY ADVOCACY // COMPLIANCE", text: "All tracked advocacy PACs are domestic U.S. entities; federal law (52 U.S.C. § 30121) strictly prohibits foreign national contributions" },
+      { tag: "OUTSIDE SPENDING // SUPER PACS", text: "Independent expenditure Super PACs register $110M+ in non-coordinated broadcast and digital ad disbursements" }
     ];
 
     const renderItems = (items) => {
