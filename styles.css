@@ -568,8 +568,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 3.5rem;
-  -webkit-animation: marquee 100s linear infinite;
-  animation: marquee 100s linear infinite;
+  -webkit-animation: marquee 175s linear infinite;
+  animation: marquee 175s linear infinite;
   will-change: transform;
 }
 
