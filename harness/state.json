@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "campaign_name": "50 States in 50 Days",
+  "current_day": 1,
+  "active_state": "CA",
+  "active_state_drop_time_pht": "2026-11-20T22:30:00+08:00",
+  "staged_state": "FL",
+  "states_completed": ["TX"],
+  "states_queued": [
+    "CA", "FL", "NY", "PA", "IL", "OH", "GA", "NC", "MI",
+    "NJ", "VA", "WA", "AZ", "TN", "MA", "IN", "MO", "MD", "WI",
+    "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT",
+    "IA", "NV", "AR", "MS", "KS", "NM", "NE", "ID", "WV", "HI",
+    "NH", "ME", "MT", "RI", "DE", "SD", "ND", "AK", "VT", "WY"
+  ],
+  "live_campaign_posts": {
+    "TX": {
+      "day": 1,
+      "state": "TX",
+      "delegation_total": 14152840,
+      "members_count": 39,
+      "x_thread_root_id": "2123601030307029107",
+      "x_thread_url": "https://x.com/donorclassinfo/status/2123601030307029107",
+      "x_cta_tweet_id": "2123602281165943244",
+      "reddit_post_id": "1y0tpap",
+      "reddit_post_url": "https://www.reddit.com/r/dataisbeautiful/comments/1y0tpap/oc_who_funds_the_texas_congressional_delegation/",
+      "reddit_oc_comment_url": "https://www.reddit.com/r/dataisbeautiful/comments/1y0tpap/comment/19swj59sh51q8/",
+      "infographic_path": "assets/infographics/texas-infographic.png",
+      "published_at_pht": "2026-11-20T11:55:00+08:00"
+    }
+  },
+  "tactical_snipes": [
+    {
+      "id": 1,
+      "target_account": "@BreakingPointsx",
+      "target_clip_url": "https://x.com/BreakingPointsx/status/2123514147166109876",
+      "target_topic": "Chuck Schumer Senate Leadership Challenge",
+      "subject": "Chuck Schumer",
+      "total_pac_cited": 730698,
+      "top_sector_cited": "Foreign Policy Advocacy ($515K)",
+      "reply_tweet_id": "2123657783354839053",
+      "reply_tweet_url": "https://x.com/donorclassinfo/status/2123657783354839053",
+      "status": "VERIFIED_LIVE",
+      "timestamp_pht": "2026-11-20T14:04:00+08:00"
+    },
+    {
+      "id": 2,
+      "target_account": "@BreakingPointsx",
+      "target_clip_url": "https://x.com/BreakingPointsx/status/2123501969150972394",
+      "target_topic": "Hakeem Jeffries / AOC House Leadership Battle",
+      "subject": "Hakeem Jeffries",
+      "total_pac_cited": 1751452,
+      "top_sector_cited": "Foreign Policy Advocacy ($1.58M)",
+      "reply_tweet_id": "2123659083182219574",
+      "reply_tweet_url": "https://x.com/donorclassinfo/status/2123659083182219574",
+      "status": "VERIFIED_LIVE",
+      "timestamp_pht": "2026-11-20T14:07:00+08:00"
+    },
+    {
+      "id": 3,
+      "target_account": "@BreakingPointsx",
+      "target_clip_url": "https://x.com/BreakingPointsx/status/2123169123534327972",
+      "target_topic": "Adam Hamawy / Navy Sec Nominee Defense Clip",
+      "subject": "Congressional Defense PACs",
+      "total_pac_cited": 34800000,
+      "top_sector_cited": "Defense & Aerospace ($34.8M)",
+      "reply_tweet_id": "2123659485847937209",
+      "reply_tweet_url": "https://x.com/donorclassinfo/status/2123659485847937209",
+      "status": "VERIFIED_LIVE",
+      "timestamp_pht": "2026-11-20T14:07:30+08:00"
+    }
+  ],
+  "last_audit_timestamp_pht": "2026-11-20T17:25:00+08:00",
+  "audit_trail": [
+    {
+      "action": "HARNESS_INITIALIZED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-20T17:25:00+08:00",
+      "details": "Operational harness established. State ledger initialized with Texas Day 1 and Breaking Points snipes 1-3."
+    }
+  ]
+}
