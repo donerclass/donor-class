@@ -1636,6 +1636,12 @@ dialog.profile-modal:not([open]) {
   display: none !important;
 }
 
+dialog.profile-modal[open] {
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 1000 !important;
+}
+
 dialog.profile-modal {
   margin: auto;
   border: 1px solid var(--border-strong);
