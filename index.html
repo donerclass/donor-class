@@ -71,14 +71,17 @@
             <!-- Injected via app.js -->
           </svg>
         </button>
+        <button class="btn btn-primary" id="btn-walkthrough" title="How to Navigate &amp; FAQ">
+          How to Use &amp; FAQ
+        </button>
+        <button class="btn btn-secondary" id="btn-methodology" title="View FEC Data Methodology">
+          Methodology
+        </button>
         <button class="btn btn-secondary" id="btn-export-csv" title="Export Current View as CSV">
           Export CSV
         </button>
         <button class="btn btn-secondary" id="btn-collab-header" title="Collaborations, Suggestions & Feedback">
-          Collabs &amp; Suggestions
-        </button>
-        <button class="btn btn-primary" id="btn-methodology" title="View FEC Data Methodology">
-          Methodology
+          Collabs
         </button>
       </div>
     </div>
@@ -468,6 +471,169 @@
 
       <div style="background-color: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
         <strong>Official FEC Paper-Trail Note:</strong> Reflects verified Schedule A (earmarked/conduit), Schedule B (direct committee-to-candidate), and independent expenditure filings registered with the Federal Election Commission for the 2024–2026 reporting cycles.
+      </div>
+    </div>
+  </dialog>
+
+  <!-- How to Use & FAQ Modal -->
+  <dialog class="profile-modal" id="walkthrough-modal" style="max-width: 780px;">
+    <div class="modal-drag-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: 0;">How to Use &amp; FAQ</h2>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Donor Class Civic Intelligence &bull; User Guide &amp; Legal Verification</div>
+      </div>
+      <button class="btn-close" id="btn-close-walkthrough" aria-label="Close dialog">&times;</button>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="walkthrough-tabs-bar">
+      <button class="walkthrough-tab active" id="tab-btn-walkthrough" type="button">
+        Quick Walkthrough (4 Steps)
+      </button>
+      <button class="walkthrough-tab" id="tab-btn-faq" type="button">
+        Frequently Asked Questions (FAQ)
+      </button>
+    </div>
+
+    <div class="modal-body" style="padding: 1.25rem 1.5rem;">
+      <!-- TAB 1: 4-Step Walkthrough -->
+      <div id="view-walkthrough" class="walkthrough-view">
+        <div class="walkthrough-steps-grid">
+          
+          <div class="walkthrough-step-card">
+            <div class="step-card-header">
+              <span class="step-badge">STEP 1</span>
+              <h3 class="step-title">Select a Special Interest Sector</h3>
+            </div>
+            <p class="step-text">
+              Click any sector pill above the map (<strong>Defense</strong>, <strong>Big Pharma</strong>, <strong>Wall Street</strong>, <strong>Energy</strong>, <strong>Big Tech</strong>, <strong>Foreign Policy</strong>, or <strong>Labor</strong>). The choropleth map dynamically recalculates color heat, rankings, and totals in real-time.
+            </p>
+            <div class="step-tip">
+              <strong>Tip:</strong> Toggle between sectors to see which regional delegations attract specific industry contributions.
+            </div>
+          </div>
+
+          <div class="walkthrough-step-card">
+            <div class="step-card-header">
+              <span class="step-badge">STEP 2</span>
+              <h3 class="step-title">Choose Your Ranking Metric</h3>
+            </div>
+            <p class="step-text">
+              Use the metric controls to evaluate delegations fairly:
+            </p>
+            <ul class="step-list">
+              <li><strong>Total ($M):</strong> Cumulative PAC dollars injected into the state delegation.</li>
+              <li><strong>Avg / Rep:</strong> Average PAC cash received per incumbent lawmaker.</li>
+              <li><strong>% Funded:</strong> Percentage of state delegation receiving checks in that sector.</li>
+              <li><strong>Per Capita:</strong> PAC spending per 100,000 citizens in the state.</li>
+            </ul>
+          </div>
+
+          <div class="walkthrough-step-card">
+            <div class="step-card-header">
+              <span class="step-badge">STEP 3</span>
+              <h3 class="step-title">Click a State or Search Lawmakers</h3>
+            </div>
+            <p class="step-text">
+              Click a state on the interactive map or type a lawmaker's name in the search bar. This opens the <strong>Delegation Inspector</strong> drawer with:
+            </p>
+            <ul class="step-list">
+              <li>Itemized PAC receipts across all 7 tracked sectors.</li>
+              <li>Direct candidate committee contributions vs. conduit PACs vs. independent Super PAC ad buys.</li>
+              <li>Bipartisan Democratic vs. Republican funding splits.</li>
+            </ul>
+          </div>
+
+          <div class="walkthrough-step-card">
+            <div class="step-card-header">
+              <span class="step-badge">STEP 4</span>
+              <h3 class="step-title">Share Custom Views &amp; Export Data</h3>
+            </div>
+            <p class="step-text">
+              Every state and sector selection updates your browser URL with shareable deep links (e.g. <code>donorclass.info/?state=CA&amp;ref=x</code>). Copy and share exact views directly on social media, or click <strong>Export CSV</strong> in the header to download the raw dataset.
+            </p>
+          </div>
+
+        </div>
+
+        <button class="btn btn-primary" id="btn-close-and-explore" type="button" style="width: 100%; justify-content: center; margin-top: 1.25rem; padding: 0.75rem;">
+          Start Exploring the Map &rarr;
+        </button>
+      </div>
+
+      <!-- TAB 2: FAQ Accordion -->
+      <div id="view-faq" class="walkthrough-view" style="display: none;">
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="faq-search-input" class="form-input" placeholder="Search questions (e.g. FEC, foreign money, statutory caps, search rep)...">
+        </div>
+
+        <div class="faq-accordion-list" id="faq-accordion-list">
+          
+          <details class="faq-item" open>
+            <summary class="faq-question">Where does this data come from?</summary>
+            <div class="faq-answer">
+              All contribution records are calculated directly from official public disclosure filings submitted to the Federal Election Commission (FEC) for the 2024–2026 reporting cycles. We aggregate Schedule A (individual conduit/earmarked donations), Schedule B (direct multicandidate PAC disbursements), and 24/48-hour independent expenditure filings.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Are all 539 members of Congress tracked?</summary>
+            <div class="faq-answer">
+              Yes. The tracker indexes all 100 U.S. Senators, 435 voting Representatives, and 4 non-voting territorial delegates across all 50 states and territories.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is the difference between direct PAC money and Super PAC outside spending?</summary>
+            <div class="faq-answer">
+              Under federal election law (52 U.S.C. § 30116(a)(2)(A)), contributions from multicandidate PACs directly to candidate committees are strictly capped at $5,000 per primary and $5,000 per general election ($10,000 per 2-year cycle). In contrast, independent expenditure Super PACs (such as United Democracy Project or Club for Growth) can raise unlimited funds to run non-coordinated independent broadcast and digital ads; under federal law, Super PACs cannot donate funds directly to candidate campaign committees.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is Foreign Policy Advocacy foreign money?</summary>
+            <div class="faq-answer">
+              No. Federal law (52 U.S.C. § 30121) strictly prohibits foreign nationals and foreign governments from contributing to U.S. elections. All tracked foreign policy advocacy PACs (such as AIPAC PAC, J Street, DMFI, RJC) are domestic American political committees registered with the FEC and funded exclusively by U.S. citizens.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is DONOR CLASS partisan or funded by a political party?</summary>
+            <div class="faq-answer">
+              100% nonpartisan and independent. The platform is not affiliated with, sponsored by, or aligned with any political party, candidate, or corporate PAC. The tracking formulas apply identically to Democrats, Republicans, and Independents alike.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Why does my state glow brighter or darker on the map?</summary>
+            <div class="faq-answer">
+              The choropleth map dynamically shades states based on capital concentration in the active sector and metric. A brighter neon blue glow indicates higher funding totals, higher representative penetration, or higher per-capita exposure.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I look up my specific representative or senator?</summary>
+            <div class="faq-answer">
+              Type your representative's last name (e.g. 'Jeffries', 'Schumer', 'McCaul', 'Khanna') into the search box in the header or directory. The table instantly filters and displays their itemized direct PAC, conduit, and outside spending totals.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I use this data for research, journalism, or reporting?</summary>
+            <div class="faq-answer">
+              Yes. All data is public civic intelligence. You may freely cite, screenshot, link, or export CSV tables for investigative journalism, research papers, or community activism. Attribution to DONOR CLASS (donorclass.info) is appreciated.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Are there any tracking cookies, paywalls, or accounts required?</summary>
+            <div class="faq-answer">
+              Zero paywalls, zero voter tracking cookies, and zero login requirements. The platform runs 100% client-side in your browser.
+            </div>
+          </details>
+
+        </div>
       </div>
     </div>
   </dialog>

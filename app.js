@@ -1233,6 +1233,59 @@
       if (e.target === methModal) methModal.close();
     });
 
+    // How to Use & FAQ Modal
+    const walkModal = document.getElementById("walkthrough-modal");
+    const btnWalk = document.getElementById("btn-walkthrough");
+    const btnCloseWalk = document.getElementById("btn-close-walkthrough");
+    const btnCloseExplore = document.getElementById("btn-close-and-explore");
+    const tabBtnWalk = document.getElementById("tab-btn-walkthrough");
+    const tabBtnFaq = document.getElementById("tab-btn-faq");
+    const viewWalk = document.getElementById("view-walkthrough");
+    const viewFaq = document.getElementById("view-faq");
+    const faqSearchInput = document.getElementById("faq-search-input");
+
+    if (walkModal) {
+      if (btnWalk) btnWalk.addEventListener("click", () => walkModal.showModal());
+      if (btnCloseWalk) btnCloseWalk.addEventListener("click", () => walkModal.close());
+      if (btnCloseExplore) btnCloseExplore.addEventListener("click", () => walkModal.close());
+      walkModal.addEventListener("click", (e) => {
+        if (e.target === walkModal) walkModal.close();
+      });
+
+      // Tab toggling
+      if (tabBtnWalk && tabBtnFaq) {
+        tabBtnWalk.addEventListener("click", () => {
+          tabBtnWalk.classList.add("active");
+          tabBtnFaq.classList.remove("active");
+          if (viewWalk) viewWalk.style.display = "block";
+          if (viewFaq) viewFaq.style.display = "none";
+        });
+        tabBtnFaq.addEventListener("click", () => {
+          tabBtnFaq.classList.add("active");
+          tabBtnWalk.classList.remove("active");
+          if (viewWalk) viewWalk.style.display = "none";
+          if (viewFaq) viewFaq.style.display = "block";
+        });
+      }
+
+      // Real-time FAQ search filter
+      if (faqSearchInput) {
+        faqSearchInput.addEventListener("input", (e) => {
+          const q = (e.target.value || "").toLowerCase().trim();
+          const items = document.querySelectorAll("#faq-accordion-list .faq-item");
+          items.forEach(it => {
+            const txt = (it.innerText || "").toLowerCase();
+            if (!q || txt.includes(q)) {
+              it.style.display = "";
+              if (q) it.open = true;
+            } else {
+              it.style.display = "none";
+            }
+          });
+        });
+      }
+    }
+
     // Collaborations & Feedback Modal
     const contactModal = document.getElementById("contact-modal");
     const btnCollabHeader = document.getElementById("btn-collab-header");
@@ -1247,6 +1300,7 @@
       if (candModal && candModal.open) candModal.close();
       if (methModal && methModal.open) methModal.close();
       if (contactModal && contactModal.open) contactModal.close();
+      if (walkModal && walkModal.open) walkModal.close();
     } catch (e) {}
 
     if (contactModal) {
