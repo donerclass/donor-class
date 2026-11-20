@@ -1394,10 +1394,10 @@
                 contactStatusMsg.innerHTML = `
                   <div style="padding: 1.5rem 0.5rem; text-align: center;">
                     <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--accent-active); margin-bottom: 0.5rem;">
-                      Message Received
+                      Inquiry Received
                     </div>
                     <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; margin: 0 0 1.25rem 0;">
-                      Your suggestion has been securely submitted to <strong>${targetEmail}</strong>.<br>If a response was requested, we will follow up with <strong>${email}</strong> shortly.
+                      Your submission has been securely delivered to the Donor Class Research Desk. All feedback, data tips, and partnership proposals are reviewed confidentially.
                     </p>
                     <button type="button" class="btn btn-primary" id="btn-contact-done" style="margin: 0 auto; padding: 0.5rem 1.5rem;">
                       Done
@@ -1429,11 +1429,13 @@
               contactStatusMsg.style.display = "block";
               contactStatusMsg.innerHTML = `
                 <div style="color: #ef4444; font-size: 0.85rem; margin-top: 0.5rem;">
-                  Direct network submission could not complete. Click below to route via email:
+                  Direct network submission could not complete. You may reach out directly via:
                 </div>
-                <a href="mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + (name || 'N/A') + '\nEmail: ' + email + '\n\n' + msg)}" class="btn btn-primary" style="margin-top: 0.65rem; display: inline-flex;">
-                  Send to ${targetEmail}
-                </a>
+                <div style="margin-top: 0.65rem;">
+                  <a href="mailto:${targetEmail}" class="btn btn-primary" style="display: inline-flex;">
+                    ${targetEmail}
+                  </a>
+                </div>
               `;
             }
           }
