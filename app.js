@@ -1389,6 +1389,31 @@
   } catch (e) {}
   applyTheme(savedTheme);
 
+  // Parse URL Parameters (Deep Linking for Social Media & Campaign Distribution)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const stParam = urlParams.get("state");
+    if (stParam && (STATE_NAMES[stParam.toUpperCase()] || stParam === "all")) {
+      state.selectedState = stParam.toUpperCase();
+    }
+    const secParam = urlParams.get("sector");
+    if (secParam && (SECTORS[secParam.toLowerCase()] || secParam === "all")) {
+      state.activeSector = secParam.toLowerCase();
+      document.querySelectorAll(".sector-pill").forEach(p => {
+        p.classList.toggle("active", p.getAttribute("data-sector") === state.activeSector);
+      });
+    }
+    const partyParam = urlParams.get("party");
+    if (partyParam && ["Democrat", "Republican", "Independent", "all"].includes(partyParam)) {
+      state.filterParty = partyParam;
+      document.querySelectorAll(".party-btn").forEach(b => {
+        b.classList.toggle("active", b.getAttribute("data-party") === state.filterParty);
+      });
+      const pSel = document.getElementById("filter-party");
+      if (pSel) pSel.value = state.filterParty;
+    }
+  } catch (e) {}
+
   initNewsTicker();
   initStatePickers();
   setupEventListeners();
