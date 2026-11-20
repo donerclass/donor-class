@@ -1899,6 +1899,16 @@ dialog::backdrop {
   box-shadow: 0 0 0 2px var(--accent-active-glow);
 }
 
+#btn-submit-contact {
+  transition: all 0.2s ease;
+}
+
+#btn-submit-contact:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  filter: grayscale(40%);
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */

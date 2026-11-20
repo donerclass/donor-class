@@ -1286,14 +1286,33 @@
       }
     }
 
-    // Collaborations & Feedback Modal
+    // Collaborations & Suggestions Modal
     const contactModal = document.getElementById("contact-modal");
     const btnCollabHeader = document.getElementById("btn-collab-header");
     const btnCollabTrigger = document.getElementById("btn-collab-trigger");
     const btnCloseContact = document.getElementById("btn-close-contact");
-    const btnCopyEmail = document.getElementById("btn-copy-collab-email");
     const contactForm = document.getElementById("contact-form");
     const contactStatusMsg = document.getElementById("contact-status-msg");
+    const btnSubmitContact = document.getElementById("btn-submit-contact");
+    const inputContactEmail = document.getElementById("contact-email");
+    const inputContactMsg = document.getElementById("contact-msg");
+
+    // Dynamic validation to enable Submit button only after user enters valid information
+    const validateContactInputs = () => {
+      const email = (inputContactEmail?.value || "").trim();
+      const msg = (inputContactMsg?.value || "").trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const isValid = emailRegex.test(email) && msg.length >= 5;
+
+      if (btnSubmitContact) {
+        btnSubmitContact.disabled = !isValid;
+        btnSubmitContact.style.opacity = isValid ? "1" : "0.5";
+        btnSubmitContact.style.cursor = isValid ? "pointer" : "not-allowed";
+      }
+    };
+
+    if (inputContactEmail) inputContactEmail.addEventListener("input", validateContactInputs);
+    if (inputContactMsg) inputContactMsg.addEventListener("input", validateContactInputs);
 
     // Ensure all dialogs start closed on load
     try {
@@ -1308,12 +1327,14 @@
         btnCollabHeader.addEventListener("click", () => {
           if (contactStatusMsg) contactStatusMsg.style.display = "none";
           contactModal.showModal();
+          validateContactInputs();
         });
       }
       if (btnCollabTrigger) {
         btnCollabTrigger.addEventListener("click", () => {
           if (contactStatusMsg) contactStatusMsg.style.display = "none";
           contactModal.showModal();
+          validateContactInputs();
         });
       }
       if (btnCloseContact) {
@@ -1323,41 +1344,98 @@
         if (e.target === contactModal) contactModal.close();
       });
 
-      if (btnCopyEmail) {
-        btnCopyEmail.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText("collab@donorclass.info");
-            const originalText = btnCopyEmail.textContent;
-            btnCopyEmail.textContent = "Copied to Clipboard!";
-            setTimeout(() => {
-              btnCopyEmail.textContent = originalText;
-            }, 2500);
-          } catch (err) {
-            if (contactStatusMsg) {
-              contactStatusMsg.style.display = "block";
-              contactStatusMsg.textContent = "Email: collab@donorclass.info";
-            }
-          }
-        });
-      }
-
       if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
+        contactForm.addEventListener("submit", async (e) => {
           e.preventDefault();
           const topic = document.getElementById("contact-topic")?.value || "Collab / Suggestion";
           const name = document.getElementById("contact-name")?.value.trim() || "";
-          const email = document.getElementById("contact-email")?.value.trim() || "";
-          const msg = document.getElementById("contact-msg")?.value.trim() || "";
+          const email = inputContactEmail?.value.trim() || "";
+          const msg = inputContactMsg?.value.trim() || "";
 
-          const subject = `[DONOR CLASS] ${topic}${name ? ' - ' + name : ''}`;
-          const body = `Name / Handle: ${name || 'N/A'}\nContact Email: ${email}\nTopic: ${topic}\n\nMessage:\n${msg}\n\n---\nSent via DONOR CLASS Platform`;
+          if (!email || !msg) return;
 
-          const mailtoUri = `mailto:collab@donorclass.info?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-          window.location.href = mailtoUri;
+          if (btnSubmitContact) {
+            btnSubmitContact.disabled = true;
+            btnSubmitContact.style.opacity = "0.7";
+            btnSubmitContact.style.cursor = "wait";
+            btnSubmitContact.textContent = "Submitting...";
+          }
 
           if (contactStatusMsg) {
-            contactStatusMsg.style.display = "block";
-            contactStatusMsg.textContent = "Opening mail client... You can also email directly: collab@donorclass.info";
+            contactStatusMsg.style.display = "none";
+          }
+
+          const targetEmail = "contact@donorclass.info";
+          const subject = `[DONOR CLASS] ${topic}${name ? ' - ' + name : ''}`;
+
+          try {
+            const response = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+              },
+              body: JSON.stringify({
+                name: name || "Anonymous Citizen",
+                email: email,
+                topic: topic,
+                message: msg,
+                _subject: subject,
+                _template: "table",
+                _captcha: "false"
+              })
+            });
+
+            if (response.ok) {
+              contactForm.reset();
+              contactForm.style.display = "none";
+              if (contactStatusMsg) {
+                contactStatusMsg.style.display = "block";
+                contactStatusMsg.innerHTML = `
+                  <div style="padding: 1.5rem 0.5rem; text-align: center;">
+                    <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--accent-active); margin-bottom: 0.5rem;">
+                      Message Received
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; margin: 0 0 1.25rem 0;">
+                      Your suggestion has been securely submitted to <strong>${targetEmail}</strong>.<br>If a response was requested, we will follow up with <strong>${email}</strong> shortly.
+                    </p>
+                    <button type="button" class="btn btn-primary" id="btn-contact-done" style="margin: 0 auto; padding: 0.5rem 1.5rem;">
+                      Done
+                    </button>
+                  </div>
+                `;
+                const btnDone = document.getElementById("btn-contact-done");
+                if (btnDone) {
+                  btnDone.addEventListener("click", () => {
+                    contactModal.close();
+                    contactForm.style.display = "block";
+                    contactStatusMsg.style.display = "none";
+                    validateContactInputs();
+                  });
+                }
+              }
+            } else {
+              throw new Error("Submission returned non-200");
+            }
+          } catch (err) {
+            // Graceful fallback: direct mail link to contact@donorclass.info
+            if (btnSubmitContact) {
+              btnSubmitContact.disabled = false;
+              btnSubmitContact.style.opacity = "1";
+              btnSubmitContact.style.cursor = "pointer";
+              btnSubmitContact.textContent = "Submit";
+            }
+            if (contactStatusMsg) {
+              contactStatusMsg.style.display = "block";
+              contactStatusMsg.innerHTML = `
+                <div style="color: #ef4444; font-size: 0.85rem; margin-top: 0.5rem;">
+                  Direct network submission could not complete. Click below to route via email:
+                </div>
+                <a href="mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + (name || 'N/A') + '\nEmail: ' + email + '\n\n' + msg)}" class="btn btn-primary" style="margin-top: 0.65rem; display: inline-flex;">
+                  Send to ${targetEmail}
+                </a>
+              `;
+            }
           }
         });
       }
