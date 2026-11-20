@@ -396,27 +396,31 @@
         <input type="text" class="search-input" id="search-input" placeholder="Search congressional member, state (e.g. TX, CA), district (e.g. NY-14)...">
       </div>
       <div class="filter-group">
-        <select class="filter-select" id="filter-chamber">
-          <option value="all">All Chambers (Senate & House)</option>
-          <option value="Senate">Senate (100)</option>
-          <option value="House">House (435+)</option>
+        <select class="filter-select" id="filter-state" aria-label="Filter directory by state">
+          <option value="all">All 50 States (National Overview)</option>
         </select>
-        <select class="filter-select" id="filter-party">
+        <select class="filter-select" id="filter-chamber" aria-label="Filter directory by chamber">
+          <option value="all">All Chambers (Senate &amp; House)</option>
+          <option value="Senate">Senate</option>
+          <option value="House">House</option>
+        </select>
+        <select class="filter-select" id="filter-party" aria-label="Filter directory by party">
           <option value="all">All Parties</option>
           <option value="Democrat">Democrats</option>
           <option value="Republican">Republicans</option>
           <option value="Independent">Independents</option>
         </select>
-        <select class="filter-select" id="filter-status">
+        <select class="filter-select" id="filter-status" aria-label="Filter directory by incumbency status">
           <option value="Incumbent">Current Incumbents (539)</option>
-          <option value="all">All Members & Former (1,336)</option>
+          <option value="all">All Members &amp; Former (1,336)</option>
         </select>
-        <select class="filter-select" id="filter-sort">
+        <select class="filter-select" id="filter-sort" aria-label="Sort directory">
           <option value="sector-desc">Highest in Active Sector</option>
           <option value="total-desc">Highest Total All-PAC $</option>
           <option value="name-asc">Name (A–Z)</option>
         </select>
       </div>
+      <div class="directory-active-filters" id="directory-active-filters" style="display: none;"></div>
     </div>
 
     <div class="directory-grid" id="directory-grid"></div>

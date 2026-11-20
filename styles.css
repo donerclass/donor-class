@@ -1490,6 +1490,73 @@ body {
   font-weight: 600;
 }
 
+/* Active Filter Chips Strip */
+.directory-active-filters {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.4rem 0.15rem 0;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.filter-chip-remove {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.filter-chip-remove:hover {
+  color: #ef4444;
+}
+
+.filter-chip-clear-all {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.filter-chip-clear-all:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+/* Delegation Inspector Empty Alert Box */
+.delegation-empty-box {
+  background-color: var(--bg-surface-elevated);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .directory-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -2051,6 +2118,10 @@ html, body {
     font-size: 16px !important; /* Eliminates iOS Safari auto-zoom */
     padding: 0.5rem;
     min-height: 42px;
+  }
+
+  .filter-group .filter-select:last-child {
+    grid-column: span 2;
   }
 
   /* 6. Sector Navigation Strip Thumb Swipe Polish */

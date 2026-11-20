@@ -209,7 +209,7 @@
       path.innerHTML = `<title>${nameStr} (${code}): ${amtStr}</title>`;
 
       path.addEventListener("click", () => {
-        selectState(code);
+        selectState(code, true);
       });
 
       statesGroup.appendChild(path);
@@ -242,7 +242,7 @@
       btn.className = `chip-btn ${state.selectedState === code ? "selected" : ""}`;
       const amt = stateData ? formatMoney(stateData.totalAmount) : "$0";
       btn.innerHTML = `${code} <span style="font-size: 0.65rem; color: var(--text-muted);">${amt}</span>`;
-      btn.addEventListener("click", () => selectState(code));
+      btn.addEventListener("click", () => selectState(code, true));
       container.appendChild(btn);
     });
   };
@@ -477,7 +477,20 @@
     const tabCountHou = document.getElementById("tab-count-hou");
     if (tabCountHou) tabCountHou.textContent = house.length;
 
-    // Handle tab visibility
+    // Gracefully handle chamber tab visibility:
+    // If the currently active tab has 0 members but the other chamber has members, default to 'all'
+    if (state.inspectorTab === "senate" && senators.length === 0 && house.length > 0) {
+      state.inspectorTab = "all";
+      document.querySelectorAll(".inspector-tab").forEach(t => {
+        t.classList.toggle("active", t.getAttribute("data-tab") === "all");
+      });
+    } else if (state.inspectorTab === "house" && house.length === 0 && senators.length > 0) {
+      state.inspectorTab = "all";
+      document.querySelectorAll(".inspector-tab").forEach(t => {
+        t.classList.toggle("active", t.getAttribute("data-tab") === "all");
+      });
+    }
+
     if (state.inspectorTab === "senate") {
       senateSec.style.display = "block";
       houseSec.style.display = "none";
@@ -519,13 +532,13 @@
       // Render senators (all matching in national view, scrollable!)
       senators.forEach(s => senateListEl.appendChild(createMemberRow(s, activeSectorKey)));
       if (senators.length === 0) {
-        senateListEl.innerHTML = `<div style="color: var(--text-muted); font-size: 0.85rem; padding: 0.5rem;">No senators found matching filter.</div>`;
+        senateListEl.innerHTML = `<div class="delegation-empty-box">No senators found matching the active filter.</div>`;
       }
 
       // Render house (all matching in national view, scrollable!)
       house.forEach(h => houseListEl.appendChild(createMemberRow(h, activeSectorKey)));
       if (house.length === 0) {
-        houseListEl.innerHTML = `<div style="color: var(--text-muted); font-size: 0.85rem; padding: 0.5rem;">No representatives found matching filter.</div>`;
+        houseListEl.innerHTML = `<div class="delegation-empty-box">No representatives found matching the active filter.</div>`;
       }
 
     } else {
@@ -546,14 +559,47 @@
       document.getElementById("delegation-list-title").textContent = `${stData.name} ${partyScope}Senate Delegation (${senators.length})`;
       document.getElementById("house-list-title").textContent = `${stData.name} ${partyScope}House Delegation (${house.length} Districts)`;
 
-      senators.forEach(s => senateListEl.appendChild(createMemberRow(s, activeSectorKey)));
-      if (senators.length === 0) {
-        senateListEl.innerHTML = `<div style="color: var(--text-muted); font-size: 0.85rem; padding: 0.5rem;">No sitting ${partyScope}senators from ${stData.name}.</div>`;
-      }
+      if (pool.length === 0) {
+        senateListEl.innerHTML = `
+          <div class="delegation-empty-box">
+            <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">No sitting ${partyScope}members in Congress from ${stData.name}.</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.65rem;">This state delegation currently has zero seats held by ${partyScope}members.</p>
+            <button class="btn btn-secondary btn-sm" id="btn-show-all-state-members">Show All ${stData.name} Members</button>
+          </div>
+        `;
+        document.getElementById("btn-show-all-state-members")?.addEventListener("click", () => {
+          state.filterParty = "all";
+          document.querySelectorAll(".party-btn").forEach(b => b.classList.toggle("active", b.getAttribute("data-party") === "all"));
+          const partySelect = document.getElementById("filter-party");
+          if (partySelect) partySelect.value = "all";
+          updateUI();
+        });
+      } else {
+        senators.forEach(s => senateListEl.appendChild(createMemberRow(s, activeSectorKey)));
+        if (senators.length === 0) {
+          senateListEl.innerHTML = `
+            <div class="delegation-empty-box">
+              <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">No sitting ${partyScope}senators from ${stData.name}.</div>
+              ${house.length > 0 ? `<div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Showing all ${house.length} ${partyScope}House ${house.length === 1 ? 'member' : 'members'} below.</div><button class="btn btn-secondary btn-sm" id="btn-jump-to-house" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Jump to House Roster (${house.length})</button>` : ''}
+            </div>
+          `;
+          document.getElementById("btn-jump-to-house")?.addEventListener("click", () => {
+            document.getElementById("house-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
 
-      house.forEach(h => houseListEl.appendChild(createMemberRow(h, activeSectorKey)));
-      if (house.length === 0) {
-        houseListEl.innerHTML = `<div style="color: var(--text-muted); font-size: 0.85rem; padding: 0.5rem;">No sitting ${partyScope}representatives from ${stData.name}.</div>`;
+        house.forEach(h => houseListEl.appendChild(createMemberRow(h, activeSectorKey)));
+        if (house.length === 0) {
+          houseListEl.innerHTML = `
+            <div class="delegation-empty-box">
+              <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">No sitting ${partyScope}representatives from ${stData.name}.</div>
+              ${senators.length > 0 ? `<div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Showing all ${senators.length} ${partyScope}Senate ${senators.length === 1 ? 'member' : 'members'} above.</div><button class="btn btn-secondary btn-sm" id="btn-jump-to-senate" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">Jump to Senate Roster (${senators.length})</button>` : ''}
+            </div>
+          `;
+          document.getElementById("btn-jump-to-senate")?.addEventListener("click", () => {
+            document.getElementById("senate-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
       }
     }
   };
@@ -596,6 +642,113 @@
     return row;
   };
 
+  // Active Filter Chips Strip Helper for Directory
+  const renderDirectoryActiveFilterChips = (resultCount) => {
+    const container = document.getElementById("directory-active-filters");
+    if (!container) return;
+
+    const chips = [];
+
+    if (state.selectedState !== "all") {
+      const sName = STATE_NAMES[state.selectedState] || state.selectedState;
+      chips.push({
+        label: `State: ${sName}`,
+        clear: () => { selectState("all"); }
+      });
+    }
+
+    if (state.filterParty !== "all") {
+      chips.push({
+        label: `Party: ${state.filterParty}`,
+        clear: () => {
+          state.filterParty = "all";
+          document.querySelectorAll(".party-btn").forEach(b => b.classList.toggle("active", b.getAttribute("data-party") === "all"));
+          const pSel = document.getElementById("filter-party");
+          if (pSel) pSel.value = "all";
+          updateUI();
+        }
+      });
+    }
+
+    if (state.filterChamber !== "all") {
+      chips.push({
+        label: `Chamber: ${state.filterChamber}`,
+        clear: () => {
+          state.filterChamber = "all";
+          const cSel = document.getElementById("filter-chamber");
+          if (cSel) cSel.value = "all";
+          state.inspectorTab = "all";
+          document.querySelectorAll(".inspector-tab").forEach(t => t.classList.toggle("active", t.getAttribute("data-tab") === "all"));
+          updateUI();
+        }
+      });
+    }
+
+    if (state.activeSector !== "all") {
+      const secName = SECTORS[state.activeSector] ? SECTORS[state.activeSector].name : state.activeSector;
+      chips.push({
+        label: `PAC: ${secName}`,
+        clear: () => {
+          state.activeSector = "all";
+          document.querySelectorAll(".sector-pill").forEach(p => p.classList.toggle("active", p.getAttribute("data-sector") === "all"));
+          updateUI();
+        }
+      });
+    }
+
+    if (state.searchQuery) {
+      chips.push({
+        label: `Search: "${state.searchQuery}"`,
+        clear: () => {
+          state.searchQuery = "";
+          const sInput = document.getElementById("search-input");
+          if (sInput) sInput.value = "";
+          renderDirectory();
+        }
+      });
+    }
+
+    if (chips.length === 0) {
+      container.style.display = "none";
+      container.innerHTML = "";
+      return;
+    }
+
+    container.style.display = "flex";
+    container.innerHTML = `
+      <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-right: 0.25rem;">Active (${resultCount}):</span>
+    `;
+
+    chips.forEach(chip => {
+      const chipEl = document.createElement("span");
+      chipEl.className = "filter-chip";
+      chipEl.innerHTML = `${chip.label} <button class="filter-chip-remove" aria-label="Remove filter">&times;</button>`;
+      chipEl.querySelector(".filter-chip-remove").addEventListener("click", chip.clear);
+      container.appendChild(chipEl);
+    });
+
+    const clearAllBtn = document.createElement("button");
+    clearAllBtn.className = "filter-chip-clear-all";
+    clearAllBtn.textContent = "Clear All";
+    clearAllBtn.addEventListener("click", () => {
+      state.selectedState = "all";
+      state.filterParty = "all";
+      state.filterChamber = "all";
+      state.activeSector = "all";
+      state.searchQuery = "";
+      const sInput = document.getElementById("search-input");
+      if (sInput) sInput.value = "";
+      document.querySelectorAll(".party-btn").forEach(b => b.classList.toggle("active", b.getAttribute("data-party") === "all"));
+      document.querySelectorAll(".sector-pill").forEach(p => p.classList.toggle("active", p.getAttribute("data-sector") === "all"));
+      const pSel = document.getElementById("filter-party");
+      if (pSel) pSel.value = "all";
+      const cSel = document.getElementById("filter-chamber");
+      if (cSel) cSel.value = "all";
+      updateUI();
+    });
+    container.appendChild(clearAllBtn);
+  };
+
   // Render Full Member Directory Grid
   const renderDirectory = () => {
     const grid = document.getElementById("directory-grid");
@@ -607,6 +760,8 @@
     const activeSectorKey = state.activeSector;
 
     let filtered = ALL_CANDIDATES.filter(c => {
+      // State Filter (Sync with state.selectedState)
+      if (state.selectedState !== "all" && c.state !== state.selectedState) return false;
       // Chamber
       if (state.filterChamber !== "all" && c.chamber !== state.filterChamber) return false;
       // Party
@@ -625,6 +780,9 @@
       return true;
     });
 
+    // Render Active Filter Chips
+    renderDirectoryActiveFilterChips(filtered.length);
+
     // Sorting
     filtered.sort((a, b) => {
       if (state.sort === "sector-desc") {
@@ -638,6 +796,33 @@
       }
       return 0;
     });
+
+    if (filtered.length === 0) {
+      const stateName = STATE_NAMES[state.selectedState] || state.selectedState;
+      const partyStr = state.filterParty === "all" ? "" : `${state.filterParty} `;
+      const chamberStr = state.filterChamber === "all" ? "members" : `${state.filterChamber} members`;
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; padding: 2.5rem 1rem; text-align: center; background-color: var(--bg-surface-elevated); border: 1px dashed var(--border-subtle); border-radius: var(--radius-md);">
+          <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
+            No ${partyStr}${chamberStr} found${state.selectedState !== "all" ? ` for ${stateName}` : ""}.
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.85rem;">
+            Try clearing filters or switching party / chamber to view all available members.
+          </p>
+          <button class="btn btn-secondary btn-sm" id="btn-directory-reset-all">Reset All Directory Filters</button>
+        </div>
+      `;
+      document.getElementById("btn-directory-reset-all")?.addEventListener("click", () => {
+        state.selectedState = "all";
+        state.filterParty = "all";
+        state.filterChamber = "all";
+        state.searchQuery = "";
+        const searchInput = document.getElementById("search-input");
+        if (searchInput) searchInput.value = "";
+        updateUI();
+      });
+      return;
+    }
 
     // Render cards (limit to first 120 for instant DOM responsiveness)
     const displayList = filtered.slice(0, 120);
@@ -792,8 +977,12 @@
   };
 
   // State Selection Handler
-  const selectState = (stateCode) => {
-    state.selectedState = state.selectedState === stateCode ? "all" : stateCode;
+  const selectState = (stateCode, isMapToggle = false) => {
+    if (isMapToggle) {
+      state.selectedState = state.selectedState === stateCode ? "all" : stateCode;
+    } else {
+      state.selectedState = (!stateCode || stateCode === "all") ? "all" : stateCode;
+    }
     updateUI();
     // On mobile screens, smoothly scroll to the delegation inspector
     if (window.innerWidth < 768 && state.selectedState !== "all") {
@@ -807,10 +996,14 @@
     const sectorColor = getSectorColor(state.activeSector);
     document.documentElement.style.setProperty("--accent-active", sectorColor);
 
-    // Keep mobile state picker synced with current selection
+    // Keep mobile state picker and directory state dropdown synced with current selection
     const mobileSel = document.getElementById("mobile-state-select");
     if (mobileSel && mobileSel.value !== state.selectedState) {
       mobileSel.value = state.selectedState;
+    }
+    const dirStateSel = document.getElementById("filter-state");
+    if (dirStateSel && dirStateSel.value !== state.selectedState) {
+      dirStateSel.value = state.selectedState;
     }
 
     const stateAggs = computeStateAggregations();
@@ -963,8 +1156,12 @@
         document.querySelectorAll(".inspector-tab").forEach(t => t.classList.remove("active"));
         tab.classList.add("active");
         state.inspectorTab = tab.getAttribute("data-tab");
-        const stateAggs = computeStateAggregations();
-        renderInspector(stateAggs);
+        // Sync directory chamber filter
+        state.filterChamber = state.inspectorTab === "senate" ? "Senate" :
+                              state.inspectorTab === "house" ? "House" : "all";
+        const chamSel = document.getElementById("filter-chamber");
+        if (chamSel) chamSel.value = state.filterChamber;
+        updateUI();
       });
     });
 
@@ -986,7 +1183,12 @@
 
     document.getElementById("filter-chamber").addEventListener("change", (e) => {
       state.filterChamber = e.target.value;
-      renderDirectory();
+      const tabTarget = state.filterChamber === "all" ? "all" : state.filterChamber.toLowerCase();
+      state.inspectorTab = tabTarget;
+      document.querySelectorAll(".inspector-tab").forEach(t => {
+        t.classList.toggle("active", t.getAttribute("data-tab") === tabTarget);
+      });
+      updateUI();
     });
 
     document.getElementById("filter-party").addEventListener("change", (e) => {
@@ -1154,30 +1356,29 @@
     });
   };
 
-  // Mobile Jump-to-State Selector Setup
-  const initMobileStatePicker = () => {
-    const sel = document.getElementById("mobile-state-select");
-    if (!sel || !STATE_NAMES) return;
+  // State Selectors Setup (Mobile Jump Selector + Directory State Selector)
+  const initStatePickers = () => {
+    const pickers = [
+      document.getElementById("mobile-state-select"),
+      document.getElementById("filter-state")
+    ].filter(Boolean);
 
-    sel.innerHTML = '<option value="all">-- All 50 States (National Overview) --</option>';
+    if (!STATE_NAMES || pickers.length === 0) return;
 
-    // Sort alphabetically by full state name
     const sorted = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1]));
 
-    sorted.forEach(([code, name]) => {
-      const opt = document.createElement("option");
-      opt.value = code;
-      opt.textContent = `${name} (${code})`;
-      sel.appendChild(opt);
-    });
+    pickers.forEach(sel => {
+      sel.innerHTML = '<option value="all">-- All 50 States (National Overview) --</option>';
+      sorted.forEach(([code, name]) => {
+        const opt = document.createElement("option");
+        opt.value = code;
+        opt.textContent = `${name} (${code})`;
+        sel.appendChild(opt);
+      });
 
-    sel.addEventListener("change", (e) => {
-      const code = e.target.value;
-      state.selectedState = (!code || code === "all") ? "all" : code;
-      updateUI();
-      if (window.innerWidth < 768 && state.selectedState !== "all") {
-        document.getElementById("inspector-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      sel.addEventListener("change", (e) => {
+        selectState(e.target.value);
+      });
     });
   };
 
@@ -1189,7 +1390,7 @@
   applyTheme(savedTheme);
 
   initNewsTicker();
-  initMobileStatePicker();
+  initStatePickers();
   setupEventListeners();
   updateUI();
 })();
