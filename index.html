@@ -185,7 +185,7 @@
       </div>
       <!-- Google AdSense Live Display Slot (activates upon AdSense approval) -->
       <ins class="adsbygoogle"
-           style="display:none; width: 100%; height: 90px;"
+           style="display:block; width: 100%; height: 90px;"
            data-ad-client="ca-pub-6657813406289371"
            data-ad-slot="9845123456"
            data-ad-format="horizontal"
@@ -438,7 +438,7 @@
           </div>
           <!-- Google AdSense Live Display Slot -->
           <ins class="adsbygoogle"
-               style="display:none; width: 300px; height: 250px;"
+               style="display:block; width: 300px; height: 250px;"
                data-ad-client="ca-pub-6657813406289371"
                data-ad-slot="9845123458"
                data-ad-format="rectangle"></ins>
@@ -464,7 +464,7 @@
       </div>
       <!-- Google AdSense Live Display Slot -->
       <ins class="adsbygoogle"
-           style="display:none; width: 100%; height: 90px;"
+           style="display:block; width: 100%; height: 90px;"
            data-ad-client="ca-pub-6657813406289371"
            data-ad-slot="9845123457"
            data-ad-format="horizontal"
@@ -554,6 +554,39 @@
       <div style="background-color: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
         <strong>Official FEC Paper-Trail Note:</strong> Reflects verified Schedule A (earmarked/conduit), Schedule B (direct committee-to-candidate), and independent expenditure filings registered with the Federal Election Commission for the 2024–2026 reporting cycles.
       </div>
+
+      <!-- Modal Embed & Share Action Toolbar -->
+      <div class="modal-embed-toolbar">
+        <div class="modal-toolbar-actions">
+          <button type="button" class="btn-toolbar-action" id="btn-copy-dossier-link" title="Copy shareable link to this lawmaker dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span id="btn-copy-dossier-text">Share Link</span>
+          </button>
+          <button type="button" class="btn-toolbar-action" id="btn-toggle-embed-code" title="Embed interactive dossier card in articles, Substack, blogs">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span>Embed Card</span>
+          </button>
+        </div>
+        <div class="modal-embed-panel" id="modal-embed-panel" style="display: none;">
+          <div class="embed-panel-header">
+            <span>Embed Interactive Lawmaker Dossier</span>
+            <span class="embed-panel-note">Substack / Medium / News CMS / HTML</span>
+          </div>
+          <div class="embed-input-row">
+            <input type="text" class="embed-code-input" id="embed-code-input" readonly value="" aria-label="Embed HTML code">
+            <button type="button" class="btn btn-secondary btn-copy-embed" id="btn-copy-embed-code">Copy HTML</button>
+          </div>
+          <div class="embed-preview-note">Embeds verified 7-sector PAC breakdown and FEC citations. Zero trackers, responsive height.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Embedded Mode Watermark Footer -->
+    <div class="embed-watermark-footer">
+      <span>Data: Federal Election Commission (2024–2026 Cycle)</span>
+      <a href="https://donorclass.info/" target="_blank" rel="noopener noreferrer" class="embed-watermark-link">
+        Explore Full 50-State Tracker on DONOR CLASS &rarr;
+      </a>
     </div>
   </dialog>
 
@@ -842,8 +875,11 @@
     </div>
   </footer>
 
+  <!-- Notification Toast for Link & Embed Copy Feedback -->
+  <div class="donor-copy-toast" id="donor-copy-toast" role="status" aria-live="polite"></div>
+
   <!-- Scripts -->
-  <script src="data/donor-dataset.js?v=2.2.2"></script>
-  <script src="app.js?v=2.2.2"></script>
+  <script src="data/donor-dataset.js?v=2.3.0"></script>
+  <script src="app.js?v=2.3.0"></script>
 </body>
 </html>

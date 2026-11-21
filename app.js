@@ -24,8 +24,111 @@
     sort: "sector-desc",
     zoom: { scale: 1, x: 0, y: 0 },
     isDragging: false,
-    dragStart: { x: 0, y: 0 }
+    dragStart: { x: 0, y: 0 },
+    isEmbedded: false,
+    activeModalCandidate: null
   };
+
+  // Notification Toast Helper
+  const showToast = (message) => {
+    let toast = document.getElementById("donor-copy-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "donor-copy-toast";
+      toast.className = "donor-copy-toast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2800);
+  };
+
+  // Clipboard Copy Helper (with modern API and textarea fallback for iframes)
+  const copyTextToClipboard = async (text, successMessage) => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        showToast(successMessage);
+        return true;
+      }
+    } catch (e) {}
+
+    try {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      textarea.style.top = "0";
+      textarea.setAttribute("readonly", "");
+      document.body.appendChild(textarea);
+      textarea.select();
+      const successful = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      if (successful) {
+        showToast(successMessage);
+        return true;
+      }
+    } catch (err) {}
+
+    showToast("Copy failed: please select and copy manually");
+    return false;
+  };
+
+  // Monetization & Google AdSense SPA Dynamic Refresh Controller
+  const AdController = (() => {
+    let lastRefreshTime = 0;
+    const COOLDOWN_MS = 30000; // Strictly enforce 30s policy cooldown per Google AdSense guidelines
+    let isInitialized = false;
+
+    const init = () => {
+      if (isInitialized) return;
+      isInitialized = true;
+      try {
+        if (window.adsbygoogle) {
+          const adSlots = document.querySelectorAll("ins.adsbygoogle");
+          adSlots.forEach(() => {
+            try {
+              (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {}
+          });
+          lastRefreshTime = Date.now();
+        }
+      } catch (e) {}
+    };
+
+    const trigger = (reason) => {
+      const now = Date.now();
+      // Enforce 30-second cooldown between refresh requests
+      if (now - lastRefreshTime < COOLDOWN_MS) {
+        return false;
+      }
+      lastRefreshTime = now;
+
+      try {
+        if (window.adsbygoogle && typeof window.adsbygoogle.push === "function") {
+          const adSlots = document.querySelectorAll("ins.adsbygoogle");
+          adSlots.forEach(slot => {
+            if (slot.getAttribute("data-adsbygoogle-status") === "done") {
+              try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+              } catch (e) {}
+            }
+          });
+        }
+      } catch (e) {}
+      return true;
+    };
+
+    return {
+      init,
+      trigger
+    };
+  })();
 
   const SECTORS = BUNDLE.sectors;
   const ALL_CANDIDATES = BUNDLE.candidates;
@@ -907,6 +1010,7 @@
 
   // Open Candidate Detail Modal (<dialog>)
   const openCandidateModal = (candidate) => {
+    state.activeModalCandidate = candidate;
     const modal = document.getElementById("candidate-modal");
     if (!modal) return;
 
@@ -973,17 +1077,38 @@
       });
     }
 
-    modal.showModal();
+    // Populate Embed Code & Reset Embed Panel
+    const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
+    const candIdentifier = candidate.fecCandidateId || candidate.slug || candidate.id;
+    const embedCode = `<iframe src="${origin}/?candidate=${encodeURIComponent(candIdentifier)}&embed=true" width="100%" height="520" frameborder="0" loading="lazy" style="border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; max-width: 680px; width: 100%;"></iframe>`;
+    const embedInput = document.getElementById("embed-code-input");
+    if (embedInput) embedInput.value = embedCode;
+
+    const embedPanel = document.getElementById("modal-embed-panel");
+    if (embedPanel) embedPanel.style.display = "none";
+
+    if (state.isEmbedded) {
+      if (!modal.hasAttribute("open")) modal.setAttribute("open", "");
+    } else {
+      if (!modal.open) modal.showModal();
+    }
   };
 
   // State Selection Handler
   const selectState = (stateCode, isMapToggle = false) => {
+    const prevState = state.selectedState;
     if (isMapToggle) {
       state.selectedState = state.selectedState === stateCode ? "all" : stateCode;
     } else {
       state.selectedState = (!stateCode || stateCode === "all") ? "all" : stateCode;
     }
     updateUI();
+
+    // Throttled AdSense Dynamic Refresh (strictly respects 30s cooldown per Google AdSense SPA policy)
+    if (state.selectedState !== prevState) {
+      AdController.trigger("state_change");
+    }
+
     // On mobile screens, smoothly scroll to the delegation inspector
     if (window.innerWidth < 768 && state.selectedState !== "all") {
       document.getElementById("inspector-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1223,8 +1348,43 @@
     const candModal = document.getElementById("candidate-modal");
     document.getElementById("btn-close-modal").addEventListener("click", () => candModal.close());
     candModal.addEventListener("click", (e) => {
-      if (e.target === candModal) candModal.close();
+      if (e.target === candModal && !state.isEmbedded) candModal.close();
     });
+
+    // Embed & Share Actions in Candidate Modal
+    const btnCopyLink = document.getElementById("btn-copy-dossier-link");
+    if (btnCopyLink) {
+      btnCopyLink.addEventListener("click", () => {
+        if (!state.activeModalCandidate) return;
+        const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
+        const candIdentifier = state.activeModalCandidate.fecCandidateId || state.activeModalCandidate.slug || state.activeModalCandidate.id;
+        const shareUrl = `${origin}/?candidate=${encodeURIComponent(candIdentifier)}`;
+        copyTextToClipboard(shareUrl, "Lawmaker dossier link copied to clipboard");
+      });
+    }
+
+    const btnToggleEmbed = document.getElementById("btn-toggle-embed-code");
+    const panelEmbed = document.getElementById("modal-embed-panel");
+    if (btnToggleEmbed && panelEmbed) {
+      btnToggleEmbed.addEventListener("click", () => {
+        const isHidden = panelEmbed.style.display === "none" || !panelEmbed.style.display;
+        panelEmbed.style.display = isHidden ? "flex" : "none";
+        if (isHidden) {
+          const input = document.getElementById("embed-code-input");
+          if (input) input.select();
+        }
+      });
+    }
+
+    const btnCopyEmbed = document.getElementById("btn-copy-embed-code");
+    if (btnCopyEmbed) {
+      btnCopyEmbed.addEventListener("click", () => {
+        const input = document.getElementById("embed-code-input");
+        if (input && input.value) {
+          copyTextToClipboard(input.value, "Embed HTML code copied to clipboard");
+        }
+      });
+    }
 
     const methModal = document.getElementById("methodology-modal");
     document.getElementById("btn-methodology").addEventListener("click", () => methModal.showModal());
@@ -1526,6 +1686,14 @@
   // Parse URL Parameters (Deep Linking for Social Media & Campaign Distribution)
   try {
     const urlParams = new URLSearchParams(window.location.search);
+    const hash = window.location.hash;
+
+    // Check for Embedded Mode (?embed=true or #embed)
+    if (urlParams.get("embed") === "true" || hash === "#embed") {
+      state.isEmbedded = true;
+      document.body.classList.add("is-embedded");
+    }
+
     const stParam = urlParams.get("state");
     if (stParam && (STATE_NAMES[stParam.toUpperCase()] || stParam === "all")) {
       state.selectedState = stParam.toUpperCase();
@@ -1546,10 +1714,29 @@
       const pSel = document.getElementById("filter-party");
       if (pSel) pSel.value = state.filterParty;
     }
+
+    // Direct Lawmaker Dossier Deep-Linking (?candidate=FEC_ID or slug)
+    const candParam = urlParams.get("candidate");
+    if (candParam) {
+      const target = candParam.toLowerCase().trim();
+      const matched = ALL_CANDIDATES.find(c =>
+        (c.fecCandidateId && c.fecCandidateId.toLowerCase() === target) ||
+        (c.slug && c.slug.toLowerCase() === target) ||
+        (c.id && c.id.toLowerCase() === target) ||
+        (c.displayName && c.displayName.toLowerCase() === target)
+      );
+      if (matched) {
+        state.selectedState = matched.state;
+        setTimeout(() => {
+          openCandidateModal(matched);
+        }, 100);
+      }
+    }
   } catch (e) {}
 
   initNewsTicker();
   initStatePickers();
   setupEventListeners();
   updateUI();
+  AdController.init();
 })();
