@@ -67,6 +67,7 @@
     ├── config.py                # Operational Constants, Schedules & Channel Definitions
     ├── state.json               # 50-State Campaign Calendar & Live Sniper Ledger
     ├── state_manager.py         # State Ledger CRUD & Audit Trail
+    ├── facebook_operator.py     # Facebook Operations & Page Engagement Engine
     ├── preflight_linter.py      # Hard Zero-Emoji & FEC Dataset Verification Linter
     ├── scheduler.py             # Event Chronometer Aligned to Manila PHT / Washington EST
     ├── runner.py                # Command-Line Harness Controller

@@ -26,6 +26,27 @@ X_HANDLE = "donorclassinfo"
 X_PROFILE_URL = "https://x.com/donorclassinfo"
 REDDIT_USER = "DonorClassInfo"
 REDDIT_PROFILE_URL = "https://www.reddit.com/user/DonorClassInfo/"
+FB_PAGE_NAME = "DONOR CLASS"
+FB_PAGE_ID = "61596685984563"
+FB_PAGE_URL = "https://www.facebook.com/profile.php?id=61596685984563"
+
+# High-Reach Target Outlets & Creators for Following & Engagement
+FB_TARGET_OUTLETS = [
+    {"name": "Breaking Points", "url": "https://www.facebook.com/BreakingPointsNews", "category": "Independent Media"},
+    {"name": "The Hill", "url": "https://www.facebook.com/TheHill", "category": "Congressional News"},
+    {"name": "Lever News", "url": "https://www.facebook.com/levernews", "category": "Investigative Journalism"},
+    {"name": "ProPublica", "url": "https://www.facebook.com/propublica", "category": "Investigative Journalism"},
+    {"name": "OpenSecrets", "url": "https://www.facebook.com/OpenSecretsDC", "category": "Campaign Finance Watchdog"},
+    {"name": "Politico", "url": "https://www.facebook.com/politico", "category": "Political News"},
+    {"name": "The Intercept", "url": "https://www.facebook.com/theintercept", "category": "Investigative Journalism"},
+    {"name": "NPR", "url": "https://www.facebook.com/NPR", "category": "Public Media"},
+    {"name": "PBS NewsHour", "url": "https://www.facebook.com/newshour", "category": "Public Media"},
+    {"name": "Common Cause", "url": "https://www.facebook.com/CommonCause", "category": "Civic Reform"},
+    {"name": "Axios", "url": "https://www.facebook.com/axiosnews", "category": "News Media"},
+    {"name": "Fox News", "url": "https://www.facebook.com/FoxNews", "category": "Major Network"},
+    {"name": "CNN", "url": "https://www.facebook.com/cnn", "category": "Major Network"},
+    {"name": "MSNBC", "url": "https://www.facebook.com/msnbc", "category": "Major Network"},
+]
 
 # Timezone Synchronization
 TIMEZONE_PRIMARY = "Asia/Manila"      # User Local Routine (PHT, UTC+8)

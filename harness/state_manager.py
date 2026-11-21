@@ -76,5 +76,24 @@ class StateManager:
         snipes.append(snipe_data)
         self.log_audit("SNIPE_RECORDED", f"Recorded snipe #{snipe_data['id']} under {snipe_data.get('target_account')} for topic: {snipe_data.get('target_topic')}")
 
+    def record_facebook_post(self, post_data: dict):
+        fb_ops = self.state.setdefault("facebook_operations", {})
+        posts = fb_ops.setdefault("published_posts", [])
+        post_data["id"] = len(posts) + 1
+        post_data["timestamp_pht"] = self.now_pht_iso()
+        posts.append(post_data)
+        self.log_audit("FB_POST_RECORDED", f"Published Facebook post #{post_data['id']}: {post_data.get('title')}")
+
+    def record_facebook_follow(self, page_name: str, page_url: str):
+        fb_ops = self.state.setdefault("facebook_operations", {})
+        follows = fb_ops.setdefault("followed_pages", [])
+        if not any(f.get("url") == page_url for f in follows):
+            follows.append({
+                "name": page_name,
+                "url": page_url,
+                "timestamp_pht": self.now_pht_iso()
+            })
+            self.log_audit("FB_PAGE_FOLLOWED", f"Followed Facebook page: {page_name} ({page_url})")
+
     def get_snipes_count_24h(self) -> int:
         return len(self.state.get("tactical_snipes", []))
