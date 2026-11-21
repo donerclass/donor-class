@@ -116,7 +116,7 @@
       "timestamp_pht": "2026-11-20T14:07:30+08:00"
     }
   ],
-  "last_audit_timestamp_pht": "2026-11-20T17:25:00+08:00",
+  "last_audit_timestamp_pht": "2026-11-21T10:41:35.584154+08:00",
   "audit_trail": [
     {
       "action": "HARNESS_INITIALIZED",
@@ -129,6 +129,60 @@
       "actor": "Donor Class Team <contact@donorclass.info>",
       "timestamp_pht": "2026-11-20T18:00:00+08:00",
       "details": "Followed @FoxNews, @CNN, and @MSNBC on X for tactical segment monitoring."
+    },
+    {
+      "action": "FB_POST_RECORDED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.582739+08:00",
+      "details": "Published Facebook post #1: Official Platform Launch & Welcome"
+    },
+    {
+      "action": "FB_POST_RECORDED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.582922+08:00",
+      "details": "Published Facebook post #2: Day 1: Texas Congressional Delegation Breakdown"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.583097+08:00",
+      "details": "Followed Facebook page: The Hill (https://www.facebook.com/TheHill)"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.583254+08:00",
+      "details": "Followed Facebook page: ProPublica (https://www.facebook.com/propublica)"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.583418+08:00",
+      "details": "Followed Facebook page: POLITICO (https://www.facebook.com/politico)"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.583577+08:00",
+      "details": "Followed Facebook page: PBS NewsHour (https://www.facebook.com/newshour)"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.583735+08:00",
+      "details": "Followed Facebook page: Breaking Points (https://www.facebook.com/profile.php?id=61575893472315)"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.583936+08:00",
+      "details": "Followed Facebook page: OpenSecrets (https://www.facebook.com/OpenSecrets)"
+    },
+    {
+      "action": "FB_PAGE_FOLLOWED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:41:35.584153+08:00",
+      "details": "Followed Facebook page: The Lever (https://www.facebook.com/TheLeverNews)"
     }
   ],
   "network_follows": [
@@ -140,7 +194,62 @@
     "page_name": "DONOR CLASS",
     "page_id": "61596685984563",
     "page_url": "https://www.facebook.com/profile.php?id=61596685984563",
-    "followed_pages": [],
-    "published_posts": []
+    "followed_pages": [
+      {
+        "name": "The Hill",
+        "url": "https://www.facebook.com/TheHill",
+        "timestamp_pht": "2026-11-21T10:41:35.583094+08:00"
+      },
+      {
+        "name": "ProPublica",
+        "url": "https://www.facebook.com/propublica",
+        "timestamp_pht": "2026-11-21T10:41:35.583251+08:00"
+      },
+      {
+        "name": "POLITICO",
+        "url": "https://www.facebook.com/politico",
+        "timestamp_pht": "2026-11-21T10:41:35.583416+08:00"
+      },
+      {
+        "name": "PBS NewsHour",
+        "url": "https://www.facebook.com/newshour",
+        "timestamp_pht": "2026-11-21T10:41:35.583575+08:00"
+      },
+      {
+        "name": "Breaking Points",
+        "url": "https://www.facebook.com/profile.php?id=61575893472315",
+        "timestamp_pht": "2026-11-21T10:41:35.583733+08:00"
+      },
+      {
+        "name": "OpenSecrets",
+        "url": "https://www.facebook.com/OpenSecrets",
+        "timestamp_pht": "2026-11-21T10:41:35.583934+08:00"
+      },
+      {
+        "name": "The Lever",
+        "url": "https://www.facebook.com/TheLeverNews",
+        "timestamp_pht": "2026-11-21T10:41:35.584150+08:00"
+      }
+    ],
+    "published_posts": [
+      {
+        "title": "Official Platform Launch & Welcome",
+        "type": "PINNED_WELCOME",
+        "copy": "DONOR CLASS is a nonpartisan campaign finance intelligence platform mapping over $277,000,000 across all 539 sitting members of the U.S. Congress. Sourced directly from official public Federal Election Commission (FEC) disclosures with zero paywalls, zero voter tracking cookies, and 100% client-side data transparency. Explore the interactive 50-state map and find your lawmakers: https://donorclass.info",
+        "url": "https://donorclass.info",
+        "media_path": "og-image.jpg",
+        "id": 1,
+        "timestamp_pht": "2026-11-21T10:41:35.582616+08:00"
+      },
+      {
+        "title": "Day 1: Texas Congressional Delegation Breakdown",
+        "type": "STATE_CAMPAIGN_DROP",
+        "copy": "50 STATES IN 50 DAYS | DAY 1: TEXAS CONGRESSIONAL DELEGATION. Our research desk mapped $14,152,840 across all 39 Texas lawmakers in the 118th/119th Congress based on official FEC filings. Fossil fuel and energy PACs lead with $4.49M, funding 95% of the delegation, while defense contractors backed 37 of 39 lawmakers ($3.12M). PAC capital follows committee power and seniority across party lines. Explore the full Texas breakdown: https://donorclass.info/?state=TX",
+        "url": "https://donorclass.info/?state=TX",
+        "media_path": "texas-infographic.png",
+        "id": 2,
+        "timestamp_pht": "2026-11-21T10:41:35.582917+08:00"
+      }
+    ]
   }
 }
