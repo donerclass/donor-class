@@ -4,7 +4,8 @@
 **Production Site:** [https://donorclass.info](https://donorclass.info)  
 **Hosting Architecture:** Cloudflare Pages (100% Static Client-Side Edge Distribution)  
 **Security Policy:** Strict Team Anonymity (`Donor Class Team <contact@donorclass.info>`)  
-**Visual Constraint:** Strict Zero-Emoji Policy across all source code, assets, and metadata.
+**Visual Constraint:** Strict Zero-Emoji Policy across all source code, assets, and metadata.  
+**Engagement Constraint:** Strict 2–5 sentences maximum per community reply across Reddit, X, and social channels.
 
 ---
 
