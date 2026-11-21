@@ -562,7 +562,8 @@
         const name = (c.displayName || c.name || "").toLowerCase();
         const st = (c.state || "").toLowerCase();
         const dist = `${c.state}-${c.district || ''}`.toLowerCase();
-        return name.includes(searchFilter) || st.includes(searchFilter) || dist.includes(searchFilter);
+        const fec = (c.fecCandidateId || "").toLowerCase();
+        return name.includes(searchFilter) || st.includes(searchFilter) || dist.includes(searchFilter) || fec.includes(searchFilter);
       });
     }
 
@@ -872,12 +873,13 @@
       // Status
       if (state.filterStatus === "Incumbent" && c.status !== "Incumbent") return false;
 
-      // Text search (name, state, district)
+      // Text search (name, state, district, FEC candidate ID)
       if (q) {
         const matchName = (c.name || "").toLowerCase().includes(q) || (c.displayName || "").toLowerCase().includes(q);
         const matchState = (c.state || "").toLowerCase() === q || (STATE_NAMES[c.state] || "").toLowerCase().includes(q);
         const matchDistrict = `${c.state}-${c.district}`.toLowerCase().includes(q);
-        if (!matchName && !matchState && !matchDistrict) return false;
+        const matchFec = (c.fecCandidateId || "").toLowerCase().includes(q);
+        if (!matchName && !matchState && !matchDistrict && !matchFec) return false;
       }
 
       return true;
@@ -1090,7 +1092,13 @@
     if (state.isEmbedded) {
       if (!modal.hasAttribute("open")) modal.setAttribute("open", "");
     } else {
-      if (!modal.open) modal.showModal();
+      if (!modal.open) {
+        try {
+          modal.showModal();
+        } catch (e) {
+          modal.setAttribute("open", "");
+        }
+      }
     }
   };
 
@@ -1676,6 +1684,50 @@
     });
   };
 
+  // Candidate Resolver Helper (Supports FEC ID, slug, full name, or surname)
+  const findCandidateByQuery = (query) => {
+    if (!query || typeof query !== "string") return null;
+    const raw = query.toLowerCase().trim();
+    if (!raw) return null;
+
+    const normalized = raw.replace(/[-_+]/g, " ").replace(/\s+/g, " ").trim();
+    const slugified = normalized.replace(/\s+/g, "-");
+
+    // 1. Exact match on FEC ID, slug, ID, or full name
+    for (let i = 0; i < ALL_CANDIDATES.length; i++) {
+      const c = ALL_CANDIDATES[i];
+      const fec = (c.fecCandidateId || "").toLowerCase();
+      const slug = (c.slug || "").toLowerCase();
+      const id = (c.id || "").toLowerCase();
+      const name = (c.displayName || c.name || "").toLowerCase();
+      if (fec === raw || slug === slugified || slug === raw || id === raw || name === normalized) {
+        return c;
+      }
+    }
+
+    // 2. Exact word match on surname / slug segment
+    for (let i = 0; i < ALL_CANDIDATES.length; i++) {
+      const c = ALL_CANDIDATES[i];
+      const slugParts = (c.slug || "").toLowerCase().split("-");
+      const nameParts = (c.displayName || c.name || "").toLowerCase().split(/\s+/);
+      if (slugParts.includes(raw) || nameParts.includes(normalized)) {
+        return c;
+      }
+    }
+
+    // 3. Substring match on name or slug
+    for (let i = 0; i < ALL_CANDIDATES.length; i++) {
+      const c = ALL_CANDIDATES[i];
+      const slug = (c.slug || "").toLowerCase();
+      const name = (c.displayName || c.name || "").toLowerCase();
+      if (name.includes(normalized) || slug.includes(slugified) || slug.includes(raw)) {
+        return c;
+      }
+    }
+
+    return null;
+  };
+
   // Initialization
   let savedTheme = "dark";
   try {
@@ -1684,6 +1736,7 @@
   applyTheme(savedTheme);
 
   // Parse URL Parameters (Deep Linking for Social Media & Campaign Distribution)
+  let initialCandidateToOpen = null;
   try {
     const urlParams = new URLSearchParams(window.location.search);
     const hash = window.location.hash;
@@ -1715,21 +1768,13 @@
       if (pSel) pSel.value = state.filterParty;
     }
 
-    // Direct Lawmaker Dossier Deep-Linking (?candidate=FEC_ID or slug)
-    const candParam = urlParams.get("candidate");
+    // Direct Lawmaker Dossier Deep-Linking (?candidate=... or ?member=... or ?rep=...)
+    const candParam = urlParams.get("candidate") || urlParams.get("member") || urlParams.get("rep");
     if (candParam) {
-      const target = candParam.toLowerCase().trim();
-      const matched = ALL_CANDIDATES.find(c =>
-        (c.fecCandidateId && c.fecCandidateId.toLowerCase() === target) ||
-        (c.slug && c.slug.toLowerCase() === target) ||
-        (c.id && c.id.toLowerCase() === target) ||
-        (c.displayName && c.displayName.toLowerCase() === target)
-      );
+      const matched = findCandidateByQuery(candParam);
       if (matched) {
         state.selectedState = matched.state;
-        setTimeout(() => {
-          openCandidateModal(matched);
-        }, 100);
+        initialCandidateToOpen = matched;
       }
     }
   } catch (e) {}
@@ -1739,4 +1784,30 @@
   setupEventListeners();
   updateUI();
   AdController.init();
+
+  if (initialCandidateToOpen) {
+    openCandidateModal(initialCandidateToOpen);
+    setTimeout(() => {
+      openCandidateModal(initialCandidateToOpen);
+    }, 60);
+  }
+
+  // Handle browser back/forward or hash change while staying on page
+  window.addEventListener("popstate", () => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const cand = params.get("candidate") || params.get("member") || params.get("rep");
+      if (cand) {
+        const found = findCandidateByQuery(cand);
+        if (found) {
+          state.selectedState = found.state;
+          updateUI();
+          openCandidateModal(found);
+        }
+      } else {
+        const modal = document.getElementById("candidate-modal");
+        if (modal && modal.open && !state.isEmbedded) modal.close();
+      }
+    } catch (e) {}
+  });
 })();
