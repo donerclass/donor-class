@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.3.0",
   "campaign_name": "50 States in 50 Days",
   "current_day": 1,
   "active_state": "CA",
@@ -257,5 +257,18 @@
         "timestamp_pht": "2026-11-21T10:41:35.582917+08:00"
       }
     ]
-  }
+  },
+  "engineering_releases": [
+    {
+      "version": "2.3.0",
+      "timestamp_pht": "2026-11-21T16:50:00+08:00",
+      "commit": "6c90685",
+      "features": [
+        "Proposal 1: 30-second throttled Google AdSense dynamic refresh controller on state navigation (SPA TOS compliant, zero CLS)",
+        "Proposal 2: Embeddable Lawmaker Card & Share Toolbar in candidate modal",
+        "Deep linking: Direct navigation to any lawmaker via ?candidate=FEC_ID or slug",
+        "Embedded widget view: ?embed=true / #embed renders clean iframe embed without header/footer"
+      ]
+    }
+  ]
 }
