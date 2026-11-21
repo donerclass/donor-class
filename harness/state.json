@@ -116,7 +116,7 @@
       "timestamp_pht": "2026-11-20T14:07:30+08:00"
     }
   ],
-  "last_audit_timestamp_pht": "2026-11-21T10:41:35.584154+08:00",
+  "last_audit_timestamp_pht": "2026-11-21T10:53:29.237260+08:00",
   "audit_trail": [
     {
       "action": "HARNESS_INITIALIZED",
@@ -183,6 +183,12 @@
       "actor": "Donor Class Team <contact@donorclass.info>",
       "timestamp_pht": "2026-11-21T10:41:35.584153+08:00",
       "details": "Followed Facebook page: The Lever (https://www.facebook.com/TheLeverNews)"
+    },
+    {
+      "action": "STRATEGY_UPDATED",
+      "actor": "Donor Class Team <contact@donorclass.info>",
+      "timestamp_pht": "2026-11-21T10:53:29.236867+08:00",
+      "details": "Paid ads (Reddit & X) deferred until completion of 50 States campaign. Daily quota enforced at 3-4 engagements per platform (X, Reddit, FB). Radar expansion active for new influencers/media."
     }
   ],
   "network_follows": [

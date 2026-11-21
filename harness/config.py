@@ -61,10 +61,15 @@ SCHEDULE_NIGHTLY_AUDIT = "04:30"     # 4:30 AM PHT (pre-brief synthesis)
 ALLOW_EMOJIS = False                 # Strict zero-emoji policy across all outputs
 MAX_COMMENT_SENTENCES = 5            # Hard limit: 2 to 5 sentences max for all community replies
 MIN_COMMENT_SENTENCES = 2            # Keep replies concise, punchy, and analytical
+MIN_DAILY_ENGAGEMENTS_PER_PLATFORM = 3 # Hard target: 3 to 4 quality engagements per platform daily (X, Reddit, FB)
+MAX_DAILY_ENGAGEMENTS_PER_PLATFORM = 4 # Cap to ensure analytical depth and avoid spam heuristic triggers
 MAX_DAILY_NEWS_SNIPES = 5            # Rate-limit safety against social spam heuristics
 MIN_JITTER_SECONDS = 15              # Anti-bot post delay minimum
 MAX_JITTER_SECONDS = 45              # Anti-bot post delay maximum
 STRICT_ANONYMITY_SIGNATURE = "Donor Class Team <contact@donorclass.info>"
+
+# Paid Acquisition Policy
+PAID_ADS_STATUS = "DEFERRED_UNTIL_50_STATES_COMPLETE" # Conserve runway: revisit Reddit & X ads after Day 50
 
 # 50 States in 50 Days Ordered Schedule
 STATE_SCHEDULE = [
