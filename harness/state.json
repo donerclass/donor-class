@@ -1,10 +1,57 @@
 {
   "version": "2.3.0",
   "campaign_name": "50 States in 50 Days",
-  "current_day": 1,
+  "current_day": 2,
   "active_state": "CA",
-  "active_state_drop_time_pht": "2026-11-20T22:30:00+08:00",
+  "active_state_drop_time_pht": "2026-11-22T11:48:00+08:00",
   "staged_state": "FL",
+  "swarm_orchestration": {
+    "status": "ACTIVE",
+    "title": "DONOR CLASS Distribution & Intel Swarm",
+    "cycle": 1,
+    "last_cycle_completed_pht": "2026-11-22T11:58:00+08:00",
+    "workers": {
+      "x-operator": {
+        "status": "STAGED_READY",
+        "deliverables": [
+          "5-Tweet California Campaign Thread (social/x/day2-california-campaign.md)",
+          "4 News Snipes deployed (@BreakingPointsx, @LeverNews, @DropSiteNews, @ggreenwald)"
+        ]
+      },
+      "reddit-operator": {
+        "status": "STAGED_READY",
+        "deliverables": [
+          "15 Subreddits Audited (REDDIT_COMMUNITY_EXPANSION_AUDIT.md)",
+          "Rollout packages for r/dataisbeautiful, r/California, r/Infographics, r/bayarea",
+          "7-Vector Engagement Vault (2-5 sentences max, zero emoji)"
+        ]
+      },
+      "fb-operator": {
+        "status": "STAGED_READY",
+        "deliverables": [
+          "Facebook Post #3 Master Drop (DAY_2_CALIFORNIA_FACEBOOK_POST.md)",
+          "8-Outlet Radar Dossier (FACEBOOK_PAGE_RADAR_DOSSIER.md)",
+          "4 Comment Snipes staged (FACEBOOK_ENGAGEMENT_VAULT.md)"
+        ]
+      },
+      "intel-scout": {
+        "status": "COMPLETED",
+        "deliverables": [
+          "21 Independent Media Targets Cataloged (MEDIA_INTELLIGENCE_DOSSIER.md)",
+          "PAC Beat Mapping & Synchronized Strike Guides"
+        ]
+      },
+      "infra-lead": {
+        "status": "VERIFIED_PRODUCTION",
+        "deliverables": [
+          "Deep Linking ?state=CA verified (54 members, $25.57M)",
+          "Candidate lookups verified (Gomez, Calvert, Aguilar, Lofgren)",
+          "AdSense Dynamic Refresh 30s throttled cooldown verified (CLS = 0)",
+          "Iframe embed mode (?embed=true) verified"
+        ]
+      }
+    }
+  },
   "states_completed": [
     "TX"
   ],
@@ -70,6 +117,9 @@
       "x_cta_tweet_id": "2123602281165943244",
       "reddit_post_id": "1y0tpap",
       "reddit_post_url": "https://www.reddit.com/r/dataisbeautiful/comments/1y0tpap/oc_who_funds_the_texas_congressional_delegation/",
+      "reddit_views": 12000,
+      "reddit_upvote_ratio": 0.67,
+      "reddit_comments_count": 14,
       "reddit_oc_comment_url": "https://www.reddit.com/r/dataisbeautiful/comments/1y0tpap/comment/19swj59sh51q8/",
       "infographic_path": "assets/infographics/texas-infographic.png",
       "published_at_pht": "2026-11-20T11:55:00+08:00"
@@ -255,6 +305,15 @@
         "media_path": "texas-infographic.png",
         "id": 2,
         "timestamp_pht": "2026-11-21T10:41:35.582917+08:00"
+      },
+      {
+        "title": "Day 2: California Congressional Delegation Breakdown",
+        "type": "STATE_CAMPAIGN_DROP",
+        "copy": "50 STATES IN 50 DAYS | DAY 2: CALIFORNIA CONGRESSIONAL DELEGATION. Our research desk tracked $25,571,776 across all 54 California lawmakers in the 118th/119th Congress based on official public FEC disclosures. Foreign policy advocacy PACs contributed $16,847,276, reaching 52 of 54 members (96% delegation penetration). Silicon Valley tech PACs allocated $1.87M across 49 lawmakers (91%), while labor unions contributed $1.67M. Top recipients span both parties: Rep. Jimmy Gomez ($2.59M), Rep. Pete Aguilar ($1.70M), and Rep. Ken Calvert ($1.33M). Explore the interactive California delegation map: https://donorclass.info/?state=CA",
+        "url": "https://donorclass.info/?state=CA",
+        "media_path": "california-infographic.png",
+        "id": 3,
+        "timestamp_pht": "2026-11-22T12:11:10+08:00"
       }
     ]
   },
