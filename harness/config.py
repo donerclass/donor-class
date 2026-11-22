@@ -19,6 +19,7 @@ DOCS_DIR = PROJECT_ROOT / "docs"
 # Production Domain & URLs
 BASE_URL = "https://donorclass.info"
 CLOUDFLARE_PAGES_URL = "https://donor-class-civic.pages.dev"
+GITHUB_REPO_URL = "https://github.com/donerclass/donor-class"
 ADSENSE_PUB_ID = "ca-pub-6657813406289371"
 
 # Social Channel Identities
