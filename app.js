@@ -174,9 +174,15 @@
   };
 
   // Helper: Format Currency
-  // Helper: Format Currency (Suppressed during official OpenFEC bulk rebuild)
-  const formatMoney = (n) => "Rebuilding...";
-  const formatMoneyFull = (n) => "Rebuilding from FEC records";
+  // Helper: Format Currency (Real primary-source FEC transaction figures)
+  const formatMoney = (n) => {
+    if (n === null || n === undefined || isNaN(n)) return "$0";
+    if (Math.abs(n) >= 1000000) return `$${(n / 1000000).toFixed(1)}M`;
+    if (Math.abs(n) >= 1000) return `$${Math.round(n / 1000)}K`;
+    return `$${Math.round(n).toLocaleString()}`;
+  };
+
+  const formatMoneyFull = (n) => `$${Math.round(n || 0).toLocaleString()}`;
   // Helper: Get candidate contribution in active sector
   const getCandidateSectorAmount = (c, sectorKey) => {
     if (!c) return 0;
@@ -1065,7 +1071,11 @@
         tr.innerHTML = `
           <td>
             <div style="font-weight: 600;">${pac.name}</div>
-            ${pac.type ? `<div style="font-size: 0.72rem; color: var(--text-muted);">${pac.type}${pac.note ? ` — <em>${pac.note}</em>` : ""}</div>` : ""}
+            <div style="font-size: 0.72rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+              <span>${pac.type || ""}</span>
+              ${pac.note ? `<span>• ${pac.note}</span>` : ""}
+              ${pac.proof_link ? `<a href="${pac.proof_link}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-active); text-decoration: underline;">FEC Filing Proof →</a>` : ""}
+            </div>
           </td>
           <td style="vertical-align: top; font-family: var(--font-mono); font-weight: 600;">${formatMoneyFull(pac.amount)}</td>
         `;
