@@ -174,15 +174,9 @@
   };
 
   // Helper: Format Currency
-  const formatMoney = (n) => {
-    if (n === null || n === undefined || isNaN(n)) return "$0";
-    if (n >= 1000000) return `$${(n / 1000000).toFixed(1)}M`;
-    if (n >= 1000) return `$${Math.round(n / 1000)}K`;
-    return `$${n.toLocaleString()}`;
-  };
-
-  const formatMoneyFull = (n) => `$${Math.round(n || 0).toLocaleString()}`;
-
+  // Helper: Format Currency (Suppressed during official OpenFEC bulk rebuild)
+  const formatMoney = (n) => "Rebuilding...";
+  const formatMoneyFull = (n) => "Rebuilding from FEC records";
   // Helper: Get candidate contribution in active sector
   const getCandidateSectorAmount = (c, sectorKey) => {
     if (!c) return 0;

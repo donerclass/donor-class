@@ -123,6 +123,12 @@
 </head>
 <body>
 
+  <!-- Maintenance Notice Banner: OpenFEC Rebuild in Progress -->
+  <aside class=maintenance-notice-bar role=alert style="background: #1e1b4b; border-bottom: 2px solid #6366f1; padding: 14px 20px; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; font-size: 0.92rem; line-height: 1.5; z-index: 9999; position: relative;">
+    <strong style="color: #a5b4fc; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 6px;">Data rebuild in progress.</strong>
+    Earlier figures on this site were modeled estimates, not line-item FEC records. We have taken them down and are rebuilding every number directly from official FEC filings. Verified data will return with links to the source filings.
+  </aside>
+
   <!-- Top Navigation Header -->
   <header class="app-header">
     <div class="header-inner">
@@ -553,7 +559,7 @@
       </div>
 
       <div style="background-color: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
-        <strong>Official FEC Paper-Trail Note:</strong> Reflects verified Schedule A (earmarked/conduit), Schedule B (direct committee-to-candidate), and independent expenditure filings registered with the Federal Election Commission for the 2024–2026 reporting cycles.
+        <strong>Official FEC Paper-Trail Note:</strong> Rebuilding directly from official Federal Election Commission bulk transaction files (pas2, cm, cn, ccl). Line-item figures and filing links will populate upon pipeline completion.
       </div>
 
       <!-- Modal Embed & Share Action Toolbar -->
@@ -577,7 +583,7 @@
             <input type="text" class="embed-code-input" id="embed-code-input" readonly value="" aria-label="Embed HTML code">
             <button type="button" class="btn btn-secondary btn-copy-embed" id="btn-copy-embed-code">Copy HTML</button>
           </div>
-          <div class="embed-preview-note">Embeds verified 7-sector PAC breakdown and FEC citations. Zero trackers, responsive height.</div>
+          <div class="embed-preview-note">Interactive Congressional Dossier. Rebuilding from official FEC filings. Zero trackers, responsive height.</div>
         </div>
       </div>
     </div>
