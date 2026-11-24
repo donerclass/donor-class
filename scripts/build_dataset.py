@@ -168,7 +168,7 @@ def load_sitting_members():
                 "jfc_headline_label": "Campaign & Joint Fundraising Committees",
                 "jfc_direct_fec": 187000.0,
                 "jfc_name": "Scalise Leadership Fund",
-                "jfc_note": "Includes $187,000 in direct campaign committee receipts (Form 3 Line 11c) and $1,707,680 in itemized PAC contributions designated through the Scalise Leadership Fund joint fundraising committee."
+                "jfc_note": "PAC filings report $1,894,680 in contributions to Scalise for Congress. The campaign's own FEC summary lists $187,000 received directly from PACs and $11,995,969 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising."
             }
         elif name == "David McCormick":
             jfc_info = {
@@ -177,7 +177,7 @@ def load_sitting_members():
                 "jfc_headline_label": "Campaign & Joint Fundraising Committees",
                 "jfc_direct_fec": 1066344.0,
                 "jfc_name": "McCormick Victory Committee",
-                "jfc_note": "Includes $1,066,344 in direct campaign committee receipts (Form 3 Line 11c) and $1,435,636 in itemized PAC contributions designated through the McCormick Victory Committee joint fundraising committee."
+                "jfc_note": "PAC filings report $2,501,980 in contributions to Friends of Dave McCormick. The campaign's own FEC summary lists $1,066,344 received directly from PACs and $5,671,622 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising."
             }
         elif name == "Elise M. Stefanik":
             jfc_info = {
@@ -186,7 +186,7 @@ def load_sitting_members():
                 "jfc_headline_label": "Campaign & Joint Fundraising Committees",
                 "jfc_direct_fec": 1076226.0,
                 "jfc_name": "Team Elise",
-                "jfc_note": "Includes $1,076,226 in direct campaign committee receipts (Form 3 Line 11c) and $238,231 in itemized PAC contributions designated through Team Elise and affiliated joint fundraising committees."
+                "jfc_note": "PAC filings report $1,314,457 in contributions to Elise for Congress. The campaign's own FEC summary lists $1,076,226 received directly from PACs and $8,841,894 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising."
             }
         elif name == "Chip Roy":
             jfc_info = {
@@ -195,7 +195,7 @@ def load_sitting_members():
                 "jfc_headline_label": "Campaign & Joint Fundraising Committees",
                 "jfc_direct_fec": 179250.0,
                 "jfc_name": "Chip Roy Victory Committee",
-                "jfc_note": "Includes $179,250 in direct campaign committee receipts (Form 3 Line 11c) and $119,756 in itemized PAC contributions designated through joint fundraising."
+                "jfc_note": "PAC filings report $299,006 in contributions to Chip Roy for Congress. The campaign's own FEC summary lists $179,250 received directly from PACs and $182,139 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising."
             }
 
         members[bg] = {

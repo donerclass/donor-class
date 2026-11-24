@@ -1,6 +1,6 @@
 # 2024 Cycle Member Reconciliation Audit
 
-**Audit summary:** 432 of 517 members match the FEC's own summary within 10%; every larger difference is documented with its reason below.
+**Audit summary:** 433 of 517 members match the FEC's own summary within 10%; every larger difference is documented with its reason below.
 
 All figures trace directly to official Federal Election Commission bulk data (pas2, cm, cn, ccl, weball24).
 
@@ -14,10 +14,10 @@ All figures trace directly to official Federal Election Commission bulk data (pa
 
 | Member | State | FEC ID | Rebuilt Direct | FEC Weball | Variance | Statutory / Accounting Audit Notes |
 |---|---|---|---|---|---|---|
-| **Steve Scalise** | LA | `H0LA01087` | $1,894,680 | $187,000 | +913.2% | House Majority Leader raises via Scalise Leadership Fund (JFC C00636282). Over 360 corporate PACs cut checks itemized to candidate H0LA01087 in pas2 ($1.89M). Candidate Form 3 books proceeds as Line 12 transfers ($11.99M) rather than Line 11(c) direct receipts. |
-| **David McCormick** | PA | `S2PA00661` | $2,501,980 | $1,066,344 | +134.6% | Senate candidate raised extensive funds via McCormick Victory Committee (JFC). Direct PAC disbursements itemized in pas2 ($2.50M) vs candidate committee Form 3 direct booking ($1.07M), with remainder transferred via Line 12. |
-| **Chip Roy** | TX | `H8TX21307` | $299,006 | $179,250 | +66.8% | Itemized PAC disbursements in pas2 ($299K) reflect primary and general checks from independent committees. Candidate Form 3 Line 11(c) reported $179K. |
-| **Elise M. Stefanik** | NY | `H4NY21079` | $1,314,457 | $1,076,226 | +22.1% | House GOP Conference Chair raises via Team Elise and affiliated joint committees. pas2 captures itemized direct PAC checks ($1.31M) whereas candidate committee booked $1.08M direct and remainder via Line 12 transfers. |
+| **Steve Scalise** | LA | `H0LA01087` | $1,894,680 | $187,000 | +913.2% | PAC filings report $1,894,680 in contributions to Scalise for Congress. The campaign's own FEC summary lists $187,000 received directly from PACs and $11,995,969 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising. |
+| **David McCormick** | PA | `S2PA00661` | $2,501,980 | $1,066,344 | +134.6% | PAC filings report $2,501,980 in contributions to Friends of Dave McCormick. The campaign's own FEC summary lists $1,066,344 received directly from PACs and $5,671,622 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising. |
+| **Chip Roy** | TX | `H8TX21307` | $299,006 | $179,250 | +66.8% | PAC filings report $299,006 in contributions to Chip Roy for Congress. The campaign's own FEC summary lists $179,250 received directly from PACs and $182,139 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising. |
+| **Elise M. Stefanik** | NY | `H4NY21079` | $1,314,457 | $1,076,226 | +22.1% | PAC filings report $1,314,457 in contributions to Elise for Congress. The campaign's own FEC summary lists $1,076,226 received directly from PACs and $8,841,894 in transfers from authorized and joint fundraising committees. The difference likely reflects PAC money routed through joint fundraising. |
 
 ## 3. Off-Cycle U.S. Senators (Class 2 & Class 3) (26 Members)
 
