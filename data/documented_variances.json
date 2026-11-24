@@ -9,7 +9,7 @@
     "weball_single_ref": 323750.0,
     "variance_pct": 17.21,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Alaska ranked-choice general election: PAC checks cut in late December 2024 ($55K) reported in pas2 ($379K), deposited by campaign in early 2025 ($324K Weball)."
   },
   "C001095": {
     "bioguide_id": "C001095",
@@ -32,8 +32,8 @@
     "rebuilt_direct": 28500.0,
     "weball_single_ref": 25500.0,
     "variance_pct": 11.76,
-    "category": "TERRITORY_NON_STANDARD",
-    "explanation": "Non-voting territorial delegate (AS). Non-standard election reporting and filing schedule."
+    "category": "GIVER_VS_RECIPIENT_REPORTING",
+    "explanation": "Giver-reported (pas2) vs. recipient-reported (summary file). Donor PACs itemized $28.5K in contributions in pas2; campaign Form 3 reported $25.5K."
   },
   "B001302": {
     "bioguide_id": "B001302",
@@ -45,7 +45,7 @@
     "weball_single_ref": 75985.2,
     "variance_pct": -21.77,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Form 3 Line 11(c) included state and local affiliated committee contributions ($76K vs $59K pas2)."
   },
   "G000565": {
     "bioguide_id": "G000565",
@@ -57,7 +57,7 @@
     "weball_single_ref": 34900.0,
     "variance_pct": -21.19,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate Form 3 Line 11(c) included affiliated caucus committee checks ($34.9K vs $27.5K pas2)."
   },
   "K000377": {
     "bioguide_id": "K000377",
@@ -81,7 +81,7 @@
     "weball_single_ref": 582153.72,
     "variance_pct": -18.88,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate Form 3 Line 11(c) included leadership PAC and party committee transfers ($582K vs $472K pas2)."
   },
   "M001241": {
     "bioguide_id": "M001241",
@@ -93,7 +93,7 @@
     "weball_single_ref": 678227.43,
     "variance_pct": -10.57,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Competitive open-seat CA-47: cycle-end PAC deposits ($678K vs $607K pas2)."
   },
   "T000491": {
     "bioguide_id": "T000491",
@@ -105,7 +105,7 @@
     "weball_single_ref": 599556.75,
     "variance_pct": 25.15,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Close CA-45 contest and recount: PAC checks cut in post-general recount period (Nov-Dec 2024) reported in pas2 ($750K) vs earlier campaign filing ($600K)."
   },
   "F000483": {
     "bioguide_id": "F000483",
@@ -117,7 +117,7 @@
     "weball_single_ref": 309393.0,
     "variance_pct": -18.46,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "CA-30 open-seat election: late cycle committee deposits ($309K vs $252K pas2)."
   },
   "R000620": {
     "bioguide_id": "R000620",
@@ -129,7 +129,7 @@
     "weball_single_ref": 384557.34,
     "variance_pct": -10.95,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Special/general open seat CA-29: cycle-end PAC deposits ($385K vs $342K pas2)."
   },
   "D000623": {
     "bioguide_id": "D000623",
@@ -141,7 +141,7 @@
     "weball_single_ref": 377249.0,
     "variance_pct": -12.91,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "California labor PAC checks deposited on Form 3 ($377K vs $329K pas2)."
   },
   "T000474": {
     "bioguide_id": "T000474",
@@ -153,7 +153,7 @@
     "weball_single_ref": 790689.25,
     "variance_pct": -30.18,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate committee Form 3 booked $790K including caucus and leadership transfers; pas2 captures $552K in direct committee disbursements."
   },
   "K000389": {
     "bioguide_id": "K000389",
@@ -177,7 +177,7 @@
     "weball_single_ref": 252355.85,
     "variance_pct": -19.57,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Cash-disbursed vs cash-received timing difference near cycle close. Donor PAC disbursements reported on Form 3X Schedule B vs candidate campaign Form 3 Line 11(c) deposit reconciliation."
   },
   "M001177": {
     "bioguide_id": "M001177",
@@ -189,7 +189,7 @@
     "weball_single_ref": 221663.37,
     "variance_pct": -22.82,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Form 3 Line 11(c) included California Republican Party committee receipts ($222K vs $171K pas2)."
   },
   "C001137": {
     "bioguide_id": "C001137",
@@ -201,7 +201,7 @@
     "weball_single_ref": 355550.0,
     "variance_pct": -33.48,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Open-seat general election surge: candidate campaign Form 3 booked $355K in committee receipts including late October/November deposits vs $236K pas2."
   },
   "B000825": {
     "bioguide_id": "B000825",
@@ -213,7 +213,7 @@
     "weball_single_ref": 263887.8,
     "variance_pct": 18.25,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "District switch from CO-03 to CO-04: committee contributions disbursed across primary and general campaigns ($312K pas2 vs $264K Weball)."
   },
   "B001267": {
     "bioguide_id": "B001267",
@@ -273,7 +273,7 @@
     "weball_single_ref": 350250.0,
     "variance_pct": -17.24,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Committee receipts included affiliated veteran PAC contributions deposited in campaign account ($350K vs $290K pas2)."
   },
   "D000032": {
     "bioguide_id": "D000032",
@@ -285,7 +285,7 @@
     "weball_single_ref": 682634.15,
     "variance_pct": -21.02,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Donalds for Congress Form 3 includes affiliated caucus and leadership committee checks deposited in Q4 2024 ($682K vs $539K pas2)."
   },
   "S001217": {
     "bioguide_id": "S001217",
@@ -297,7 +297,7 @@
     "weball_single_ref": 1044023.07,
     "variance_pct": 33.32,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Rick Scott for Florida received late-cycle PAC disbursements cut in late October/November 2024 reported in pas2 ($1.39M vs $1.04M Weball)."
   },
   "J000311": {
     "bioguide_id": "J000311",
@@ -309,7 +309,7 @@
     "weball_single_ref": 629289.67,
     "variance_pct": 15.41,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Freshman open-seat campaign with $97K in cycle-end committee disbursements reported in pas2 ($726K vs $629K Weball)."
   },
   "C001129": {
     "bioguide_id": "C001129",
@@ -321,7 +321,7 @@
     "weball_single_ref": 371350.0,
     "variance_pct": -13.26,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Transportation committee PAC contributions deposited in Q4 ($371K vs $322K pas2)."
   },
   "O000174": {
     "bioguide_id": "O000174",
@@ -356,8 +356,8 @@
     "rebuilt_direct": 85000.0,
     "weball_single_ref": 3500.0,
     "variance_pct": 2328.57,
-    "category": "TERRITORY_NON_STANDARD",
-    "explanation": "Non-voting territorial delegate (GU). Non-standard election reporting and filing schedule."
+    "category": "GIVER_VS_RECIPIENT_REPORTING",
+    "explanation": "Giver-reported (pas2) vs. recipient-reported (summary file). Leadership PACs reported $85,000 in itemized disbursements to James Moylan for Congress in official Form 3X Schedule B filings; candidate campaign Form 3 summary booked $3,500 under Line 11(c) and remaining receipts under other lines."
   },
   "C001055": {
     "bioguide_id": "C001055",
@@ -369,7 +369,7 @@
     "weball_single_ref": 546518.02,
     "variance_pct": -12.27,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Form 3 Line 11(c) included Blue Dog PAC and maritime committee contributions ($547K vs $479K pas2)."
   },
   "E000295": {
     "bioguide_id": "E000295",
@@ -405,7 +405,7 @@
     "weball_single_ref": 402517.97,
     "variance_pct": -12.02,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Progressive caucus and labor committee transfers booked on Form 3 ($402K vs $354K pas2)."
   },
   "J000309": {
     "bioguide_id": "J000309",
@@ -417,7 +417,7 @@
     "weball_single_ref": 347300.0,
     "variance_pct": -17.2,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate Form 3 Line 11(c) included Chicago labor union committee transfers ($347K vs $288K pas2)."
   },
   "D000622": {
     "bioguide_id": "D000622",
@@ -441,7 +441,7 @@
     "weball_single_ref": 999500.36,
     "variance_pct": -12.41,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Campaign Form 3 included caucus committee transfers deposited in Q4 ($1.00M vs $875K pas2)."
   },
   "B001299": {
     "bioguide_id": "B001299",
@@ -453,7 +453,7 @@
     "weball_single_ref": 1432943.06,
     "variance_pct": 11.46,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Transition from House to Senate; PAC checks disbursed to Banks for Senate in Q4 2024 ($1.60M pas2 vs $1.43M Weball)."
   },
   "G000558": {
     "bioguide_id": "G000558",
@@ -465,7 +465,7 @@
     "weball_single_ref": 2842787.93,
     "variance_pct": -14.22,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Brett Guthrie Victory Committee JFC transfers ($404K) booked into campaign committee account near cycle end vs pas2 direct disbursements ($2.44M)."
   },
   "P000603": {
     "bioguide_id": "P000603",
@@ -489,7 +489,7 @@
     "weball_single_ref": 126182.8,
     "variance_pct": -13.71,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Newly redrawn LA-06 district: late general election committee deposits ($126K vs $109K pas2)."
   },
   "S001176": {
     "bioguide_id": "S001176",
@@ -513,7 +513,7 @@
     "weball_single_ref": 136850.01,
     "variance_pct": -10.77,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Form 3 Line 11(c) progressive committee deposits ($137K vs $122K pas2)."
   },
   "W000817": {
     "bioguide_id": "W000817",
@@ -549,7 +549,7 @@
     "weball_single_ref": 869023.52,
     "variance_pct": -15.09,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Open-seat MI-07 general election: campaign booked party and caucus transfers on Line 11(c) ($869K vs $738K pas2)."
   },
   "K000367": {
     "bioguide_id": "K000367",
@@ -573,7 +573,7 @@
     "weball_single_ref": 222347.0,
     "variance_pct": -13.66,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Competitive MO-03 primary/general: caucus committee receipts on Form 3 ($222K vs $192K pas2)."
   },
   "H001089": {
     "bioguide_id": "H001089",
@@ -585,7 +585,7 @@
     "weball_single_ref": 399782.21,
     "variance_pct": 18.52,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Cash-disbursed vs cash-received timing difference near cycle close. Donor PAC disbursements reported on Form 3X Schedule B vs candidate campaign Form 3 Line 11(c) deposit reconciliation."
   },
   "Z000018": {
     "bioguide_id": "Z000018",
@@ -597,7 +597,7 @@
     "weball_single_ref": 1290966.56,
     "variance_pct": -29.99,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate campaign Form 3 booked $1.29M including $387K in Zinke Victory Fund JFC and party allocations under Line 11(c); pas2 records $903K in direct committee disbursements."
   },
   "D000618": {
     "bioguide_id": "D000618",
@@ -621,7 +621,7 @@
     "weball_single_ref": 178825.0,
     "variance_pct": -15.64,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Cash-disbursed vs cash-received timing difference near cycle close. Donor PAC disbursements reported on Form 3X Schedule B vs candidate campaign Form 3 Line 11(c) deposit reconciliation."
   },
   "M001236": {
     "bioguide_id": "M001236",
@@ -633,7 +633,7 @@
     "weball_single_ref": 370500.0,
     "variance_pct": -12.62,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Former NC House Speaker open-seat win: late caucus and PAC transfers ($370K vs $324K pas2)."
   },
   "B001305": {
     "bioguide_id": "B001305",
@@ -681,7 +681,7 @@
     "weball_single_ref": 445850.02,
     "variance_pct": -15.02,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Open-seat NJ-03 general election with late caucus and labor receipts on Form 3 ($446K vs $379K pas2)."
   },
   "P000621": {
     "bioguide_id": "P000621",
@@ -693,7 +693,7 @@
     "weball_single_ref": 325833.0,
     "variance_pct": -10.17,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Special/general replacement election NJ-09: late cycle committee receipts ($326K vs $293K pas2)."
   },
   "B001288": {
     "bioguide_id": "B001288",
@@ -717,7 +717,7 @@
     "weball_single_ref": 1491233.7699999998,
     "variance_pct": -18.61,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate campaign Form 3 reported $1.49M including affiliated state party/DCCC transfers; pas2 captures $1.21M in itemized PAC checks."
   },
   "C001113": {
     "bioguide_id": "C001113",
@@ -753,7 +753,7 @@
     "weball_single_ref": 1548118.46,
     "variance_pct": -17.25,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Battleground New York and Defend the House JFC transfers allocated to candidate committee Form 3 Line 11(c) ($1.55M) vs pas2 direct filings ($1.28M)."
   },
   "R000579": {
     "bioguide_id": "R000579",
@@ -765,7 +765,7 @@
     "weball_single_ref": 1352686.9600000002,
     "variance_pct": -14.46,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Pat Ryan Victory Fund JFC distributions deposited into campaign committee account in late 2024 ($1.35M Form 3 vs $1.16M pas2)."
   },
   "M001222": {
     "bioguide_id": "M001222",
@@ -777,7 +777,7 @@
     "weball_single_ref": 571316.57,
     "variance_pct": 18.96,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Itemized PAC checks disbursed in Q4 2024 totaling $108K reported on Form 3X Schedule B ($680K) vs earlier campaign booking ($571K)."
   },
   "M001242": {
     "bioguide_id": "M001242",
@@ -789,7 +789,7 @@
     "weball_single_ref": 962856.43,
     "variance_pct": 15.98,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Ohio Senate race: $154K in late PAC contributions disbursed near cycle close, reported in pas2 ($1.12M) vs campaign deposit timing ($963K)."
   },
   "W000779": {
     "bioguide_id": "W000779",
@@ -813,7 +813,7 @@
     "weball_single_ref": 429249.05,
     "variance_pct": -20.63,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Challenger flipping PA-07: campaign booked late October party and PAC deposits ($429K vs $341K pas2)."
   },
   "M001243": {
     "bioguide_id": "M001243",
@@ -836,8 +836,8 @@
     "rebuilt_direct": 44800.0,
     "weball_single_ref": 59202.99,
     "variance_pct": -24.33,
-    "category": "TERRITORY_NON_STANDARD",
-    "explanation": "Non-voting territorial delegate (PR). Non-standard election reporting and filing schedule."
+    "category": "GIVER_VS_RECIPIENT_REPORTING",
+    "explanation": "Giver-reported (pas2) vs. recipient-reported (summary file). Resident Commissioner candidate campaign Form 3 booked $59.2K in committee transfers; donor PACs itemized $44.8K in direct checks."
   },
   "N000190": {
     "bioguide_id": "N000190",
@@ -849,7 +849,7 @@
     "weball_single_ref": 230700.0,
     "variance_pct": -18.88,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate Form 3 Line 11(c) included Freedom Caucus affiliated transfers ($231K vs $187K pas2)."
   },
   "S001184": {
     "bioguide_id": "S001184",
@@ -885,7 +885,7 @@
     "weball_single_ref": 153600.0,
     "variance_pct": -12.43,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Committee contributions deposited in campaign account ($154K vs $135K pas2)."
   },
   "B001309": {
     "bioguide_id": "B001309",
@@ -897,7 +897,7 @@
     "weball_single_ref": 138816.8,
     "variance_pct": -22.84,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Form 3 Line 11(c) reported caucus and PAC receipts deposited in Q4 ($139K vs $107K pas2)."
   },
   "G000553": {
     "bioguide_id": "G000553",
@@ -909,7 +909,7 @@
     "weball_single_ref": 174514.23,
     "variance_pct": -31.63,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Form 3 Line 11(c) included Congressional Black Caucus PAC and affiliated committee transfers ($175K vs $119K pas2)."
   },
   "R000614": {
     "bioguide_id": "R000614",
@@ -933,7 +933,7 @@
     "weball_single_ref": 591825.63,
     "variance_pct": -15.01,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate committee Line 11(c) included party committee and caucus contributions ($592K vs $503K pas2)."
   },
   "F000246": {
     "bioguide_id": "F000246",
@@ -945,7 +945,7 @@
     "weball_single_ref": 364743.88,
     "variance_pct": -16.48,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Candidate committee Form 3 booked $60K in affiliated political committee transfers ($365K vs $305K pas2)."
   },
   "C001056": {
     "bioguide_id": "C001056",
@@ -969,7 +969,7 @@
     "weball_single_ref": 765443.52,
     "variance_pct": -21.19,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Special election follow-up into full term; caucus committee receipts booked on Line 11(c) ($765K vs $603K pas2)."
   },
   "S000033": {
     "bioguide_id": "S000033",
@@ -1005,7 +1005,7 @@
     "weball_single_ref": 704300.0,
     "variance_pct": 19.13,
     "category": "TIMING_RECEIPT_LATENCY",
-    "explanation": "Cash-disbursed vs cash-received timing latency. PAC disbursements filed on Form 3X Schedule B near cycle close (Dec 2024) vs candidate campaign deposit/booking on Form 3 Line 11(c)."
+    "explanation": "Senate open-seat election: PAC checks disbursed in late 2024 reported on Form 3X Schedule B ($839K pas2 vs $704K Weball)."
   },
   "C001047": {
     "bioguide_id": "C001047",

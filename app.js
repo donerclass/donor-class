@@ -738,7 +738,7 @@
       </div>
       <div class="member-financials">
         <div class="financial-amount">${formatMoney(sectorAmt)}</div>
-        <div class="financial-sub">in ${activeSectorKey === "all" ? "Total PACs" : SECTORS[activeSectorKey].name}</div>
+        <div class="financial-sub">${candidate.has_jfc ? "Campaign & JFC PACs" : (activeSectorKey === "all" ? "in Total PACs" : "in " + SECTORS[activeSectorKey].name)}</div>
       </div>
     `;
 
@@ -980,9 +980,10 @@
             </div>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
-            <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">${activeSectorKey === "all" ? "Total PAC $" : SECTORS[activeSectorKey].name}</span>
+            <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">${c.has_jfc ? "Campaign & JFC PACs" : (activeSectorKey === "all" ? "Total PAC $" : SECTORS[activeSectorKey].name)}</span>
             <span style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--accent-active);">${formatMoney(sectorAmt)}</span>
           </div>
+          ${c.has_jfc ? `<div style="font-size: 0.68rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">(Direct campaign: ${formatMoney(c.jfc_direct_fec)})</div>` : ''}
         </div>
 
         <div class="sector-breakdown-mini">
@@ -1025,9 +1026,21 @@
     partyBadge.textContent = candidate.party;
     partyBadge.className = `badge-party ${candidate.party === "Democrat" ? "badge-dem" : candidate.party === "Republican" ? "badge-rep" : "badge-ind"}`;
 
-    let breakdownHtml = `Total Tracked: ${formatMoneyFull(candidate.totalPacAmount)}`;
-    if (candidate.outsideSpendingAmount > 0 || candidate.conduitAmount > 0) {
-      breakdownHtml += ` <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">(Direct: ${formatMoney(candidate.directPacAmount)} • Super PAC Outside Ads: ${formatMoney(candidate.outsideSpendingAmount)} • Conduit Bundles: ${formatMoney(candidate.conduitAmount)})</span>`;
+    let breakdownHtml = "";
+    if (candidate.has_jfc) {
+      breakdownHtml = `
+        <div style="font-size: 0.95rem; font-weight: 700; color: var(--accent-active); margin-bottom: 0.25rem;">
+          ${candidate.jfc_label}: ${formatMoneyFull(candidate.totalPacAmount)}
+        </div>
+        <div style="font-size: 0.78rem; font-weight: normal; color: var(--text-muted); background: rgba(255,255,255,0.04); border-left: 3px solid var(--accent-active); padding: 0.35rem 0.5rem; border-radius: 4px; margin-top: 0.25rem;">
+          ${candidate.jfc_note}
+        </div>
+      `;
+    } else {
+      breakdownHtml = `Total Tracked: ${formatMoneyFull(candidate.totalPacAmount)}`;
+      if (candidate.outsideSpendingAmount > 0 || candidate.conduitAmount > 0) {
+        breakdownHtml += ` <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">(Direct: ${formatMoney(candidate.directPacAmount)} • Super PAC Outside Ads: ${formatMoney(candidate.outsideSpendingAmount)} • Conduit Bundles: ${formatMoney(candidate.conduitAmount)})</span>`;
+      }
     }
     document.getElementById("modal-total-pac-header").innerHTML = breakdownHtml;
 

@@ -154,7 +154,7 @@ def audit_gate_3_comprehensive_weball_reconciliation():
             print(f"    {name}: FEC Weball=${web:,.2f} | Rebuilt PAC=${our:,.2f} | Var={var:.1f}%")
         return False
 
-    print("  PASSED: 100% of members reconciled within 10% or verified via documented FEC exception (0 unexplained).")
+    print(f"  PASSED: {within_10} of {len(compared)} members match the FEC's own summary within 10%; every larger difference is documented with its reason.")
     return True
 
 def audit_gate_4_proof_links():

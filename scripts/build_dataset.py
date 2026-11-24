@@ -160,6 +160,44 @@ def load_sitting_members():
         if not primary_fec_id and fec_ids:
             primary_fec_id = fec_ids[0]
 
+        jfc_info = {}
+        if name == "Steve Scalise":
+            jfc_info = {
+                "has_jfc": True,
+                "jfc_label": "PAC money to the campaign and its joint fundraising committees",
+                "jfc_headline_label": "Campaign & Joint Fundraising Committees",
+                "jfc_direct_fec": 187000.0,
+                "jfc_name": "Scalise Leadership Fund",
+                "jfc_note": "Includes $187,000 in direct campaign committee receipts (Form 3 Line 11c) and $1,707,680 in itemized PAC contributions designated through the Scalise Leadership Fund joint fundraising committee."
+            }
+        elif name == "David McCormick":
+            jfc_info = {
+                "has_jfc": True,
+                "jfc_label": "PAC money to the campaign and its joint fundraising committees",
+                "jfc_headline_label": "Campaign & Joint Fundraising Committees",
+                "jfc_direct_fec": 1066344.0,
+                "jfc_name": "McCormick Victory Committee",
+                "jfc_note": "Includes $1,066,344 in direct campaign committee receipts (Form 3 Line 11c) and $1,435,636 in itemized PAC contributions designated through the McCormick Victory Committee joint fundraising committee."
+            }
+        elif name == "Elise M. Stefanik":
+            jfc_info = {
+                "has_jfc": True,
+                "jfc_label": "PAC money to the campaign and its joint fundraising committees",
+                "jfc_headline_label": "Campaign & Joint Fundraising Committees",
+                "jfc_direct_fec": 1076226.0,
+                "jfc_name": "Team Elise",
+                "jfc_note": "Includes $1,076,226 in direct campaign committee receipts (Form 3 Line 11c) and $238,231 in itemized PAC contributions designated through Team Elise and affiliated joint fundraising committees."
+            }
+        elif name == "Chip Roy":
+            jfc_info = {
+                "has_jfc": True,
+                "jfc_label": "PAC money to the campaign and its joint fundraising committees",
+                "jfc_headline_label": "Campaign & Joint Fundraising Committees",
+                "jfc_direct_fec": 179250.0,
+                "jfc_name": "Chip Roy Victory Committee",
+                "jfc_note": "Includes $179,250 in direct campaign committee receipts (Form 3 Line 11c) and $119,756 in itemized PAC contributions designated through joint fundraising."
+            }
+
         members[bg] = {
             "id": bg,
             "name": name,
@@ -179,7 +217,13 @@ def load_sitting_members():
             "pacs": {},
             "transaction_count": 0,
             "latest_transaction_date": "",
-            "notes": ""
+            "notes": jfc_info.get("jfc_note", ""),
+            "has_jfc": jfc_info.get("has_jfc", False),
+            "jfc_label": jfc_info.get("jfc_label", ""),
+            "jfc_headline_label": jfc_info.get("jfc_headline_label", ""),
+            "jfc_direct_fec": jfc_info.get("jfc_direct_fec", 0.0),
+            "jfc_name": jfc_info.get("jfc_name", ""),
+            "jfc_note": jfc_info.get("jfc_note", "")
         }
 
         for fid in fec_ids:
@@ -359,6 +403,12 @@ def main():
             "transaction_count": m["transaction_count"],
             "latest_transaction_date": m["latest_transaction_date"],
             "notes": m.get("notes", ""),
+            "has_jfc": m.get("has_jfc", False),
+            "jfc_label": m.get("jfc_label", ""),
+            "jfc_headline_label": m.get("jfc_headline_label", ""),
+            "jfc_direct_fec": m.get("jfc_direct_fec", 0.0),
+            "jfc_name": m.get("jfc_name", ""),
+            "jfc_note": m.get("jfc_note", ""),
             "data_through": latest_global_dt
         }
         member_json_path = os.path.join(MEMBERS_DIR, f"{bg}.json")
@@ -419,6 +469,12 @@ def main():
             "transaction_count": m["transaction_count"],
             "latest_transaction_date": m["latest_transaction_date"],
             "notes": m.get("notes", ""),
+            "has_jfc": m.get("has_jfc", False),
+            "jfc_label": m.get("jfc_label", ""),
+            "jfc_headline_label": m.get("jfc_headline_label", ""),
+            "jfc_direct_fec": m.get("jfc_direct_fec", 0.0),
+            "jfc_name": m.get("jfc_name", ""),
+            "jfc_note": m.get("jfc_note", ""),
             "data_through": latest_global_dt
         }
         candidate_list.append(cand_obj)
