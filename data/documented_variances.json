@@ -1018,5 +1018,41 @@
     "variance_pct": 21.41,
     "category": "OFF_CYCLE_SENATOR",
     "explanation": "U.S. Senator not on ballot in 2024 (Class 2 or 3). FEC Candidate Summary (weball24.txt) reflects partial or semi-annual filings for off-cycle candidates. pas2 captures all verified itemized disbursements made by PACs during 2023-2024 calendar years."
+  },
+  "P000622": {
+    "bioguide_id": "P000622",
+    "fec_candidate_id": "H6FL01390",
+    "name": "Jimmy Patronis",
+    "state": "FL",
+    "chamber": "rep",
+    "rebuilt_direct": 109000.0,
+    "weball_single_ref": 0.0,
+    "variance_pct": 100.0,
+    "category": "SPECIAL_ELECTION_CYCLE_LATENCY",
+    "explanation": "Elected in 2025 special election (FL-01 vacancy): PACs reported early disbursements in late 2024 pas2 ($109K), while candidate committee filed under 2026 cycle (omitted from 2024 Weball summary)."
+  },
+  "F000484": {
+    "bioguide_id": "F000484",
+    "fec_candidate_id": "H6FL06258",
+    "name": "Randy Fine",
+    "state": "FL",
+    "chamber": "rep",
+    "rebuilt_direct": 82600.0,
+    "weball_single_ref": 0.0,
+    "variance_pct": 100.0,
+    "category": "SPECIAL_ELECTION_CYCLE_LATENCY",
+    "explanation": "Elected in 2025 special election (FL-06 vacancy): PACs reported early disbursements in late 2024 pas2 ($82.6K), while candidate committee filed under 2026 cycle (omitted from 2024 Weball summary)."
+  },
+  "G000602": {
+    "bioguide_id": "G000602",
+    "fec_candidate_id": "H2NY04244",
+    "name": "Laura Gillen",
+    "state": "NY",
+    "chamber": "rep",
+    "rebuilt_direct": 119465.0,
+    "weball_single_ref": 0.0,
+    "variance_pct": 100.0,
+    "category": "OFFICE_CYCLE_ID_CONSOLIDATION",
+    "explanation": "Candidate committee C00806547 received $119K in direct PAC contributions reported in 2024 pas2, while candidate ID H2NY04244 lists $0 committee contributions in Weball summary."
   }
 }
