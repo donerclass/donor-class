@@ -91,17 +91,23 @@ def audit_gate_3_comprehensive_weball_reconciliation():
             if cid in fec_to_bioguide:
                 bg = fec_to_bioguide[cid]
                 receipts = float(p[5]) if len(p) > 5 and p[5] else 0.0
-                pac_amt = float(p[25]) if len(p) > 25 and p[25] else 0.0
+                other_pol = float(p[25]) if len(p) > 25 and p[25] else 0.0
+                pol_party = float(p[26]) if len(p) > 26 and p[26] else 0.0
+                pac_amt = other_pol + pol_party
                 weball_by_bg_rows[bg].append((cid, receipts, pac_amt))
 
     weball_pac_totals = {}
     for bg, rows in weball_by_bg_rows.items():
         seen_receipts = set()
+        seen_pacs = set()
         tot = 0.0
         for cid, rec, pac in rows:
             if rec > 0 and rec in seen_receipts:
                 continue
+            if pac > 0 and pac in seen_pacs:
+                continue
             seen_receipts.add(rec)
+            seen_pacs.add(pac)
             tot += pac
         weball_pac_totals[bg] = tot
 
@@ -112,39 +118,43 @@ def audit_gate_3_comprehensive_weball_reconciliation():
         for row in reader:
             our_totals[row["bioguide_id"]] = float(row["direct_contributions_total"])
 
-    # Documented structural variances
-    # 1. Steve Scalise (Majority Leader): PACs contributed $1.95M via Scalise Leadership Fund; campaign booked as Line 12 transfers rather than Line 11c.
-    # 2. Guam / Territory delegates with non-standard reporting calendars.
-    # 3. Off-cycle Senate incumbents (e.g. Booker, Ossoff) who were not on ballot in 2024.
-    DOCUMENTED_EXCEPTIONS = {"S001176", "M001219", "O000174", "B001288", "K000389"}
+    # Load documented variances per docs/OPENFEC_REBUILD_SPEC.md and docs/RECONCILIATION_AUDIT_2024.md
+    DOC_VARIANCES_PATH = os.path.join(DATA_DIR, "documented_variances.json")
+    documented_variances = {}
+    if os.path.exists(DOC_VARIANCES_PATH):
+        with open(DOC_VARIANCES_PATH, "r", encoding="utf-8") as f:
+            documented_variances = json.load(f)
 
     compared = [bg for bg in our_totals if bg in weball_pac_totals and weball_pac_totals[bg] > 0]
-    within_15 = 0
+    within_10 = 0
+    documented_count = 0
     unexplained_outliers = []
 
     for bg in compared:
         web = weball_pac_totals[bg]
         our = our_totals[bg]
         var = abs(our - web) / web
-        if var <= 0.15:
-            within_15 += 1
-        elif bg in DOCUMENTED_EXCEPTIONS:
-            within_15 += 1 # Count documented statutory accounting exceptions
+        if var <= 0.10:
+            within_10 += 1
+        elif bg in documented_variances:
+            documented_count += 1
         else:
             unexplained_outliers.append((bioguide_to_name.get(bg, bg), web, our, var * 100))
 
-    match_pct = (within_15 / len(compared)) * 100
+    total_cleared = within_10 + documented_count
+    match_pct = (total_cleared / len(compared)) * 100
     print(f"  Compared {len(compared)} members appearing in weball24.txt.")
-    print(f"  Reconciled within tolerance / documented exceptions: {within_15}/{len(compared)} ({match_pct:.1f}%)")
+    print(f"  Direct 10% match: {within_10}/{len(compared)} ({within_10/len(compared)*100:.1f}%)")
+    print(f"  Audited & documented statutory/timing exceptions: {documented_count}/{len(compared)}")
+    print(f"  Total verified & accounted for: {total_cleared}/{len(compared)} ({match_pct:.1f}%)")
 
-    if match_pct < 85.0:
-        print(f"  FAILED: Reconciliation rate {match_pct:.1f}% is below 85% requirement.")
-        print(f"  Top unexplained outliers:")
+    if unexplained_outliers:
+        print(f"  FAILED: Found {len(unexplained_outliers)} UNEXPLAINED members deviating > 10%:")
         for name, web, our, var in sorted(unexplained_outliers, key=lambda x: x[3], reverse=True)[:10]:
             print(f"    {name}: FEC Weball=${web:,.2f} | Rebuilt PAC=${our:,.2f} | Var={var:.1f}%")
         return False
 
-    print("  PASSED: Member reconciliation meets strict FEC bulk tolerance standards.")
+    print("  PASSED: 100% of members reconciled within 10% or verified via documented FEC exception (0 unexplained).")
     return True
 
 def audit_gate_4_proof_links():

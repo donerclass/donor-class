@@ -103,12 +103,35 @@ def load_committee_master():
     print(f"  Loaded {len(committees):,} committees from cm.txt")
     return committees
 
+def load_member_authorized_committees(fec_to_bioguide):
+    ccl_path = os.path.join(RAW_EXTRACTED, "ccl.txt")
+    member_auth_cmtes = defaultdict(set)
+    if os.path.exists(ccl_path):
+        with open(ccl_path, "r", encoding="latin1") as f:
+            for line in f:
+                p = line.strip().split("|")
+                if len(p) > 5 and p[5] in ("P", "A"):
+                    cand = p[0].strip().upper()
+                    cmte = p[3].strip().upper()
+                    if cand in fec_to_bioguide:
+                        bg = fec_to_bioguide[cand]
+                        member_auth_cmtes[bg].add(cmte)
+        print(f"  Loaded authorized campaign committees for {len(member_auth_cmtes)} sitting members from ccl.txt")
+    return member_auth_cmtes
+
 def load_sitting_members():
     if not os.path.exists(ROSTER_JSON):
         raise FileNotFoundError(f"Roster not found: {ROSTER_JSON}")
 
     with open(ROSTER_JSON, "r", encoding="utf-8") as f:
         roster = json.load(f)
+
+    weball_path = os.path.join(RAW_EXTRACTED, "weball24.txt")
+    weball_cids = set()
+    if os.path.exists(weball_path):
+        with open(weball_path, "r", encoding="latin1") as f:
+            for line in f:
+                weball_cids.add(line.strip().split("|")[0].strip().upper())
 
     members = {}
     fec_to_bioguide = {}
@@ -122,13 +145,18 @@ def load_sitting_members():
         party = leg["party"]
         fec_ids = [fid.strip().upper() for fid in leg.get("fec", [])]
 
-        # Select primary candidate ID for current office
+        # Select primary candidate ID active for current office in 2024 cycle
         prefix = "S" if chamber == "Senate" else "H"
         primary_fec_id = ""
         for fid in fec_ids:
-            if fid.startswith(prefix) and fid[2:4] == state:
+            if fid.startswith(prefix) and fid in weball_cids:
                 primary_fec_id = fid
                 break
+        if not primary_fec_id:
+            for fid in fec_ids:
+                if fid.startswith(prefix) and fid[2:4] == state:
+                    primary_fec_id = fid
+                    break
         if not primary_fec_id and fec_ids:
             primary_fec_id = fec_ids[0]
 
@@ -173,6 +201,7 @@ def main():
     sector_map = load_sector_map()
     cm_dict = load_committee_master()
     members, fec_to_bioguide = load_sitting_members()
+    member_auth_cmtes = load_member_authorized_committees(fec_to_bioguide)
 
     pas2_path = os.path.join(RAW_EXTRACTED, "itpas2.txt")
     if not os.path.exists(pas2_path):
@@ -184,6 +213,7 @@ def main():
     dedup_dict = {}
     skipped_memo = 0
     skipped_conduit = 0
+    skipped_self_transfers = 0
     total_raw_rows = 0
 
     with open(pas2_path, "r", encoding="latin1") as f:
@@ -197,13 +227,19 @@ def main():
             if cand_id not in fec_to_bioguide:
                 continue
 
+            bg = fec_to_bioguide[cand_id]
+            cmte_id = parts[0].strip().upper()
+
+            # Skip self-transfers where candidate's own authorized campaign committee is the giver
+            if cmte_id in member_auth_cmtes.get(bg, set()):
+                skipped_self_transfers += 1
+                continue
+
             # Skip memo items (duplicates/informational line items)
             memo_cd = parts[19].strip() if len(parts) > 19 else ""
             if memo_cd == "X":
                 skipped_memo += 1
                 continue
-
-            cmte_id = parts[0].strip().upper()
 
             # Skip conduit pass-through records (WinRed, ActBlue, or CMTE_TP == 'V')
             # They reflect earmarked individual contributions, not committee PAC cash
@@ -225,6 +261,7 @@ def main():
     print(f"Processed {total_raw_rows:,} raw pas2 rows.")
     print(f"  Skipped {skipped_memo:,} memo items.")
     print(f"  Skipped {skipped_conduit:,} conduit individual passthrough items.")
+    print(f"  Skipped {skipped_self_transfers:,} candidate campaign self-transfer items.")
     print(f"  Retained {len(dedup_dict):,} deduplicated transactions for sitting members.")
 
     latest_global_dt = ""
