@@ -30,7 +30,7 @@ Every candidate figure now links directly to the source FEC filing. Code, data, 
 
 ---
 
-### Part 2: Master Florida Campaign Thread (To Deploy a Few Hours Later)
+### Part 2: Master Florida Campaign Thread (To Deploy Following Wait Window)
 
 #### Tweet 1/5 [Hook & Delegation Overview] (277 / 280 Characters)
 ```text
@@ -66,15 +66,15 @@ Sector breakdown (29 members with 2024 records):
 
 #### Tweet 3/5 [Legal Capital Structure & Disaggregation] (276 / 280 Characters)
 ```text
-How political money in Florida is legally structured:
+Florida political money:
 
-- Direct PAC Contributions: $18,283,963 (Capped at $5,000/election under 52 U.S.C. 30116)
-- Outside Support: $2,900,760 (Independent ad buys)
-- Outside Opposition: $757,043 (Negative ad blitzes)
+- Direct PACs: $18,283,963 (capped contributions)
+- Outside Support: $2,900,760 (independent spending supporting members)
+- Outside Opposition: $757,043 (independent spending opposing members)
 
-Direct PAC funds and outside spending are kept strictly separate.
+Direct PAC funds and outside spending are kept separate.
 ```
-* **Objective:** Clarify distinction between direct capped campaign contributions and independent outside expenditures.
+* **Objective:** Nonpartisan legal disaggregation with neutral framing and zero editorial adjectives.
 
 ---
 
@@ -92,11 +92,11 @@ Top Florida direct PAC recipients across party lines (2024 records):
 
 ---
 
-#### Tweet 5/5 [Public Record Audit & Call To Action] (259 / 280 Characters)
+#### Tweet 5/5 [Public Record Audit & Call To Action] (250 / 280 Characters)
 ```text
-Track all 29 Florida members with 2024 records, compare sector receipts, and audit candidate ledgers directly with links to raw FEC filing images.
+Track all 29 Florida members with 2024 records, compare sector receipts, and audit candidate ledgers directly.
 
-100% nonpartisan. No paywalls. Verified from official FEC bulk files.
+100% nonpartisan. Built directly from official FEC bulk files, with links to the source filings.
 
 Explore Florida:
 https://donorclass.info/?state=FL&ref=bp
@@ -107,11 +107,11 @@ https://donorclass.info/?state=FL&ref=bp
 
 ### Part 3: Live Verification Protocol (First 48 Hours)
 
-If anyone replies questioning a candidate figure, retrieve their primary FEC filing proof link:
-- Darren Soto: https://docquery.fec.gov/cgi-bin/fecimg/?C00588657 (or direct Schedule B filing images from member JSON `/data/members/S001200.json`)
-- Rick Scott: https://docquery.fec.gov/cgi-bin/fecimg/?C00676965 (from member JSON `/data/members/S001217.json`)
-- Vern Buchanan: https://docquery.fec.gov/cgi-bin/fecimg/?C00424564 (from member JSON `/data/members/B001260.json`)
-- Mario Diaz-Balart: https://docquery.fec.gov/cgi-bin/fecimg/?C00376087 (from member JSON `/data/members/D000600.json`)
-- Gus Bilirakis: https://docquery.fec.gov/cgi-bin/fecimg/?C00407221 (from member JSON `/data/members/B001257.json`)
+If anyone replies questioning a candidate figure, retrieve their official FEC committee page:
+- **Rep. Darren Soto:** https://www.fec.gov/data/committee/C00588657/
+- **Sen. Rick Scott:** https://www.fec.gov/data/committee/C00676965/
+- **Rep. Vern Buchanan:** https://www.fec.gov/data/committee/C00424564/
+- **Rep. Mario Diaz-Balart:** https://www.fec.gov/data/committee/C00376087/
+- **Rep. Gus Bilirakis:** https://www.fec.gov/data/committee/C00407221/
 
-Always respond neutrally with the direct FEC document query link. Never argue or guess.
+For itemized transaction inquiries, link to the candidate's line-item table on DONOR CLASS or the specific filing image number from their individual member JSON file. Always respond factually and neutrally with the direct official FEC link.
