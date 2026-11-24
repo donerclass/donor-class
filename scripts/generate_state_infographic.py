@@ -87,7 +87,11 @@ def generate_infographic(state_code, state_name, day_num):
     
     draw.text((40, 16), f"50 STATES IN 50 DAYS // DAY {day_num}: {state_name.upper()}", font=font_day, fill="#38bdf8")
     draw.text((40, 36), f"WHO FUNDS THE {state_name.upper()} CONGRESSIONAL DELEGATION?", font=font_title, fill="#ffffff")
-    draw.text((40, 74), f"Official FEC Primary-Source Bulk Records: ${direct_total/1e6:.2f}M Direct PAC Funds Across {member_count} Lawmakers", font=font_sub, fill="#94a3b8")
+    if state_code == "FL":
+        member_subtitle = "29 of Florida's 30 Members with 2024-Cycle FEC Records"
+    else:
+        member_subtitle = f"{member_count} Lawmakers"
+    draw.text((40, 74), f"Official FEC Primary-Source Bulk Records: ${direct_total/1e6:.2f}M Direct PAC Funds Across {member_subtitle}", font=font_sub, fill="#94a3b8")
     
     badge = make_state_badge(state_code, size=74)
     img.paste(badge, (W - 195, 15), badge)
@@ -121,7 +125,7 @@ def generate_infographic(state_code, state_name, day_num):
         pharma_amt = float(r["sector_pharma"])
         fin_amt = float(r["sector_finance"])
         fp_amt = float(r["sector_foreign_policy"])
-        detail_str = f"Def {fmt_amt_short(def_amt)} • Pharma {fmt_amt_short(pharma_amt)} • Fin {fmt_amt_short(fin_amt)} • FP {fmt_amt_short(fp_amt)}"
+        detail_str = f"Def {fmt_amt_short(def_amt)} • Pharma {fmt_amt_short(pharma_amt)} • Fin {fmt_amt_short(fin_amt)} • Pro-Israel/FP {fmt_amt_short(fp_amt)}"
         draw.text((135, row_y + 30), detail_str, font=font_meta, fill="#94a3b8")
         
         amt_val = float(r["direct_contributions_total"])
@@ -157,7 +161,7 @@ def generate_infographic(state_code, state_name, day_num):
     bullets = [
         f"• All figures derived from 703,181 itemized official FEC records (pas2).",
         f"• Zero modeled, estimated, or projected numbers anywhere on this graphic.",
-        f"• Top recipient in {state_code} collected ${float(top_recipients[0]['direct_contributions_total']):,.0f} in direct PAC cash.",
+        f"• Pro-Israel & Foreign Policy PAC category tracks domestic advocacy committees.",
         f"• Check scanned FEC filing proof links for every transaction on live map."
     ]
     
