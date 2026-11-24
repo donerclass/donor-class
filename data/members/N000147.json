@@ -1,0 +1,501 @@
+{
+  "id": "N000147",
+  "name": "Eleanor Holmes Norton",
+  "state": "DC",
+  "district": 0,
+  "chamber": "House",
+  "party": "Democrat",
+  "fecCandidateId": "H0DC00058",
+  "fec_ids": [
+    "H0DC00058"
+  ],
+  "direct_contributions_total": 148750.0,
+  "ie_support_total": 0.0,
+  "ie_oppose_total": 0.0,
+  "sector_totals": {
+    "defense": 1500.0,
+    "pharma": 0.0,
+    "finance": 11000.0,
+    "energy": 0.0,
+    "tech": 5000.0,
+    "foreign_policy": 0.0,
+    "labor": 107000.0,
+    "uncategorized": 24250.0
+  },
+  "pacs": [
+    {
+      "id": "C00004861",
+      "name": "UNITE HERE TIP CAMPAIGN COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304189581034232",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00027342",
+      "name": "IBEW PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307189583786767",
+      "latest_date": "2023-06-05"
+    },
+    {
+      "id": "C00030718",
+      "name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310189598493403",
+      "latest_date": "2023-08-22"
+    },
+    {
+      "id": "C00267849",
+      "name": "ALLIED PILOTS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 9500.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584233624",
+      "latest_date": "2023-04-04"
+    },
+    {
+      "id": "C00032995",
+      "name": "AMALGAMATED TRANSIT UNION - COPE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 8500.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202305199581551446",
+      "latest_date": "2023-04-13"
+    },
+    {
+      "id": "C00010322",
+      "name": "AMERICAN POSTAL WORKERS UNION COMMITTEE ON POLITICAL ACTION",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 7500.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319619572676",
+      "latest_date": "2023-09-26"
+    },
+    {
+      "id": "C00035451",
+      "name": "AIR LINE PILOTS ASSOCIATION PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 7500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633561242",
+      "latest_date": "2024-03-26"
+    },
+    {
+      "id": "C00012476",
+      "name": "UA UNION PLUMBERS & PIPEFITTERS VOTE! PAC (UNITED ASSOCIATION OF JOURNEYMEN AND APPRENTICES OF THE PLUMBING & PIPEFITTING INDUSTRY OF THE UNITED STATES AND CANADA)",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202311209599311107",
+      "latest_date": "2023-10-05"
+    },
+    {
+      "id": "C00011114",
+      "name": "AFSCME PEOPLE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402029619673877",
+      "latest_date": "2023-12-19"
+    },
+    {
+      "id": "C00008268",
+      "name": "TRANSPORT WORKERS UNION OF AMERICA POLITICAL CONTRIBUTIONS COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403209622524464",
+      "latest_date": "2024-02-22"
+    },
+    {
+      "id": "C00002881",
+      "name": "TRUCKING POLITICAL ACTION COMMITTEE OF THE AMERICAN TRUCKING ASSOCIATIONS INC.",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404189633480766",
+      "latest_date": "2024-03-20"
+    },
+    {
+      "id": "C00002469",
+      "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS & AEROSPACE WORKERS",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666109479",
+      "latest_date": "2024-07-09"
+    },
+    {
+      "id": "C00007542",
+      "name": "INTERNATIONAL ASSOCIATION OF SHEET METAL, AIR, RAIL AND TRANSPORTATION WORKERS POLITICAL ACTION LEAGUE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202502209753532016",
+      "latest_date": "2024-10-31"
+    },
+    {
+      "id": "C00009936",
+      "name": "AMERICAN FEDERATION OF GOVT. EMPL. POLITICAL ACTION COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 4500.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304179581023943",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00186288",
+      "name": "VERIZON COMMUNICATIONS, INC. POLITICAL ACTION COMMITTEE (VERIZON PAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584198396",
+      "latest_date": "2023-03-24"
+    },
+    {
+      "id": "C00238725",
+      "name": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306209582272843",
+      "latest_date": "2023-05-10"
+    },
+    {
+      "id": "C00001636",
+      "name": "SMART TD PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 3000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633502530",
+      "latest_date": "2024-03-21"
+    },
+    {
+      "id": "C00144766",
+      "name": "NATIONAL BEER WHOLESALERS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304199581136826",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00099234",
+      "name": "BROTHERHOOD OF LOCOMOTIVE ENGINEERS & TRAINMEN PAC FUND",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306069581746348",
+      "latest_date": "2023-05-03"
+    },
+    {
+      "id": "C00023580",
+      "name": "NATIONAL ASSOCIATION OF LETTER CARRIERS OF U.S.A. POLITICAL FUND (LETTER CARRIER POLITICAL FUND)",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306169582165889",
+      "latest_date": "2023-05-15"
+    },
+    {
+      "id": "C00280909",
+      "name": "TRANSPORTATION TRADES DEPARTMENT AFL-CIO POLITICAL ACTION COMMITTEE (TTD/PAC)",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310049597398678",
+      "latest_date": "2023-09-11"
+    },
+    {
+      "id": "C00028860",
+      "name": "AMERICAN FEDERATION OF TEACHERS, AFL-CIO COMMITTEE ON POLITICAL EDUCATION",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310209598806028",
+      "latest_date": "2023-09-30"
+    },
+    {
+      "id": "C00064766",
+      "name": "UNITED PARCEL SERVICE, INC. PAC (UPSPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401309600643823",
+      "latest_date": "2023-12-17"
+    },
+    {
+      "id": "C00029504",
+      "name": "ENGINEERS POLITICAL EDUCATION COMMITTEE (EPEC)/INTERNATIONAL UNION OF OPERATING ENGINEERS",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661338298",
+      "latest_date": "2024-06-12"
+    },
+    {
+      "id": "C00091561",
+      "name": "NATIONAL ACTIVE AND RETIRED FEDERAL EMPLOYEES ASSOCIATION POLITICAL ACTION COM (NARFE-PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584201654",
+      "latest_date": "2023-06-02"
+    },
+    {
+      "id": "C00000885",
+      "name": "INTERNATIONAL UNION OF PAINTERS AND ALLIED TRADES POLITICAL ACTION TOGETHER POLITICAL COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202312209599561372",
+      "latest_date": "2023-11-22"
+    },
+    {
+      "id": "C00107128",
+      "name": "NATIONAL TREASURY EMPLOYEES UNION POLITICAL ACTION COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501239747730945",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00169821",
+      "name": "TYSON FOODS INC POLITICAL ACTION COMMITTEE (TYPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319607712739",
+      "latest_date": "2023-10-25"
+    },
+    {
+      "id": "C00235853",
+      "name": "HUMAN RIGHTS CAMPAIGN PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402209619827059",
+      "latest_date": "2024-01-25"
+    },
+    {
+      "id": "C00241380",
+      "name": "ARENTFOX SCHIFF CIVIC PARTICIPATION FUND (AFSPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649284438",
+      "latest_date": "2024-05-06"
+    },
+    {
+      "id": "C00103549",
+      "name": "PARSONS CORPORATION POLITICAL ACTION COMMITTEE",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408019666053315",
+      "latest_date": "2023-12-15"
+    },
+    {
+      "id": "C00699157",
+      "name": "CLEAR CHANNEL OUTDOOR, LLC. PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404159627887816",
+      "latest_date": "2024-03-13"
+    },
+    {
+      "id": "C00451153",
+      "name": "GRIDIRON-PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661436619",
+      "latest_date": "2024-06-27"
+    },
+    {
+      "id": "C00142299",
+      "name": "JACOBS SOLUTIONS, INC. POLITICAL ACTION COMMITTEE (JACOBS PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306189582187594",
+      "latest_date": "2023-05-03"
+    },
+    {
+      "id": "C00092957",
+      "name": "NATIONAL ASSOCIATION OF POSTAL SUPERVISORS PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307069582439019",
+      "latest_date": "2023-06-08"
+    },
+    {
+      "id": "C00003251",
+      "name": "NEA FUND FOR CHILDREN AND PUBLIC EDUCATION",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307199583846042",
+      "latest_date": "2023-06-07"
+    },
+    {
+      "id": "C00685297",
+      "name": "ELECT DEMOCRATIC WOMEN",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600542573",
+      "latest_date": "2023-10-31"
+    },
+    {
+      "id": "C00173153",
+      "name": "AMERICAN ASSOCIATION OF NURSE ANESTHETISTS SEPARATE SEGREGATED FUND (CRNA-PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408159666198273",
+      "latest_date": "2024-07-10"
+    },
+    {
+      "id": "C00131185",
+      "name": "AIRCRAFT OWNERS AND PILOTS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409169675482017",
+      "latest_date": "2024-08-22"
+    },
+    {
+      "id": "C00431478",
+      "name": "GIVING WILLINGLY EMPOWERING NATIONALLY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653713659",
+      "latest_date": "2024-06-05"
+    },
+    {
+      "id": "C00360354",
+      "name": "AMAZON.COM SERVICES LLC SEPARATE SEGREGATED FUND (AMAZON PAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698615659",
+      "latest_date": "2024-09-27"
+    },
+    {
+      "id": "C00007880",
+      "name": "CREDIT UNION LEGISLATIVE ACTION COUNCIL (CULAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748318130",
+      "latest_date": "2024-10-09"
+    },
+    {
+      "id": "C00545202",
+      "name": "THE CENTER FOR FREETHOUGHT EQUALITY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685008574",
+      "latest_date": "2024-08-08"
+    },
+    {
+      "id": "C00858100",
+      "name": "PRO PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 250.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059739356280",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00001016",
+      "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 0.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202305199581605633",
+      "latest_date": "2023-04-21"
+    },
+    {
+      "id": "C00652701",
+      "name": "VNA HOLDING INC. POLITICAL ACTION COMMITTEE (VG PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": -1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319600856601",
+      "latest_date": "2023-12-01"
+    },
+    {
+      "id": "C00004879",
+      "name": "AMERICAN BUS ASSOCIATION POLITICAL ACTION COMMITTEE - BUSPAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": -1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307199583842300",
+      "latest_date": "2023-06-26"
+    }
+  ],
+  "transaction_count": 83,
+  "latest_transaction_date": "2024-11-01",
+  "notes": "",
+  "data_through": "2024-12-31"
+}

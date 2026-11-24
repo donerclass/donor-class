@@ -1,0 +1,4022 @@
+{
+  "id": "J000307",
+  "name": "John James",
+  "state": "MI",
+  "district": 10,
+  "chamber": "House",
+  "party": "Republican",
+  "fecCandidateId": "H2MI10150",
+  "fec_ids": [
+    "H2MI10150",
+    "S8MI00372"
+  ],
+  "direct_contributions_total": 1328766.0,
+  "ie_support_total": 986619.0,
+  "ie_oppose_total": 7018829.0,
+  "sector_totals": {
+    "defense": 24500.0,
+    "pharma": 60000.0,
+    "finance": 107000.0,
+    "energy": 91500.0,
+    "tech": 65000.0,
+    "foreign_policy": 19313.0,
+    "labor": 20500.0,
+    "uncategorized": 940953.0
+  },
+  "pacs": [
+    {
+      "id": "C00375048",
+      "name": "CONSUMER TECHNOLOGY ASSOCIATION PAC",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202303209579396863",
+      "latest_date": "2023-02-16"
+    },
+    {
+      "id": "C00081547",
+      "name": "DTE ENERGY COMPANY POLITICAL ACTION COMMITTEE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202303209579437415",
+      "latest_date": "2023-02-08"
+    },
+    {
+      "id": "C00525212",
+      "name": "VICTORY AND FREEDOM PAC (VAF PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202303209579435428",
+      "latest_date": "2023-02-27"
+    },
+    {
+      "id": "C00639229",
+      "name": "AMERICAN REVIVAL PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304139580378020",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00540187",
+      "name": "INNOVATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304209581180196",
+      "latest_date": "2023-03-21"
+    },
+    {
+      "id": "C00388827",
+      "name": "ROCK HOLDINGS INC. PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304209581144595",
+      "latest_date": "2023-03-22"
+    },
+    {
+      "id": "C00428052",
+      "name": "MAJORITY COMMITTEE PAC--MC PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304209581206917",
+      "latest_date": "2023-03-08"
+    },
+    {
+      "id": "C00779538",
+      "name": "UNITED WHOLESALE MORTGAGE PAC (UWM PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307069582441695",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00513549",
+      "name": "PHILLIPS 66 PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306089581777550",
+      "latest_date": "2023-05-11"
+    },
+    {
+      "id": "C00082917",
+      "name": "ASSOCIATED GENERAL CONTRACTORS OF AMERICA POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306209582235212",
+      "latest_date": "2023-05-11"
+    },
+    {
+      "id": "C00076810",
+      "name": "GENERAL MOTORS COMPANY POLITICAL ACTION COMMITTEE (GM PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306209582253528",
+      "latest_date": "2023-05-24"
+    },
+    {
+      "id": "C00104802",
+      "name": "DELTA AIR LINES PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583911929",
+      "latest_date": "2023-06-02"
+    },
+    {
+      "id": "C00236489",
+      "name": "KOCH INDUSTRIES INC POLITICAL ACTION COMMITTEE (KOCHPAC)",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583860523",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00390161",
+      "name": "EUREKA POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583894036",
+      "latest_date": "2023-06-16"
+    },
+    {
+      "id": "C00570226",
+      "name": "SEAL PAC SUPPORTING ELECTING AMERICAN LEADERS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583895606",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00007880",
+      "name": "CREDIT UNION LEGISLATIVE ACTION COUNCIL (CULAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307199583828457",
+      "latest_date": "2023-02-23"
+    },
+    {
+      "id": "C00563726",
+      "name": "MR. SOUTHERN MISSOURIAN IN THE HOUSE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584264376",
+      "latest_date": "2023-03-24"
+    },
+    {
+      "id": "C00540146",
+      "name": "FIRST IN FREEDOM PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584207181",
+      "latest_date": "2023-03-24"
+    },
+    {
+      "id": "C00504530",
+      "name": "CONGRESSIONAL LEADERSHIP FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584278308",
+      "latest_date": "2023-06-14"
+    },
+    {
+      "id": "C00583526",
+      "name": "TOGETHER UNITED FOR LIBERTY, INTEGRITY AND PROSPERITY PAC (TULIP PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307259584032217",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00075820",
+      "name": "NRCC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309279597325072",
+      "latest_date": "2023-06-12"
+    },
+    {
+      "id": "C00248716",
+      "name": "COMCAST CORPORATION & NBCUNIVERSAL PAC",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309209597196628",
+      "latest_date": "2023-08-21"
+    },
+    {
+      "id": "C00467431",
+      "name": "THE EYE OF THE TIGER POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308259596777713",
+      "latest_date": "2023-03-24"
+    },
+    {
+      "id": "C00158881",
+      "name": "NEW YORK LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309209597193912",
+      "latest_date": "2023-08-23"
+    },
+    {
+      "id": "C00084491",
+      "name": "INTERNATIONAL FRANCHISE ASSOCIATION FRANCHISING POLITICAL ACTION COMMITTEE INC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310199598507234",
+      "latest_date": "2023-09-29"
+    },
+    {
+      "id": "C00697326",
+      "name": "ON WISCONSIN PAC, INC.",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310159597901584",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00647420",
+      "name": "BOLD ACTIVE CONSERVATIVES OF NEBRASKA PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402169619786867",
+      "latest_date": "2023-10-19"
+    },
+    {
+      "id": "C00030718",
+      "name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403199622502692",
+      "latest_date": "2024-02-20"
+    },
+    {
+      "id": "C00335091",
+      "name": "TRANSPORTATION INTERMEDIARIES ASSOCIATION'S TIAPAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404119627534218",
+      "latest_date": "2024-02-13"
+    },
+    {
+      "id": "C00542431",
+      "name": "JOHN BOLTON PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666662552",
+      "latest_date": "2024-07-30"
+    },
+    {
+      "id": "C00035006",
+      "name": "CHEVRON EMPLOYEES POLITICAL ACTION COMMITTEE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408139666178259",
+      "latest_date": "2024-07-10"
+    },
+    {
+      "id": "C00426775",
+      "name": "CHARTER COMMUNICATIONS INC. POLITICAL ACTION COMMITTEE",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 10000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407189661239606",
+      "latest_date": "2024-06-12"
+    },
+    {
+      "id": "C00797670",
+      "name": "AIPAC PAC",
+      "sector": "foreign_policy",
+      "sector_name": "Pro-Israel and Foreign Policy PACs",
+      "amount": 10000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209648576417",
+      "latest_date": "2024-04-26"
+    },
+    {
+      "id": "C00075473",
+      "name": "CMS ENERGY CORPORATION EMPLOYEES FOR BETTER GOVERNMENT- FEDERAL",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 9000.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202302149578304313",
+      "latest_date": "2023-01-27"
+    },
+    {
+      "id": "C00144766",
+      "name": "NATIONAL BEER WHOLESALERS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 8500.0,
+      "transactions": 7,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304199581136837",
+      "latest_date": "2023-03-13"
+    },
+    {
+      "id": "C00000901",
+      "name": "BUILD POLITICAL ACTION COMMITTEE OF THE NATIONAL ASSOCIATION OF HOME BUILDERS (BUILDPAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 8500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410179698612026",
+      "latest_date": "2024-09-10"
+    },
+    {
+      "id": "C00345132",
+      "name": "REPUBLICAN JEWISH COALITION-POLITICAL ACTION COMMITTEE (RJC-PAC)",
+      "sector": "foreign_policy",
+      "sector_name": "Pro-Israel and Foreign Policy PACs",
+      "amount": 8263.0,
+      "transactions": 29,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209699275069",
+      "latest_date": "2024-09-02"
+    },
+    {
+      "id": "C00404392",
+      "name": "CONSERVATIVE OPPORTUNITY LEADERSHIP AND ENTERPRISE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 8000.0,
+      "transactions": 6,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202312209599598141",
+      "latest_date": "2023-03-25"
+    },
+    {
+      "id": "C00623512",
+      "name": "IN THE ARENA PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 8000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403299627430086",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00110338",
+      "name": "AMERICAN CRYSTAL SUGAR COMPANY POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7500.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202305179581533043",
+      "latest_date": "2023-02-28"
+    },
+    {
+      "id": "C00109306",
+      "name": "NATIONAL ASSOCIATION OF WHOLESALER-DISTRIBUTORS POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307279584071911",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00683508",
+      "name": "FOREVER YOUTH ORGANIZATION UTILIZING A NEW GENERATION PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401119600024514",
+      "latest_date": "2023-12-28"
+    },
+    {
+      "id": "C00004473",
+      "name": "NATIONAL TELECOMMUNICATIONS COOPERATIVE ASSOCIATION RURAL BROADBAND PAC",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 7500.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666552915",
+      "latest_date": "2024-07-21"
+    },
+    {
+      "id": "C00077321",
+      "name": "AMERICAN INSTITUTE OF CERTIFIED PUBLIC ACCOUNTANTS POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 7500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202507249764209699",
+      "latest_date": "2024-06-03"
+    },
+    {
+      "id": "C00822833",
+      "name": "DEFENDING THE AMERICAN DREAM PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7300.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307119582499700",
+      "latest_date": "2023-06-30"
+    },
+    {
+      "id": "C00101105",
+      "name": "NATIONAL FEDERATION OF INDEPENDENT BUSINESS FEDERAL POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304179581023166",
+      "latest_date": "2023-03-15"
+    },
+    {
+      "id": "C00109017",
+      "name": "AT&T INC. FEDERAL POLITICAL ACTION COMMITTEE",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 7000.0,
+      "transactions": 6,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304199581046215",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00583153",
+      "name": "VALOR PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307109582470754",
+      "latest_date": "2023-06-23"
+    },
+    {
+      "id": "C00142711",
+      "name": "THE BOEING COMPANY POLITICAL ACTION COMMITTEE",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 7000.0,
+      "transactions": 7,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306169582169007",
+      "latest_date": "2023-05-31"
+    },
+    {
+      "id": "C00235739",
+      "name": "BNSF RAILWAY COMPANY RAILPAC (BNSF RAILPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306159582151872",
+      "latest_date": "2023-05-17"
+    },
+    {
+      "id": "C00078451",
+      "name": "GENERAL DYNAMICS CORPORATION POLITICAL ACTION COMMITTEE (GCPAC)",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 7000.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307139582539376",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00691501",
+      "name": "REJOICE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584196654",
+      "latest_date": "2023-03-16"
+    },
+    {
+      "id": "C00607721",
+      "name": "LAND OF OPPORTUNITY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584198967",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00498360",
+      "name": "TRUTH IS MARKETS WORK FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584211820",
+      "latest_date": "2023-03-22"
+    },
+    {
+      "id": "C00010868",
+      "name": "AMERICAN COUNCIL OF ENGINEERING COMPANIES (ACEC/PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 7000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309229597309465",
+      "latest_date": "2023-04-04"
+    },
+    {
+      "id": "C00063164",
+      "name": "MCDONALDS CORPORATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306139582145222",
+      "latest_date": "2023-05-04"
+    },
+    {
+      "id": "C00093054",
+      "name": "WALMART INC. PAC FOR RESPONSIBLE GOVERNMENT",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583871409",
+      "latest_date": "2023-06-13"
+    },
+    {
+      "id": "C00342113",
+      "name": "DYKEMA GOSSETT FEDERAL PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307249584026315",
+      "latest_date": "2023-02-02"
+    },
+    {
+      "id": "C00570945",
+      "name": "E-PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584207946",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00770255",
+      "name": "SIX PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310099597435882",
+      "latest_date": "2023-06-23"
+    },
+    {
+      "id": "C00089136",
+      "name": "ALTRIA GROUP, INC. POLITICAL ACTION COMMITTEE (ALTRIAPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310199598520995",
+      "latest_date": "2023-09-21"
+    },
+    {
+      "id": "C00410670",
+      "name": "HEALTH ALLIANCE PLAN PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401199600122936",
+      "latest_date": "2023-10-02"
+    },
+    {
+      "id": "C00267849",
+      "name": "ALLIED PILOTS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 6000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319618343788",
+      "latest_date": "2023-12-14"
+    },
+    {
+      "id": "C00089458",
+      "name": "NATIONAL STONE, SAND & GRAVEL ASSOCIATION ROCKPAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404209633592304",
+      "latest_date": "2024-03-21"
+    },
+    {
+      "id": "C00114025",
+      "name": "NATIONAL READY MIXED CONCRETE ASSN. PAC (CONCRETEPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407189661214104",
+      "latest_date": "2024-06-26"
+    },
+    {
+      "id": "C00165159",
+      "name": "REPUBLICAN MAINSTREET PARTNERSHIP PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 6000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501309748183914",
+      "latest_date": "2024-03-22"
+    },
+    {
+      "id": "C00818740",
+      "name": "CALL TO SERVICE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5300.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319607711919",
+      "latest_date": "2023-12-26"
+    },
+    {
+      "id": "C00693127",
+      "name": "BUILDING BRIDGES PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 6,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580392627",
+      "latest_date": "2023-03-06"
+    },
+    {
+      "id": "C00755173",
+      "name": "HONOR COURAGE COMMITMENT PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580408314",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00483487",
+      "name": "BRINGING REPUBLICAN EXCELLENCE TO TOWN PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580414859",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00749481",
+      "name": "RAPTOR PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580474865",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00284885",
+      "name": "THE HOME DEPOT INC. POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306159582152583",
+      "latest_date": "2023-05-03"
+    },
+    {
+      "id": "C00148031",
+      "name": "CATERPILLAR INC. POLITICAL ACTION COMMITTEE (CATPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202305189581538016",
+      "latest_date": "2023-03-20"
+    },
+    {
+      "id": "C00001198",
+      "name": "AMERICAN HOTEL AND LODGING ASSOCIATION POLITICAL ACTION COMMITTEE ('HOTELPAC')",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583980082",
+      "latest_date": "2023-06-13"
+    },
+    {
+      "id": "C00022343",
+      "name": "INDEPENDENT INSURANCE AGENTS & BROKERS OF AMERICA, INC. POLITICAL ACTION COMMITTEE (INSURPAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307199583821491",
+      "latest_date": "2023-06-16"
+    },
+    {
+      "id": "C00186288",
+      "name": "VERIZON COMMUNICATIONS, INC. POLITICAL ACTION COMMITTEE (VERIZON PAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584198436",
+      "latest_date": "2023-05-31"
+    },
+    {
+      "id": "C00661272",
+      "name": "WITH HONOR PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307289584098975",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00105981",
+      "name": "INVESTMENT COMPANY INSTITUTE POLITICAL ACTION COMMITTEE (ICI PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309189597083860",
+      "latest_date": "2023-08-08"
+    },
+    {
+      "id": "C00004275",
+      "name": "AMERICAN BANKERS ASSOCIATION PAC (BANKPAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309189597074090",
+      "latest_date": "2023-08-30"
+    },
+    {
+      "id": "C00592089",
+      "name": "ELECTING MAJORITY MAKING EFFECTIVE REPUBLICANS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309019596914425",
+      "latest_date": "2023-01-30"
+    },
+    {
+      "id": "C00211318",
+      "name": "DELOITTE POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310189598497152",
+      "latest_date": "2023-09-24"
+    },
+    {
+      "id": "C00692715",
+      "name": "HELP ELECT REPUBLICANS NOW",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407169661192195",
+      "latest_date": "2023-12-01"
+    },
+    {
+      "id": "C00496307",
+      "name": "MARATHON PETROLEUM CORPORATION EMPLOYEES POLITICAL ACTION COMMITTEE (MPAC)",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310129597483610",
+      "latest_date": "2023-09-11"
+    },
+    {
+      "id": "C00691972",
+      "name": "ALLISON TRANSMISSION INC. POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401309600665163",
+      "latest_date": "2023-09-15"
+    },
+    {
+      "id": "C00360669",
+      "name": "SOUTHWEST AIRLINES PILOTS' ASSOCIATION POLITICAL ACTION COMMITTEE (SWAPA PAC)",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401129600046173",
+      "latest_date": "2023-08-17"
+    },
+    {
+      "id": "C00636837",
+      "name": "STAR PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319601144659",
+      "latest_date": "2023-12-20"
+    },
+    {
+      "id": "C00448373",
+      "name": "HUCK PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403149622424009",
+      "latest_date": "2023-09-07"
+    },
+    {
+      "id": "C00010421",
+      "name": "ASSOCIATED BUILDERS AND CONTRACTORS, INC. POLITICAL ACTION COMMITTEE (ABC PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209646208535",
+      "latest_date": "2023-06-02"
+    },
+    {
+      "id": "C00028787",
+      "name": "NATIONAL CATTLEMEN'S BEEF ASSOCIATION POLITICAL ACTION COMMITTEE (NCBA-PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402289622290608",
+      "latest_date": "2023-05-09"
+    },
+    {
+      "id": "C00035451",
+      "name": "AIR LINE PILOTS ASSOCIATION PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402149619772284",
+      "latest_date": "2023-11-30"
+    },
+    {
+      "id": "C00255752",
+      "name": "AMERICAN SOCIETY OF ANESTHESIOLOGISTS POLITICAL ACTION COMMITTEE (ASA PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404169633413357",
+      "latest_date": "2024-03-11"
+    },
+    {
+      "id": "C00002972",
+      "name": "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION AMERICA'S ELECTRIC COOPERATIVES PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 5000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404189633472396",
+      "latest_date": "2024-03-14"
+    },
+    {
+      "id": "C00390583",
+      "name": "BHFS-E, PC PAC (BROWNSTEIN HYATT FARBER SCHRECK POLITICAL ACTION COMMITTEE)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404209633594515",
+      "latest_date": "2024-03-21"
+    },
+    {
+      "id": "C00452052",
+      "name": "ENDO, INC. POLITICAL ACTION COMMITTEE (ENDO PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405209646110098",
+      "latest_date": "2024-04-15"
+    },
+    {
+      "id": "C00807909",
+      "name": "STOP COLLECTIVISM OR TOTALITARIANISM TRIUMPHS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405079645480088",
+      "latest_date": "2024-03-30"
+    },
+    {
+      "id": "C00040998",
+      "name": "NATIONAL AUTOMOBILE DEALERS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405179646057618",
+      "latest_date": "2024-04-23"
+    },
+    {
+      "id": "C00113811",
+      "name": "CONOCOPHILLIPS SPIRIT PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409059675360160",
+      "latest_date": "2024-07-25"
+    },
+    {
+      "id": "C00409516",
+      "name": "DIRECT SUPPLY, INC. PARTNERS PAC (DSI PARTNERS PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666624046",
+      "latest_date": "2024-07-15"
+    },
+    {
+      "id": "C00531517",
+      "name": "GIVING US SECURITY POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698634709",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00250399",
+      "name": "AUTOMOTIVE FREE INTERNATIONAL TRADE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710023435",
+      "latest_date": "2024-09-03"
+    },
+    {
+      "id": "C00376756",
+      "name": "SPEAK UP AMERICA POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720713936",
+      "latest_date": "2024-10-23"
+    },
+    {
+      "id": "C00429662",
+      "name": "ENBRIDGE (U.S.) INC. POLITICAL ACTION COMMITTEE (ENBRIDGE PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720255020",
+      "latest_date": "2024-10-24"
+    },
+    {
+      "id": "C00572271",
+      "name": "BUILDING AMERICA'S REPUBLICAN REPRESENTATION PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698632087",
+      "latest_date": "2024-09-23"
+    },
+    {
+      "id": "C00135541",
+      "name": "TO PROTECT OUR HERITAGE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202411019719914523",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00565630",
+      "name": "MAINTAINING ALL REPUBLICANS IN OFFICE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410139684946120",
+      "latest_date": "2024-09-25"
+    },
+    {
+      "id": "C00300921",
+      "name": "BLACK AMERICA'S POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685411956",
+      "latest_date": "2024-08-30"
+    },
+    {
+      "id": "C00785014",
+      "name": "CONQUERING CANCER PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685653433",
+      "latest_date": "2024-09-18"
+    },
+    {
+      "id": "C00495887",
+      "name": "TOMORROW IS MEANINGFUL PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687750028",
+      "latest_date": "2024-09-25"
+    },
+    {
+      "id": "C00497594",
+      "name": "DEFENDING AMERICA'S VALUES EVERYWHERE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721227065",
+      "latest_date": "2024-11-04"
+    },
+    {
+      "id": "C00354753",
+      "name": "DEVON ENERGY CORPORATION POLITICAL ACTION COMMITTEE (DEC PAC)",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410079684812162",
+      "latest_date": "2024-09-23"
+    },
+    {
+      "id": "C00040394",
+      "name": "THE WILLIAMS COMPANIES, INC. POLITICAL ACTION COMMITTEE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710087506",
+      "latest_date": "2024-10-12"
+    },
+    {
+      "id": "C00431544",
+      "name": "DUNKIN' BRANDS, INC, POLITICAL ACTION COMMITTEE (DUNKIN' PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 5000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410239710111110",
+      "latest_date": "2024-09-16"
+    },
+    {
+      "id": "C00147173",
+      "name": "WINE AND SPIRITS WHOLESALERS OF AMERICA, INC. POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4623.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202312199599534923",
+      "latest_date": "2023-11-15"
+    },
+    {
+      "id": "C00039578",
+      "name": "THE COUNCIL OF INSURANCE AGENTS & BROKERS POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 4500.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307199583836567",
+      "latest_date": "2023-06-27"
+    },
+    {
+      "id": "C00123612",
+      "name": "TEXTRON INC. POLITICAL ACTION COMMITTEE",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 4500.0,
+      "transactions": 5,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401229600138121",
+      "latest_date": "2023-10-23"
+    },
+    {
+      "id": "C00430256",
+      "name": "MOLINA HEALTHCARE, INC. PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 4500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409179675499104",
+      "latest_date": "2024-08-28"
+    },
+    {
+      "id": "C00481531",
+      "name": "TEXAS REPUBLICANS UNITED POLITICAL ACTION COMMITTEE (TRU PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202303179579301839",
+      "latest_date": "2023-02-03"
+    },
+    {
+      "id": "C00553859",
+      "name": "DR. BRIAN BABIN FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406299652546083",
+      "latest_date": "2023-06-26"
+    },
+    {
+      "id": "C00504019",
+      "name": "RICK W. ALLEN FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304129580262327",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00482737",
+      "name": "AUSTIN SCOTT FOR CONGRESS INC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580438139",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00545749",
+      "name": "EMMER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580487887",
+      "latest_date": "2023-03-22"
+    },
+    {
+      "id": "C00599464",
+      "name": "SMUCKER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580439491",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00010470",
+      "name": "UNION PACIFIC CORP. FUND FOR EFFECTIVE GOVERNMENT",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306159582158398",
+      "latest_date": "2023-05-30"
+    },
+    {
+      "id": "C00632257",
+      "name": "MAST FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307109582470685",
+      "latest_date": "2023-06-26"
+    },
+    {
+      "id": "C00547893",
+      "name": "ELISE FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307159582924418",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00361758",
+      "name": "T-MOBILE US, INC.  POLITICAL ACTION COMMITTEE (T-PAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583879514",
+      "latest_date": "2023-06-08"
+    },
+    {
+      "id": "C00786657",
+      "name": "FRY FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308099596504482",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00817338",
+      "name": "MVL PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307229584018572",
+      "latest_date": "2023-06-27"
+    },
+    {
+      "id": "C00394957",
+      "name": "SCALISE FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308319596881141",
+      "latest_date": "2023-06-19"
+    },
+    {
+      "id": "C00741090",
+      "name": "DIANA FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202312199599541532",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00558486",
+      "name": "GARRET GRAVES FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401169600089994",
+      "latest_date": "2023-09-19"
+    },
+    {
+      "id": "C00274431",
+      "name": "UNITEDHEALTH GROUP INCORPORATED PAC (UNITEDHEALTH GROUP PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319607734151",
+      "latest_date": "2023-12-12"
+    },
+    {
+      "id": "C00329425",
+      "name": "BURGER KING FRANCHISEE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403139622405528",
+      "latest_date": "2024-02-29"
+    },
+    {
+      "id": "C00303305",
+      "name": "PETE SESSIONS FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402229622259666",
+      "latest_date": "2024-02-14"
+    },
+    {
+      "id": "C00163832",
+      "name": "CSX CORPORATION GOOD GOVERNMENT FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406189649209989",
+      "latest_date": "2024-05-13"
+    },
+    {
+      "id": "C00140061",
+      "name": "NATIONAL EMERGENCY MEDICINE POLITICAL ACTION COMMITTEE / AMERICAN COLLEGE OF EMERGENCY PHYSICIANS",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159660040781",
+      "latest_date": "2024-05-22"
+    },
+    {
+      "id": "C00666396",
+      "name": "MICHAEL WALTZ FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 4000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653475556",
+      "latest_date": "2024-05-29"
+    },
+    {
+      "id": "C00053553",
+      "name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3950.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410049684793001",
+      "latest_date": "2024-07-23"
+    },
+    {
+      "id": "C00003764",
+      "name": "NATIONAL RESTAURANT ASSOCIATION PAC (RESTAURANT PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202305159581453281",
+      "latest_date": "2023-04-25"
+    },
+    {
+      "id": "C00007450",
+      "name": "AMERICAN GAS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306209582255477",
+      "latest_date": "2023-05-28"
+    },
+    {
+      "id": "C00064766",
+      "name": "UNITED PARCEL SERVICE, INC. PAC (UPSPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307189583811070",
+      "latest_date": "2023-06-26"
+    },
+    {
+      "id": "C00485540",
+      "name": "LEADERSHIP FOR AMERICA TODAY TOMORROW AND ALWAYS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307309584165337",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00388462",
+      "name": "ITC HOLDINGS CORP. PAC (ITC PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307249584028365",
+      "latest_date": "2023-02-22"
+    },
+    {
+      "id": "C00254953",
+      "name": "JACKSON HOLDINGS LLC AND JACKSON NATIONAL LIFE INSURANCE COMPANY SEPARATE SEGREGATED FUND (JACKSON N",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307289584110516",
+      "latest_date": "2023-01-19"
+    },
+    {
+      "id": "C00106146",
+      "name": "AMERICAN HOSPITAL ASSOCIATION PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310199598521439",
+      "latest_date": "2023-09-14"
+    },
+    {
+      "id": "C00688549",
+      "name": "DAKOTA LEADERSHIP PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685172465",
+      "latest_date": "2023-11-05"
+    },
+    {
+      "id": "C00010983",
+      "name": "JOHNSON & JOHNSON POLITICAL ACTION COMMITTEE",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319600798452",
+      "latest_date": "2023-10-24"
+    },
+    {
+      "id": "C00346353",
+      "name": "CRH AMERICAS, INC. PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409209684655117",
+      "latest_date": "2023-05-25"
+    },
+    {
+      "id": "C00359539",
+      "name": "AMERICAN ACADEMY OF DERMATOLOGY ASSOCIATION POLITICAL ACTION COMMITTEE (SKINPAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404179633437860",
+      "latest_date": "2024-03-19"
+    },
+    {
+      "id": "C00098061",
+      "name": "TARGET CORPORATION CITIZENS POLITICAL FORUM (TARGETCITIZENS POLITICAL FORUM)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406189649211763",
+      "latest_date": "2024-05-09"
+    },
+    {
+      "id": "C00874560",
+      "name": "DUTY HONOR VICTORY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3300.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412039720161047",
+      "latest_date": "2024-10-23"
+    },
+    {
+      "id": "C00773853",
+      "name": "GINGER PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3300.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731292719",
+      "latest_date": "2024-11-01"
+    },
+    {
+      "id": "C00652149",
+      "name": "BURCHETT FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3080.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304159580886850",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00502229",
+      "name": "WEBER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580552414",
+      "latest_date": "2023-03-16"
+    },
+    {
+      "id": "C00501643",
+      "name": "DAVID ROUZER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580468363",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00542365",
+      "name": "TOYOTA MOTOR NORTH AMERICA, INC POLITICAL ACTION COMMITTEE (TOYOTA/LEXUS PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583862214",
+      "latest_date": "2023-06-27"
+    },
+    {
+      "id": "C00653220",
+      "name": "CAROL FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582581643",
+      "latest_date": "2023-06-30"
+    },
+    {
+      "id": "C00493361",
+      "name": "RAZOR PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308109596513395",
+      "latest_date": "2023-07-20"
+    },
+    {
+      "id": "C00823351",
+      "name": "REPUBLICANS UNITED TO DEFEND YOU PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309019596928440",
+      "latest_date": "2023-06-20"
+    },
+    {
+      "id": "C00706267",
+      "name": "ASHLEY HINSON FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310139597628112",
+      "latest_date": "2023-09-28"
+    },
+    {
+      "id": "C00657833",
+      "name": "GUY FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202311039598932683",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00390724",
+      "name": "WALBERG FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407129653150929",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00096362",
+      "name": "MICHIGAN FARM BUREAU POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407039652562991",
+      "latest_date": "2024-06-25"
+    },
+    {
+      "id": "C00488080",
+      "name": "NATIONAL STRIPPER WELL ASSOCIATION PAC (NSWA PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407099652750607",
+      "latest_date": "2024-06-11"
+    },
+    {
+      "id": "C00130773",
+      "name": "NATIONAL MULTIFAMILY HOUSING COUNCIL POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405179646057013",
+      "latest_date": "2024-04-16"
+    },
+    {
+      "id": "C00326439",
+      "name": "HOUSE CONSERVATIVES FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720627531",
+      "latest_date": "2024-10-22"
+    },
+    {
+      "id": "C00832139",
+      "name": "MI CORN GROWERS ASSOCIATION PAC (MI CORN PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 3000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685337718",
+      "latest_date": "2024-03-08"
+    },
+    {
+      "id": "C00326389",
+      "name": "AMALGAMATED SUGAR COMPANY POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202303149579016205",
+      "latest_date": "2023-02-23"
+    },
+    {
+      "id": "C00760397",
+      "name": "NO NONSENSE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307119582498457",
+      "latest_date": "2023-03-31"
+    },
+    {
+      "id": "C00410621",
+      "name": "SHOW-ME POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307159582982790",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00784694",
+      "name": "TKJ PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307139582523822",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00631051",
+      "name": "ABRAHAM LINCOLN PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584192285",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00343137",
+      "name": "POLITICAL ACTION COMMITTEE OF THE AMERICAN ASSOCIATION OF ORTHOPAEDIC SURGEONS--PAC OF AAOS",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307269584047885",
+      "latest_date": "2023-05-09"
+    },
+    {
+      "id": "C00219642",
+      "name": "ENTERPRISE HOLDINGS, INC. / ENTERPRISE MOBILITY POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309209597129185",
+      "latest_date": "2023-08-11"
+    },
+    {
+      "id": "C00113803",
+      "name": "AMERICAN OSTEOPATHIC INFORMATION ASSOCIATION - OSTEOPATHIC POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310169598470158",
+      "latest_date": "2023-09-29"
+    },
+    {
+      "id": "C00469429",
+      "name": "CMR POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319601066840",
+      "latest_date": "2023-09-26"
+    },
+    {
+      "id": "C00427435",
+      "name": "MAVERICK PAC USA",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319618989070",
+      "latest_date": "2023-10-31"
+    },
+    {
+      "id": "C00193631",
+      "name": "THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 2500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403209622594771",
+      "latest_date": "2024-02-02"
+    },
+    {
+      "id": "C00461129",
+      "name": "RGA REINSURANCE COMPANY FEDERAL PAC",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402069619678263",
+      "latest_date": "2024-01-30"
+    },
+    {
+      "id": "C00635557",
+      "name": "DO RIGHT BAYOU PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633550243",
+      "latest_date": "2024-03-04"
+    },
+    {
+      "id": "C00034157",
+      "name": "AFLAC POLITICAL ACTION COMMITTEE (AFLAC PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404179633446726",
+      "latest_date": "2024-03-21"
+    },
+    {
+      "id": "C00477653",
+      "name": "COX ENTERPRISES PAC (COXPAC) INC.",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633500630",
+      "latest_date": "2024-03-21"
+    },
+    {
+      "id": "C00204099",
+      "name": "DEERE & COMPANY PAC (AKA JOHN DEERE PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404179633438072",
+      "latest_date": "2024-03-22"
+    },
+    {
+      "id": "C00010082",
+      "name": "NCTA - THE INTERNET & TELEVISION ASSOCIATION POLITICAL ACTION COMMITTEE (NCTAPAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404179633440785",
+      "latest_date": "2024-03-26"
+    },
+    {
+      "id": "C00250753",
+      "name": "AUTO CARE ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408079666111386",
+      "latest_date": "2024-07-29"
+    },
+    {
+      "id": "C00769695",
+      "name": "FREEDOM FORCE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202405299648787114",
+      "latest_date": "2024-03-28"
+    },
+    {
+      "id": "C00536573",
+      "name": "ABBVIE POLITICAL ACTION COMMITTEE",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408199666436177",
+      "latest_date": "2024-07-19"
+    },
+    {
+      "id": "C00393173",
+      "name": "COMERICA INCORPORATED POLTICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407179661194175",
+      "latest_date": "2024-06-10"
+    },
+    {
+      "id": "C00085316",
+      "name": "THE CIGNA GROUP EMPLOYEE POLITICAL ACTION COMMITTEE",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649348740",
+      "latest_date": "2024-05-13"
+    },
+    {
+      "id": "C00112896",
+      "name": "CONOCOPHILLIPS SPIRIT PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698648588",
+      "latest_date": "2024-09-17"
+    },
+    {
+      "id": "C00551184",
+      "name": "CONTINENTAL RESOURCES, INC. POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687663720",
+      "latest_date": "2024-09-20"
+    },
+    {
+      "id": "C00447565",
+      "name": "FINSECA PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720619569",
+      "latest_date": "2024-10-31"
+    },
+    {
+      "id": "C00016683",
+      "name": "PFIZER INC. PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410179698583945",
+      "latest_date": "2024-09-24"
+    },
+    {
+      "id": "C00108035",
+      "name": "MCKESSON CORPORATION EMPLOYEES POLITICAL FUND",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685688623",
+      "latest_date": "2024-09-25"
+    },
+    {
+      "id": "C00818344",
+      "name": "FARMER PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410199699224950",
+      "latest_date": "2024-10-14"
+    },
+    {
+      "id": "C00095869",
+      "name": "POWERPAC OF THE EDISON ELECTRIC INSTITUTE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501179740202027",
+      "latest_date": "2024-06-28"
+    },
+    {
+      "id": "C00082271",
+      "name": "PRECISION METALFORMING ASSOCIATION VOICE OF THE INDUSTRY COMMITTEE (PMAVIC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304119579740571",
+      "latest_date": "2023-03-22"
+    },
+    {
+      "id": "C00778308",
+      "name": "SOUTHERN STATES PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304159580604469",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00654723",
+      "name": "MEUSER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580553864",
+      "latest_date": "2023-03-24"
+    },
+    {
+      "id": "C00817932",
+      "name": "LANGWORTHY FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304159580860930",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00628669",
+      "name": "1848 PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580445727",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00489427",
+      "name": "BUILDING LEADERSHIP AND INSPIRING NEW ENTERPRISE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580396353",
+      "latest_date": "2023-03-25"
+    },
+    {
+      "id": "C00444620",
+      "name": "FRIENDS OF GLENN THOMPSON",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580483783",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00497818",
+      "name": "WENSTRUP FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580536656",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00435974",
+      "name": "ANDY HARRIS FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580441685",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00068692",
+      "name": "FEDEX CORPORATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306199582200871",
+      "latest_date": "2023-05-31"
+    },
+    {
+      "id": "C00800649",
+      "name": "HOUCHIN FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307159583407660",
+      "latest_date": "2023-06-28"
+    },
+    {
+      "id": "C00096156",
+      "name": "HONEYWELL INTERNATIONAL POLITICAL ACTION COMMITTEE",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583914452",
+      "latest_date": "2023-06-23"
+    },
+    {
+      "id": "C00081414",
+      "name": "AMERICAN SUGAR CANE LEAGUE OF USA, INC PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307179583769550",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00724229",
+      "name": "VICTORY EAST",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307179583768886",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00730895",
+      "name": "KAT FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582631499",
+      "latest_date": "2023-06-28"
+    },
+    {
+      "id": "C00420935",
+      "name": "KEVIN MCCARTHY FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582771127",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00525238",
+      "name": "IMPACT COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307139582537853",
+      "latest_date": "2023-03-25"
+    },
+    {
+      "id": "C00523381",
+      "name": "HEARTDOCPAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582583205",
+      "latest_date": "2023-03-15"
+    },
+    {
+      "id": "C00697698",
+      "name": "REPUBLICANS OFFERING SOLUTIONS FOR EVERYONE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307139582538657",
+      "latest_date": "2023-06-23"
+    },
+    {
+      "id": "C00477240",
+      "name": "MORGAN GRIFFITH FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582820600",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00531764",
+      "name": "A NEW NATION PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307159583231768",
+      "latest_date": "2023-06-30"
+    },
+    {
+      "id": "C00726042",
+      "name": "LISA MCCLAIN FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582645188",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00650853",
+      "name": "CREATING OPPORTUNITIES, MARKETS AND ENTHUSIASM IN RURAL KENTUCKY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584226266",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00597062",
+      "name": "BUDDY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584196365",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00819102",
+      "name": "DREAMAKERS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584270613",
+      "latest_date": "2023-06-30"
+    },
+    {
+      "id": "C00706747",
+      "name": "FRIENDS OF MCCORMICK",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308319596914003",
+      "latest_date": "2023-03-31"
+    },
+    {
+      "id": "C00824938",
+      "name": "BE AN AMERICAN PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307259584034811",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00480863",
+      "name": "NATIONAL SHOOTING SPORTS FOUNDATION, INC. POLITICAL ACTION COMMITTEE (NSSF PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309209597134927",
+      "latest_date": "2023-08-15"
+    },
+    {
+      "id": "C00585893",
+      "name": "CONSERVATIVE PROMISES PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310259598841899",
+      "latest_date": "2023-03-20"
+    },
+    {
+      "id": "C00427401",
+      "name": "CONSERVATIVE & REPUBLICAN TOGETHER EQUALS RESULTS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310259598842962",
+      "latest_date": "2023-06-30"
+    },
+    {
+      "id": "C00281212",
+      "name": "BAE SYSTEMS USA PAC",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310199598516683",
+      "latest_date": "2023-09-25"
+    },
+    {
+      "id": "C00416594",
+      "name": "JIM JORDAN FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310239598824589",
+      "latest_date": "2023-03-24"
+    },
+    {
+      "id": "C00197228",
+      "name": "ELEVANCE HEALTH, INC. POLITICAL ACTION COMMITTEE (ELEVANCE HEALTH PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2000.0,
+      "transactions": 4,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202311179599150911",
+      "latest_date": "2023-10-18"
+    },
+    {
+      "id": "C00366872",
+      "name": "DETROIT REGIONAL CHAMBER FED PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401309600591044",
+      "latest_date": "2023-09-19"
+    },
+    {
+      "id": "C00450320",
+      "name": "INVEST IN A STRONG AND SECURE AMERICA",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401179600098893",
+      "latest_date": "2023-12-29"
+    },
+    {
+      "id": "C00712695",
+      "name": "VITORIA PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319601184016",
+      "latest_date": "2023-12-29"
+    },
+    {
+      "id": "C00608695",
+      "name": "MIKE JOHNSON FOR LOUISIANA",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319607834250",
+      "latest_date": "2023-12-29"
+    },
+    {
+      "id": "C00813063",
+      "name": "LEADERSHIP AND LOYALTY ONLY TO AMERICA PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319619544605",
+      "latest_date": "2023-12-21"
+    },
+    {
+      "id": "C00738260",
+      "name": "POINT ACTION PAC, INC.",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404229636705882",
+      "latest_date": "2023-04-06"
+    },
+    {
+      "id": "C00504522",
+      "name": "HUDSON FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404089627477671",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00428623",
+      "name": "GOOGLE LLC NETPAC",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633558117",
+      "latest_date": "2024-03-20"
+    },
+    {
+      "id": "C00389403",
+      "name": "SPECIALTY EQUIPMENT MARKET ASSOCIATION & PERFORMANCE RACING, INC. PAC (SEMA & PRI PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404119627535567",
+      "latest_date": "2024-01-08"
+    },
+    {
+      "id": "C00373001",
+      "name": "CITIZENS FOR TURNER",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404159627774960",
+      "latest_date": "2024-03-25"
+    },
+    {
+      "id": "C00074096",
+      "name": "DOW INC. PAC (DOWPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652757881",
+      "latest_date": "2024-06-21"
+    },
+    {
+      "id": "C00213173",
+      "name": "K&L GATES LLP POLITICAL ACTION COMMITTEE (DC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407139653207801",
+      "latest_date": "2024-06-11"
+    },
+    {
+      "id": "C00830208",
+      "name": "GE HEALTHCARE TECHNOLOGIES INC. PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2000.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661290026",
+      "latest_date": "2024-06-28"
+    },
+    {
+      "id": "C00462630",
+      "name": "COVINGTON AND BURLING LLP PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649264511",
+      "latest_date": "2024-05-23"
+    },
+    {
+      "id": "C00663914",
+      "name": "DEBBIE LESKO FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653512534",
+      "latest_date": "2024-06-14"
+    },
+    {
+      "id": "C00009282",
+      "name": "NORFOLK SOUTHERN CORPORATION GOOD GOVERNMENT FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649270088",
+      "latest_date": "2024-05-01"
+    },
+    {
+      "id": "C00462374",
+      "name": "CRAWFORD FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653475095",
+      "latest_date": "2024-06-27"
+    },
+    {
+      "id": "C00812586",
+      "name": "FIRST IN TEXAS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698685630",
+      "latest_date": "2024-09-23"
+    },
+    {
+      "id": "C00725465",
+      "name": "CLIFF BENTZ FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720971073",
+      "latest_date": "2024-10-21"
+    },
+    {
+      "id": "C00674259",
+      "name": "DR JOHN JOYCE FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720972549",
+      "latest_date": "2024-11-01"
+    },
+    {
+      "id": "C00819425",
+      "name": "OLD BREED PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202411299720067765",
+      "latest_date": "2024-10-21"
+    },
+    {
+      "id": "C00014555",
+      "name": "FOOD MARKETPLACE INC. POLITICAL ACTION COMMITTEE FMI FOODPAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720624230",
+      "latest_date": "2024-10-31"
+    },
+    {
+      "id": "C00635516",
+      "name": "TELLURIAN INC PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710020792",
+      "latest_date": "2024-10-08"
+    },
+    {
+      "id": "C00809012",
+      "name": "FROGMAN PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209709493377",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00520841",
+      "name": "FIGHTIN' NINTH POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685817069",
+      "latest_date": "2024-07-20"
+    },
+    {
+      "id": "C00870238",
+      "name": "ONDER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685774042",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00431403",
+      "name": "VOTE TO ELECT REPUBLICANS NOW PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686522242",
+      "latest_date": "2024-09-20"
+    },
+    {
+      "id": "C00869370",
+      "name": "FEDORCHAK FOR ND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685568192",
+      "latest_date": "2024-09-26"
+    },
+    {
+      "id": "C00680405",
+      "name": "DEFEND & UPHOLD OUR NATION NOW",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686037593",
+      "latest_date": "2024-09-11"
+    },
+    {
+      "id": "C00246306",
+      "name": "IPAA WILDCATTERS FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149684988902",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00770438",
+      "name": "JAKE ELLZEY FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159689095596",
+      "latest_date": "2024-09-24"
+    },
+    {
+      "id": "C00801985",
+      "name": "KEVIN KILEY FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319748890474",
+      "latest_date": "2024-10-24"
+    },
+    {
+      "id": "C00445023",
+      "name": "GUTHRIE FOR CONGRESS",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 2000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501319749126892",
+      "latest_date": "2024-07-01"
+    },
+    {
+      "id": "C00755728",
+      "name": "PROVEN CONSERVATIVES PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580395974",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00543892",
+      "name": "LOUDERMILK FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580409240",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00002881",
+      "name": "TRUCKING POLITICAL ACTION COMMITTEE OF THE AMERICAN TRUCKING ASSOCIATIONS INC.",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583903977",
+      "latest_date": "2023-06-19"
+    },
+    {
+      "id": "C00588657",
+      "name": "TEXANS FOR JODEY ARRINGTON",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582651524",
+      "latest_date": "2023-03-29"
+    },
+    {
+      "id": "C00200865",
+      "name": "ROAD TO FREEDOM CAMPAIGN COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308189596694038",
+      "latest_date": "2023-07-25"
+    },
+    {
+      "id": "C00668921",
+      "name": "NATIONAL WOODEN PALLET AND CONTAINER ASSOCIATION POLITICAL ACTION COMMITTEE (PALLETPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653622200",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00409565",
+      "name": "NATIONAL OCEAN INDUSTRIES ASSOCIATION (NOIA) POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633501115",
+      "latest_date": "2024-03-04"
+    },
+    {
+      "id": "C00262295",
+      "name": "CTIA - THE WIRELESS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 1500.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661312020",
+      "latest_date": "2024-06-13"
+    },
+    {
+      "id": "C00105338",
+      "name": "FOLEY & LARDNER POLITICAL FUND, INC.",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409199675537304",
+      "latest_date": "2024-08-06"
+    },
+    {
+      "id": "C00082040",
+      "name": "CHAMBER OF COMMERCE OF THE UNITED STATES OF AMERICA PAC (US CHAMBER PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720628993",
+      "latest_date": "2024-10-21"
+    },
+    {
+      "id": "C00686055",
+      "name": "JACKSON HOLDINGS LLC AND JACKSON NATIONAL LIFE INSURANCE COMPANY FEDERAL SSF (JACKSON NATIONAL FEDER",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731247533",
+      "latest_date": "2024-10-22"
+    },
+    {
+      "id": "C00384602",
+      "name": "AMERICAN SOCIETY FOR RADIATION ONCOLOGY PAC (''ASTRO-PAC'')",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698558922",
+      "latest_date": "2024-09-16"
+    },
+    {
+      "id": "C00762930",
+      "name": "BE VICTORIOUS OVER DEMOCRATS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304139580374957",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00496760",
+      "name": "AMODEI FOR NEVADA",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304159580905452",
+      "latest_date": "2023-03-31"
+    },
+    {
+      "id": "C00546499",
+      "name": "MIKE BOST FOR CONGRESS COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304249581266970",
+      "latest_date": "2023-03-27"
+    },
+    {
+      "id": "C00415208",
+      "name": "LONE STAR LEADERSHIP PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304139580377615",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00252338",
+      "name": "AMERICAN CHEMISTRY COUNCIL PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304209581145458",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00703843",
+      "name": "BICE FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202304149580426052",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00825398",
+      "name": "MISSOURI TRUTH PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307119582481467",
+      "latest_date": "2023-03-31"
+    },
+    {
+      "id": "C00738872",
+      "name": "BLAKE MOORE FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202305249581677418",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00733329",
+      "name": "BYRON DONALDS FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307139582525720",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00097568",
+      "name": "RTX CORPORATION POLITICAL ACTION COMMITTEE (RTX PAC)",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202306209582268323",
+      "latest_date": "2023-05-22"
+    },
+    {
+      "id": "C00762328",
+      "name": "FIGHT ON PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583853080",
+      "latest_date": "2023-06-22"
+    },
+    {
+      "id": "C00374447",
+      "name": "AECOM PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583912646",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00697649",
+      "name": "FRIENDS TO ELECT DR. GREG MURPHY TO CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582640724",
+      "latest_date": "2023-06-09"
+    },
+    {
+      "id": "C00737270",
+      "name": "LIBERTAD",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307149582628145",
+      "latest_date": "2023-06-30"
+    },
+    {
+      "id": "C00412890",
+      "name": "ADRIAN SMITH FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307129582502966",
+      "latest_date": "2023-06-15"
+    },
+    {
+      "id": "C00524314",
+      "name": "AMERICA'S FIRST PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307159582974060",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00450916",
+      "name": "ASURION LLC POLITICAL ACTION COMMITTEE (ASURION PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307139582525891",
+      "latest_date": "2023-03-21"
+    },
+    {
+      "id": "C00799809",
+      "name": "1890 PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584268494",
+      "latest_date": "2023-03-28"
+    },
+    {
+      "id": "C00144774",
+      "name": "SOUTHERN COMPANY EMPLOYEES PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584192432",
+      "latest_date": "2023-06-27"
+    },
+    {
+      "id": "C00775999",
+      "name": "DEPENDABLE CONSERVATIVE LEADERSHIP PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584240288",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00345058",
+      "name": "COMMON SENSE COMMON SOLUTIONS POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584228288",
+      "latest_date": "2023-03-30"
+    },
+    {
+      "id": "C00798025",
+      "name": "CONSERVATIVE LEADERSHIP IN ELECTIONS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584279819",
+      "latest_date": "2023-06-29"
+    },
+    {
+      "id": "C00693671",
+      "name": "WARRIOR DIPLOMAT PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584208050",
+      "latest_date": "2023-06-23"
+    },
+    {
+      "id": "C00756551",
+      "name": "AMERICAN GRIT PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307319584191130",
+      "latest_date": "2023-06-28"
+    },
+    {
+      "id": "C00043091",
+      "name": "NATIONAL TOOLING & MACHINING ASSOCIATION (NTMA) COMMITTEE FOR A STRONG ECONOMY",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307259584030055",
+      "latest_date": "2023-03-23"
+    },
+    {
+      "id": "C00545079",
+      "name": "BELIEF IN LIFE AND LIBERTY POLITICAL ACTION COMMITTEE (BILL'S PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202308319596864786",
+      "latest_date": "2023-06-23"
+    },
+    {
+      "id": "C00468256",
+      "name": "BUCSHON FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310139597564870",
+      "latest_date": "2023-09-27"
+    },
+    {
+      "id": "C00524603",
+      "name": "KEEP AMERICA ROLLING",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 3,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310139597564801",
+      "latest_date": "2023-09-19"
+    },
+    {
+      "id": "C00441014",
+      "name": "ROB WITTMAN FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202310159597952235",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00122499",
+      "name": "AMERICAN ACADEMY OF PHYSICIAN ASSOCIATES POLITICAL ACTION COMMITTEE (PA PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401269600430174",
+      "latest_date": "2023-11-29"
+    },
+    {
+      "id": "C00213066",
+      "name": "CAREER EDUCATION COLLEGES AND UNIVERSITIES POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401299600529670",
+      "latest_date": "2023-12-13"
+    },
+    {
+      "id": "C00366070",
+      "name": "FAA MANAGERS ASSOCIATION INC. PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401239600220765",
+      "latest_date": "2023-05-18"
+    },
+    {
+      "id": "C00338848",
+      "name": "HOOSIER PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401239600154297",
+      "latest_date": "2023-11-16"
+    },
+    {
+      "id": "C00706176",
+      "name": "YOUR OHIO REPUBLICAN TEAM",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319600778736",
+      "latest_date": "2023-12-22"
+    },
+    {
+      "id": "C00670547",
+      "name": "ARMSTRONG FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319600779802",
+      "latest_date": "2023-11-14"
+    },
+    {
+      "id": "C00544684",
+      "name": "COLLINS FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319601183494",
+      "latest_date": "2023-10-26"
+    },
+    {
+      "id": "C00503151",
+      "name": "UPPER HAND FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319601169906",
+      "latest_date": "2023-09-26"
+    },
+    {
+      "id": "C00635219",
+      "name": "DELIVERING AMERICAN VALUES IN DC PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202402019619624686",
+      "latest_date": "2023-03-21"
+    },
+    {
+      "id": "C00698092",
+      "name": "LET'S ALL KEEP ELECTING REPUBLICANS PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319619292707",
+      "latest_date": "2023-09-30"
+    },
+    {
+      "id": "C00770701",
+      "name": "CEILING AND VISIBILITY UNLIMITED (CAVU PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202401319608027620",
+      "latest_date": "2023-12-22"
+    },
+    {
+      "id": "C00364109",
+      "name": "AMERICAN CABLE ASSOCIATION INC PAC (ACA PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202403199622508043",
+      "latest_date": "2024-02-16"
+    },
+    {
+      "id": "C00447284",
+      "name": "NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS (NAPEO PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404159632610947",
+      "latest_date": "2024-03-29"
+    },
+    {
+      "id": "C00689893",
+      "name": "GUEST PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404159627891756",
+      "latest_date": "2024-03-08"
+    },
+    {
+      "id": "C00032698",
+      "name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA POLITICAL ACTION COMMITTEE",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633493125",
+      "latest_date": "2024-03-28"
+    },
+    {
+      "id": "C00544817",
+      "name": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY FEDERAL POLITICAL ACTION COMMITTEE (STATE FARM FEDERAL PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404249636724827",
+      "latest_date": "2024-03-19"
+    },
+    {
+      "id": "C00357863",
+      "name": "BOSTON SCIENTIFIC CORPORATION POLITICAL ACTION COMMITTEE (BSC PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633511374",
+      "latest_date": "2024-03-28"
+    },
+    {
+      "id": "C00064774",
+      "name": "NEXTERA ENERGY INC. POLITICAL ACTION COMMITTEE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404169633424802",
+      "latest_date": "2024-03-15"
+    },
+    {
+      "id": "C00481176",
+      "name": "CONCERNED AMERICANS FOR FREEDOM & OPPORTUNITY PAC (CAFO PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404199633545020",
+      "latest_date": "2024-03-26"
+    },
+    {
+      "id": "C00414474",
+      "name": "AMERIPRISE FINANCIAL INC. POLITICAL ACTION COMMITTEE (AMERIPRISEPAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404129627604123",
+      "latest_date": "2024-03-07"
+    },
+    {
+      "id": "C00239848",
+      "name": "NUCLEAR ENERGY INSTITUTE FEDERAL POLITICAL ACTION COMMITTEE",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408169666376236",
+      "latest_date": "2024-07-25"
+    },
+    {
+      "id": "C00079681",
+      "name": "NATIONAL PROPANE GAS ASSOCIATION PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407109652762247",
+      "latest_date": "2024-06-05"
+    },
+    {
+      "id": "C00046474",
+      "name": "FORD MOTOR COMPANY CIVIC ACTION FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666653444",
+      "latest_date": "2024-07-16"
+    },
+    {
+      "id": "C00552141",
+      "name": "HENRY FORD HEALTH SYSTEM GOVERNMENT AFFAIRS SERVICES PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408069666081742",
+      "latest_date": "2024-06-14"
+    },
+    {
+      "id": "C00340943",
+      "name": "DAVITA INC. POLITICAL ACTION COMMITTEE (DAPAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408209666508704",
+      "latest_date": "2024-07-17"
+    },
+    {
+      "id": "C00250407",
+      "name": "SOUTHERN NUCLEAR OPERATING COMPANY, INC. PAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407189661228597",
+      "latest_date": "2024-06-10"
+    },
+    {
+      "id": "C00107771",
+      "name": "XCEL ENERGY EMPLOYEE POLITICAL ACTION COMMITTEE (XPAC)",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407189661243037",
+      "latest_date": "2024-06-07"
+    },
+    {
+      "id": "C00355677",
+      "name": "BIOTECHNOLOGY INNOVATION ORGANIZATION PAC (BIO PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408179666399308",
+      "latest_date": "2024-06-27"
+    },
+    {
+      "id": "C00410068",
+      "name": "FRATERNITY & SORORITY POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407179661213227",
+      "latest_date": "2024-06-25"
+    },
+    {
+      "id": "C00364778",
+      "name": "BANK OF AMERICA CORPORATION FEDERAL PAC",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409169675469028",
+      "latest_date": "2024-08-19"
+    },
+    {
+      "id": "C00173153",
+      "name": "AMERICAN ASSOCIATION OF NURSE ANESTHETISTS SEPARATE SEGREGATED FUND (CRNA-PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202408159666198282",
+      "latest_date": "2024-07-10"
+    },
+    {
+      "id": "C00411553",
+      "name": "AMERICAN ACADEMY OF FAMILY PHYSICIANS POLITICAL ACTION COMMITTEE (FAMMEDPAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202409189675518658",
+      "latest_date": "2024-08-30"
+    },
+    {
+      "id": "C00523936",
+      "name": "IRON MOUNTAIN INCORPORATED EMPLOYEES PAC (IMPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407179661210153",
+      "latest_date": "2024-06-26"
+    },
+    {
+      "id": "C00455733",
+      "name": "FLAGSTAR BANK FEDERAL PAC",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406129648931959",
+      "latest_date": "2024-05-01"
+    },
+    {
+      "id": "C00468660",
+      "name": "VERTEX PHARMACEUTICALS INCORPORATED POLITICAL ACTION COMMITTEE",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406149649027349",
+      "latest_date": "2024-05-06"
+    },
+    {
+      "id": "C00177469",
+      "name": "PG&E CORPORATION EMPLOYEES ENERGYPAC",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661404742",
+      "latest_date": "2024-06-27"
+    },
+    {
+      "id": "C00358903",
+      "name": "AMERICAN ASSOCIATION OF NURSE PRACTITIONERS POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406149649017069",
+      "latest_date": "2024-05-24"
+    },
+    {
+      "id": "C00360354",
+      "name": "AMAZON.COM SERVICES LLC SEPARATE SEGREGATED FUND (AMAZON PAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407179661200095",
+      "latest_date": "2024-06-20"
+    },
+    {
+      "id": "C00384818",
+      "name": "CVS HEALTH PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407199661326077",
+      "latest_date": "2024-06-13"
+    },
+    {
+      "id": "C00363879",
+      "name": "ENTERGY CORPORATION EMPLOYEE POLITICAL ACTION COMMITTEE (ENPAC)",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653703308",
+      "latest_date": "2024-06-26"
+    },
+    {
+      "id": "C00000984",
+      "name": "UNITED STATES TELECOM ASSOCIATION POLITICAL ACTION COMMITTEE (TELECOMPAC)",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652023426",
+      "latest_date": "2024-05-13"
+    },
+    {
+      "id": "C00711747",
+      "name": "THE GREENBRIER COMPANIES, INC. PAC (AKA GREENBRIER PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653475584",
+      "latest_date": "2024-02-16"
+    },
+    {
+      "id": "C00722652",
+      "name": "MACKINAC ISLAND TOURISM BUREAU POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202404160300468165",
+      "latest_date": "2024-02-15"
+    },
+    {
+      "id": "C00035675",
+      "name": "BRISTOL-MYERS SQUIBB COMPANY POLITICAL ACTION COMMITTEE (BMS PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649264817",
+      "latest_date": "2024-05-22"
+    },
+    {
+      "id": "C00030809",
+      "name": "NATIONAL COMMUNITY PHARMACISTS ASSOCIATION - PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209652021312",
+      "latest_date": "2024-04-04"
+    },
+    {
+      "id": "C00303024",
+      "name": "LOCKHEED MARTIN CORPORATION EMPLOYEES' POLITICAL ACTION COMMITTEE",
+      "sector": "defense",
+      "sector_name": "Defense & Aerospace",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202406209649376820",
+      "latest_date": "2024-05-31"
+    },
+    {
+      "id": "C00388819",
+      "name": "PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION POLITICAL ACTION COMMITTEE (PCMA PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653753951",
+      "latest_date": "2024-06-24"
+    },
+    {
+      "id": "C00132092",
+      "name": "ALLIANT ENERGY CORPORATION EMPLOYEE'S POLITICAL ACTION COMM",
+      "sector": "energy",
+      "sector_name": "Fossil Fuels & Energy",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407119653114536",
+      "latest_date": "2024-06-11"
+    },
+    {
+      "id": "C00855361",
+      "name": "BRAD KNOTT FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059721106999",
+      "latest_date": "2024-11-05"
+    },
+    {
+      "id": "C00397851",
+      "name": "CENTENE CORPORATION POLITICAL ACTION COMMITTEE (CENTENE PAC)",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698674025",
+      "latest_date": "2024-09-06"
+    },
+    {
+      "id": "C00042002",
+      "name": "REYNOLDS AMERICAN INC. POLITICAL ACTION COMMITTEE; RAI PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189698640107",
+      "latest_date": "2024-09-09"
+    },
+    {
+      "id": "C00439521",
+      "name": "AMERICAN SECURITY PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720828371",
+      "latest_date": "2024-10-22"
+    },
+    {
+      "id": "C00438697",
+      "name": "LATTA FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410139684952281",
+      "latest_date": "2024-06-28"
+    },
+    {
+      "id": "C00884452",
+      "name": "HELPING ELECT AMERICAN LEADERS PAC HEAL PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202411289720066965",
+      "latest_date": "2024-10-17"
+    },
+    {
+      "id": "C00362707",
+      "name": "CISCO SYSTEMS, INC. FEDERAL PAC, AKA CISCO SYSTEMS EPAC",
+      "sector": "tech",
+      "sector_name": "Big Tech & Telecom",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410189699189880",
+      "latest_date": "2024-09-27"
+    },
+    {
+      "id": "C00169821",
+      "name": "TYSON FOODS INC POLITICAL ACTION COMMITTEE (TYPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159686364573",
+      "latest_date": "2024-09-24"
+    },
+    {
+      "id": "C00588764",
+      "name": "COMER FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159687984004",
+      "latest_date": "2024-09-16"
+    },
+    {
+      "id": "C00252684",
+      "name": "CAMBIA HEALTH SOLUTIONS INC. PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685293702",
+      "latest_date": "2024-09-18"
+    },
+    {
+      "id": "C00890582",
+      "name": "MICHAEL RULLI FOR OHIO STATE SENATE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685555862",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00561530",
+      "name": "MOOLENAAR FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685953911",
+      "latest_date": "2024-09-25"
+    },
+    {
+      "id": "C00823500",
+      "name": "SECURING THE REPUBLIC FOR OUR NEXT GENERATION",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685368074",
+      "latest_date": "2024-09-25"
+    },
+    {
+      "id": "C00264770",
+      "name": "AGRICULTURAL RETAILERS ASSOCIATION POLITICAL ACTION COMMITTE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410209699391519",
+      "latest_date": "2024-09-30"
+    },
+    {
+      "id": "C00166074",
+      "name": "AMERICAN SUPPLY ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685499894",
+      "latest_date": "2024-09-19"
+    },
+    {
+      "id": "C00479964",
+      "name": "MOTOR AND EQUIPMENT MANUFACTURERS ASSOCIATION PAC (MEMA PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685366144",
+      "latest_date": "2024-09-26"
+    },
+    {
+      "id": "C00228106",
+      "name": "PPL CORPORATION PEOPLE FOR GOOD GOVERNMENT",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410039684787626",
+      "latest_date": "2024-05-08"
+    },
+    {
+      "id": "C00017525",
+      "name": "AMERICAN NURSES ASSOCIATION PAC",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698554116",
+      "latest_date": "2024-09-27"
+    },
+    {
+      "id": "C00516526",
+      "name": "ALLIANCE FOR AUTOMOTIVE INNOVATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685009157",
+      "latest_date": "2024-08-19"
+    },
+    {
+      "id": "C00614552",
+      "name": "150PAC.ORG",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410089684826003",
+      "latest_date": "2024-09-23"
+    },
+    {
+      "id": "C00876243",
+      "name": "NICK FOR CONGRESS",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159698076403",
+      "latest_date": "2024-07-31"
+    },
+    {
+      "id": "C00302844",
+      "name": "HIGHMARK PAC OF HIGHMARK INC.",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410039684787084",
+      "latest_date": "2024-09-12"
+    },
+    {
+      "id": "C00411900",
+      "name": "EDWARDS LIFESCIENCES POLITICAL ACTION COMMITTEE (A.K.A. EDWARDS PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412029720119770",
+      "latest_date": "2024-10-28"
+    },
+    {
+      "id": "C00376343",
+      "name": "NATIONAL CORN GROWERS ASSOCIATION PAC (CORNPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410169698554005",
+      "latest_date": "2024-09-10"
+    },
+    {
+      "id": "C00383521",
+      "name": "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059731604600",
+      "latest_date": "2024-10-21"
+    },
+    {
+      "id": "C00350884",
+      "name": "RESOLUTE FOREST PRODUCTS INC. POLITICAL ACTION COMMITTEE AKA DOMTAR PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149684953828",
+      "latest_date": "2024-09-13"
+    },
+    {
+      "id": "C00824425",
+      "name": "TAFT STETTINIUS & HOLLISTER LLP POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410239710138938",
+      "latest_date": "2024-10-02"
+    },
+    {
+      "id": "C00767640",
+      "name": "RANGER PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710535584",
+      "latest_date": "2024-10-03"
+    },
+    {
+      "id": "C00247569",
+      "name": "HEALTHCARE DISTRIBUTION ALLIANCE POLITICAL ACTION COMMITTEE",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410079684808436",
+      "latest_date": "2024-09-18"
+    },
+    {
+      "id": "C00484725",
+      "name": "DOMESTIC ENERGY PRODUCERS ALLIANCE PAC (DEPA PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410239710124621",
+      "latest_date": "2024-10-01"
+    },
+    {
+      "id": "C00066472",
+      "name": "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION POLITICAL ACTION COMMITTEE (INSURING AMERICA PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410229710082698",
+      "latest_date": "2024-10-15"
+    },
+    {
+      "id": "C00101204",
+      "name": "NATIONAL FISHERIES INSTITUTE (FISHPAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410249710300127",
+      "latest_date": "2024-09-19"
+    },
+    {
+      "id": "C00127811",
+      "name": "U.S. ISRAEL PAC  (USI PAC)",
+      "sector": "foreign_policy",
+      "sector_name": "Pro-Israel and Foreign Policy PACs",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059736851239",
+      "latest_date": "2024-11-01"
+    },
+    {
+      "id": "C00010793",
+      "name": "THE LOOSE GROUP",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501079740076877",
+      "latest_date": "2024-10-17"
+    },
+    {
+      "id": "C00764134",
+      "name": "FREE MARKET FUND",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202501149740173954",
+      "latest_date": "2024-12-12"
+    },
+    {
+      "id": "C00266585",
+      "name": "GREENBERG TRAURIG, P.A. PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202505159761320652",
+      "latest_date": "2024-09-19"
+    },
+    {
+      "id": "C00492579",
+      "name": "AMERICAN PRINCIPLES",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 1000.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202502039753254858",
+      "latest_date": "2024-11-01"
+    },
+    {
+      "id": "C00104901",
+      "name": "AKIN GUMP STRAUSS HAUER & FELD LLP CIVIC ACTION COMMITTEE (AKA AKIN GUMP PAC)",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 750.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407099652735277",
+      "latest_date": "2024-06-14"
+    },
+    {
+      "id": "C00286807",
+      "name": "PROFESSIONAL AVIATION SAFETY SPECIALISTS PAC",
+      "sector": "labor",
+      "sector_name": "Labor Unions",
+      "amount": 500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307209583976572",
+      "latest_date": "2023-06-07"
+    },
+    {
+      "id": "C00788943",
+      "name": "HAGEMAN FOR WYOMING",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202309119597021641",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00033969",
+      "name": "NOVARTIS CORPORATION POLITICAL ACTION COMMITTEE",
+      "sector": "pharma",
+      "sector_name": "Big Pharma & Health",
+      "amount": 500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202407159653788693",
+      "latest_date": "2024-06-24"
+    },
+    {
+      "id": "C00395533",
+      "name": "THE NATIONAL RIGHT TO WORK COMMITTEE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410219710022978",
+      "latest_date": "2024-10-02"
+    },
+    {
+      "id": "C00199497",
+      "name": "VIZIENT, INC., POLITICAL ACTION COMMITTEE",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410159685499937",
+      "latest_date": "2024-09-26"
+    },
+    {
+      "id": "C00380196",
+      "name": "FRIENDS OF SNOWMOBILING PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 250.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202410149685130882",
+      "latest_date": "2024-09-22"
+    },
+    {
+      "id": "C00841361",
+      "name": "NEXT GENERATION PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": 100.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412059720661146",
+      "latest_date": "2024-10-29"
+    },
+    {
+      "id": "C00247403",
+      "name": "NORPAC",
+      "sector": "foreign_policy",
+      "sector_name": "Pro-Israel and Foreign Policy PACs",
+      "amount": 50.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412049720197517",
+      "latest_date": "2024-10-23"
+    },
+    {
+      "id": "C00165589",
+      "name": "HUNTINGTON BANCSHARES INC. POLITICAL ACTION COMMITTEE  (HBI-PAC)",
+      "sector": "finance",
+      "sector_name": "Wall St & Finance",
+      "amount": 0.0,
+      "transactions": 2,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202307199583837023",
+      "latest_date": "2023-06-21"
+    },
+    {
+      "id": "C00379479",
+      "name": "THE HAWKEYE PAC",
+      "sector": "uncategorized",
+      "sector_name": "Uncategorized Committees",
+      "amount": -2500.0,
+      "transactions": 1,
+      "proof_link": "https://docquery.fec.gov/cgi-bin/fecimg/?202412239739983873",
+      "latest_date": "2024-07-25"
+    }
+  ],
+  "transaction_count": 826,
+  "latest_transaction_date": "2024-12-31",
+  "notes": "",
+  "data_through": "2024-12-31"
+}

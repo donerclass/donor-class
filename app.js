@@ -1083,6 +1083,36 @@
       });
     }
 
+    // Lazy-load complete verified PAC history from data/members/{id}.json
+    const bioguideId = candidate.id;
+    if (bioguideId) {
+      fetch(`data/members/${encodeURIComponent(bioguideId)}.json`)
+        .then(res => res.ok ? res.json() : null)
+        .then(fullMemberData => {
+          if (!fullMemberData || state.activeModalCandidate !== candidate) return;
+          const matchingPacs = (fullMemberData.pacs || []).filter(p => targetSector === "all" || p.sector === targetSector);
+          if (matchingPacs.length > 0) {
+            tbody.innerHTML = "";
+            matchingPacs.forEach(pac => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
+                <td>
+                  <div style="font-weight: 600;">${pac.name}</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                    <span>Direct PAC Contribution (FEC 24K)</span>
+                    ${pac.latest_date ? `<span>• Date: ${pac.latest_date}</span>` : ""}
+                    ${pac.proof_link ? `<a href="${pac.proof_link}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-active); text-decoration: underline;">FEC Filing Proof →</a>` : ""}
+                  </div>
+                </td>
+                <td style="vertical-align: top; font-family: var(--font-mono); font-weight: 600;">${formatMoneyFull(pac.amount)}</td>
+              `;
+              tbody.appendChild(tr);
+            });
+          }
+        })
+        .catch(() => {});
+    }
+
     // Populate Embed Code & Reset Embed Panel
     const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
     const candIdentifier = candidate.fecCandidateId || candidate.slug || candidate.id;

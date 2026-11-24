@@ -3,8 +3,9 @@
 scripts/generate_state_infographic.py
 
 Generates publication-grade 1200x675 infographics for the 50 States in 50 Days campaign.
-Uses official state seals, primary-source FEC bulk transaction data, and tight typography.
-Zero emojis, zero modeled data, and zero text overflowing bounds.
+Uses nonpartisan institutional typography badges (NO state seals to strictly comply
+with state statutory seal restrictions and eliminate endorsement implications).
+Pulls 100% verified FEC bulk data from data/donor-dataset.csv.
 """
 
 import os
@@ -14,7 +15,6 @@ from PIL import Image, ImageDraw, ImageFont
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_CSV = os.path.join(BASE_DIR, "data", "donor-dataset.csv")
-SEALS_DIR = os.path.join(BASE_DIR, "assets", "seals")
 LOGO_PATH = os.path.join(BASE_DIR, "logo-master.png")
 OUTPUT_DIR = os.path.join(BASE_DIR, "assets", "infographics")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -22,28 +22,26 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 FONT_REG = "/System/Library/Fonts/Supplemental/Arial.ttf"
 
-def make_circular_medallion(img_path, size=78):
-    """Loads an image, crops/resizes it to a clean circle with a subtle glow border."""
-    src = Image.open(img_path).convert("RGBA")
+def make_state_badge(state_code, size=74):
+    """Creates a sleek, nonpartisan circular state badge (avoids state seal restrictions)."""
+    canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(canvas)
     
-    # Square crop center
-    w, h = src.size
-    min_dim = min(w, h)
-    left = (w - min_dim) // 2
-    top = (h - min_dim) // 2
-    src = src.crop((left, top, left + min_dim, top + min_dim))
-    src = src.resize((size, size), Image.Resampling.LANCZOS)
+    draw.ellipse((0, 0, size - 1, size - 1), fill="#0f172a", outline="#38bdf8", width=2)
+    draw.ellipse((4, 4, size - 5, size - 5), outline="#1e293b", width=1)
     
-    # Create circular mask
-    mask = Image.new("L", (size, size), 0)
-    draw_mask = ImageDraw.Draw(mask)
-    draw_mask.ellipse((0, 0, size - 1, size - 1), fill=255)
+    font_code = ImageFont.truetype(FONT_BOLD, 26)
+    font_sub = ImageFont.truetype(FONT_BOLD, 8)
     
-    # Canvas with outer ring
-    canvas = Image.new("RGBA", (size + 8, size + 8), (0, 0, 0, 0))
-    draw_c = ImageDraw.Draw(canvas)
-    draw_c.ellipse((0, 0, size + 7, size + 7), fill="#1e293b", outline="#38bdf8", width=2)
-    canvas.paste(src, (4, 4), mask)
+    bbox_code = font_code.getbbox(state_code)
+    w_code = bbox_code[2] - bbox_code[0]
+    draw.text(((size - w_code) // 2, 16), state_code, font=font_code, fill="#ffffff")
+    
+    sub_text = "50 STATES"
+    bbox_sub = font_sub.getbbox(sub_text)
+    w_sub = bbox_sub[2] - bbox_sub[0]
+    draw.text(((size - w_sub) // 2, 48), sub_text, font=font_sub, fill="#38bdf8")
+    
     return canvas
 
 def fmt_amt_short(val):
@@ -64,16 +62,13 @@ def generate_infographic(state_code, state_name, day_num):
     outside_opp = sum(float(r["ie_oppose_total"]) for r in rows)
     member_count = len(rows)
     
-    # Sort top direct recipients
     rows.sort(key=lambda x: float(x["direct_contributions_total"]), reverse=True)
     top_recipients = rows[:7]
     
-    # Create canvas
     W, H = 1200, 675
     img = Image.new("RGBA", (W, H), "#070a13")
     draw = ImageDraw.Draw(img)
     
-    # Fonts
     font_day = ImageFont.truetype(FONT_BOLD, 13)
     font_title = ImageFont.truetype(FONT_BOLD, 26)
     font_sub = ImageFont.truetype(FONT_REG, 13)
@@ -87,22 +82,16 @@ def generate_infographic(state_code, state_name, day_num):
     font_cta_sub = ImageFont.truetype(FONT_REG, 11)
     font_footer = ImageFont.truetype(FONT_REG, 11)
     
-    # Top Header Banner
     draw.rectangle([(0, 0), (W, 105)], fill="#0f172a")
     draw.line([(0, 105), (W, 105)], fill="#1e293b", width=2)
     
-    # Header Badges
     draw.text((40, 16), f"50 STATES IN 50 DAYS // DAY {day_num}: {state_name.upper()}", font=font_day, fill="#38bdf8")
     draw.text((40, 36), f"WHO FUNDS THE {state_name.upper()} CONGRESSIONAL DELEGATION?", font=font_title, fill="#ffffff")
     draw.text((40, 74), f"Official FEC Primary-Source Bulk Records: ${direct_total/1e6:.2f}M Direct PAC Funds Across {member_count} Lawmakers", font=font_sub, fill="#94a3b8")
     
-    # Add State Seal Medallion in Top Right
-    seal_file = os.path.join(SEALS_DIR, f"{state_code.lower()}.png")
-    if os.path.exists(seal_file):
-        medallion = make_circular_medallion(seal_file, size=74)
-        img.paste(medallion, (W - 200, 14), medallion)
+    badge = make_state_badge(state_code, size=74)
+    img.paste(badge, (W - 195, 15), badge)
     
-    # Add Donor Class Brand Mark
     if os.path.exists(LOGO_PATH):
         try:
             logo = Image.open(LOGO_PATH).convert("RGBA")
@@ -111,7 +100,7 @@ def generate_infographic(state_code, state_name, day_num):
         except Exception:
             pass
             
-    # LEFT COLUMN: Top Direct PAC Recipients (Width: 620)
+    # Left column: top recipients
     draw.rounded_rectangle([(40, 122), (660, 615)], radius=8, fill="#0f172a", outline="#1e293b", width=1)
     draw.text((60, 136), f"TOP DIRECT PAC RECIPIENTS ({state_name.upper()})", font=font_col_header, fill="#f8fafc")
     draw.text((480, 138), "Direct Campaign PACs", font=font_meta, fill="#64748b")
@@ -125,11 +114,9 @@ def generate_infographic(state_code, state_name, day_num):
         is_dem = r["party"] == "Democrat"
         badge_color = "#38bdf8" if is_dem else "#f43f5e"
         
-        # Name
         draw.text((70, row_y + 8), r["name"], font=font_name, fill="#ffffff")
         draw.text((70, row_y + 30), badge_text, font=font_meta, fill=badge_color)
         
-        # Sector Details with clean negative formatting
         def_amt = float(r["sector_defense"])
         pharma_amt = float(r["sector_pharma"])
         fin_amt = float(r["sector_finance"])
@@ -137,7 +124,6 @@ def generate_infographic(state_code, state_name, day_num):
         detail_str = f"Def {fmt_amt_short(def_amt)} • Pharma {fmt_amt_short(pharma_amt)} • Fin {fmt_amt_short(fin_amt)} • FP {fmt_amt_short(fp_amt)}"
         draw.text((135, row_y + 30), detail_str, font=font_meta, fill="#94a3b8")
         
-        # Amount right-aligned
         amt_val = float(r["direct_contributions_total"])
         amt_str = f"${amt_val:,.0f}"
         bbox = font_amt.getbbox(amt_str)
@@ -145,8 +131,7 @@ def generate_infographic(state_code, state_name, day_num):
         draw.text((630 - w_amt, row_y + 16), amt_str, font=font_amt, fill="#10b981")
         row_y += 62
         
-    # RIGHT COLUMN: Two Stacked Cards
-    # Card 1: Direct vs Outside Spending Breakdown
+    # Right column: campaign vs outside spending
     draw.rounded_rectangle([(685, 122), (1160, 360)], radius=8, fill="#0f172a", outline="#1e293b", width=1)
     draw.text((705, 136), "CAMPAIGN MONEY VS. OUTSIDE EXPENDITURES", font=font_col_header, fill="#f8fafc")
     
@@ -165,7 +150,7 @@ def generate_infographic(state_code, state_name, day_num):
         draw.text((705, c_y + 20), sub, font=font_meta, fill="#64748b")
         c_y += 56
         
-    # Card 2: Takeaways & Tight Blue Action Button
+    # Right column: takeaways and CTA
     draw.rounded_rectangle([(685, 375), (1160, 615)], radius=8, fill="#0f172a", outline="#1e293b", width=1)
     draw.text((705, 390), f"PRIMARY-SOURCE TAKEAWAYS // {state_code}", font=font_col_header, fill="#38bdf8")
     
@@ -181,7 +166,6 @@ def generate_infographic(state_code, state_name, day_num):
         draw.text((705, b_y), b, font=font_box_body, fill="#cbd5e1")
         b_y += 25
         
-    # Clean, Centered, Non-Bleeding CTA Button (2-line layout with generous padding)
     btn_x1, btn_y1, btn_x2, btn_y2 = 705, 542, 1140, 598
     draw.rounded_rectangle([(btn_x1, btn_y1), (btn_x2, btn_y2)], radius=6, fill="#0284c7")
     
@@ -196,9 +180,8 @@ def generate_infographic(state_code, state_name, day_num):
     draw.text((btn_x1 + (btn_x2 - btn_x1 - w1) // 2, btn_y1 + 10), cta_line1, font=font_cta_main, fill="#ffffff")
     draw.text((btn_x1 + (btn_x2 - btn_x1 - w2) // 2, btn_y1 + 30), cta_line2, font=font_cta_sub, fill="#e0f2fe")
     
-    # Footer
     draw.line([(40, 630), (W - 40, 630)], fill="#1e293b", width=1)
-    draw.text((40, 642), "Official FEC Bulk Records (pas2, cm, cn, ccl) Through Dec 31, 2024 • Nonpartisan 501(c)(3) Public Dataset • DONOR CLASS", font=font_footer, fill="#64748b")
+    draw.text((40, 642), "Official FEC Bulk Records (pas2, cm, cn, ccl) Through Dec 31, 2024 • Nonpartisan Public Interest Dataset • DONOR CLASS", font=font_footer, fill="#64748b")
     draw.text((W - 270, 642), f"VERIFIED: donorclass.info/?state={state_code}&ref=bp", font=font_footer, fill="#10b981")
     
     out_file = os.path.join(OUTPUT_DIR, f"{state_code.lower()}-infographic.png")
