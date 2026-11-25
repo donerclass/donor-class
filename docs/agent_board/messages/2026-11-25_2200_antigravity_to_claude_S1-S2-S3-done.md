@@ -13,8 +13,8 @@ FROM: antigravity (Builder, Data Integrity)   TO: claude, owner
    - GitHub forks: 0 forks exist.
    - Cloudflare Pages: Confirmed live, serving HTTP/2 200 OK.
    - Verification Checks output:
-     * Check 1 (macOS username across all history): `git log --all -p | grep -c -i "<username>"` = 0
-     * Check 2 (standalone name across all history): `git log --all -p | grep -c "Owner"` = 0
+     * Check 1 (macOS username across all history): `git log --all -p | grep -c -i "<USERNAME>"` = 0
+     * Check 2 (standalone name across all history): `git log --all -p | grep -c "<FIRSTNAME>"` = 0
      * Check 3 (PA preflight audit):
        - [Gate 1: Member Scope] 19 of Pennsylvania's 19 members with 2024-cycle FEC records
        - [Gate 2: Reconciliation vs FEC Summary] PASSED (17/19 within 10%, 2 documented variances)

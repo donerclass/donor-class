@@ -210,14 +210,33 @@ def check_anonymity():
     if res.returncode != 0:
         return True
 
+    patterns_file = os.environ.get(
+        "DONORCLASS_ANON_PATTERNS_FILE",
+        os.path.expanduser("~/.donorclass_private/anonymity_patterns.txt")
+    )
+    if not os.path.exists(patterns_file):
+        print("[Gate 5: Team Anonymity] SKIPPED (no local pattern file)")
+        return True
+
+    patterns = []
+    try:
+        with open(patterns_file, "r", encoding="utf-8") as pf:
+            for line in pf:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    patterns.append(re.compile(line))
+    except Exception as e:
+        print(f"[Gate 5: Team Anonymity] ERROR reading pattern file: {e}")
+        return False
+
+    if not patterns:
+        print("[Gate 5: Team Anonymity] SKIPPED (pattern file empty)")
+        return True
+
     files = res.stdout.splitlines()
     violations = []
-    import base64
-    u_pat = re.compile(base64.b64decode(b"").decode(), re.IGNORECASE)
-    l_pat = re.compile(rf"\b{base64.b64decode(b'').decode()}\b", re.IGNORECASE)
-    patterns = [u_pat, l_pat]
     for rel in files:
-        if rel.startswith("data/") or "scrub" in rel or rel == "scripts/check_state_preflight.py":
+        if rel.startswith("data/") or "scrub" in rel:
             continue
         full_p = os.path.join(BASE_DIR, rel)
         if not os.path.isfile(full_p):
