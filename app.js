@@ -1149,6 +1149,292 @@
     }
   };
 
+  // Download High-Resolution Social Card Image (HTML5 Canvas)
+  const downloadCandidateSocialCard = (candidate) => {
+    if (!candidate) return;
+    const canvas = document.createElement("canvas");
+    canvas.width = 1200;
+    canvas.height = 630;
+    const ctx = canvas.getContext("2d");
+
+    // Dark background
+    ctx.fillStyle = "#0b0f19";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Subtle grid
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.03)";
+    ctx.lineWidth = 1;
+    for (let x = 0; x < canvas.width; x += 40) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, canvas.height);
+      ctx.stroke();
+    }
+    for (let y = 0; y < canvas.height; y += 40) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(canvas.width, y);
+      ctx.stroke();
+    }
+
+    // Outer gold border
+    ctx.strokeStyle = "#e2b340";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(16, 16, canvas.width - 32, canvas.height - 32);
+
+    // Header badge
+    ctx.fillStyle = "#e2b340";
+    ctx.fillRect(40, 40, 6, 28);
+    ctx.fillStyle = "#f8fafc";
+    ctx.font = "bold 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText("DONOR CLASS", 56, 62);
+
+    ctx.fillStyle = "#94a3b8";
+    ctx.font = "bold 15px monospace";
+    ctx.fillText("2024 FEC CONGRESSIONAL CAPITAL DOSSIER", 215, 61);
+
+    // Lawmaker Name
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 44px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText(candidate.displayName || "Member of Congress", 50, 140);
+
+    // Party dot & Office
+    const partyColor = candidate.party === "Democrat" ? "#3b82f6" : candidate.party === "Republican" ? "#ef4444" : "#10b981";
+    ctx.fillStyle = partyColor;
+    ctx.beginPath();
+    ctx.arc(58, 175, 8, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = "#cbd5e1";
+    ctx.font = "600 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    const officeText = `${candidate.party} • ${candidate.state} • ${candidate.chamber} (District ${candidate.district || "AL"})`;
+    ctx.fillText(officeText, 76, 182);
+
+    // Metric Box (Direct PAC Receipts)
+    ctx.fillStyle = "#131826";
+    ctx.fillRect(50, 220, 520, 160);
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(50, 220, 520, 160);
+
+    ctx.fillStyle = "#94a3b8";
+    ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText("DIRECT MULTI-CANDIDATE PAC RECEIPTS (CAPPED)", 70, 260);
+
+    ctx.fillStyle = "#e2b340";
+    ctx.font = "bold 46px monospace";
+    ctx.fillText(formatMoneyFull(candidate.totalPacAmount), 70, 320);
+
+    ctx.fillStyle = "#64748b";
+    ctx.font = "14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText("Under 52 U.S.C. § 30116(a)(2)(A), capped at $5,000 per election", 70, 355);
+
+    // Top Sectors Breakdown Box
+    ctx.fillStyle = "#131826";
+    ctx.fillRect(610, 220, 540, 320);
+    ctx.strokeRect(610, 220, 540, 320);
+
+    ctx.fillStyle = "#f8fafc";
+    ctx.font = "bold 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText("TOP CONTRIBUTING SECTORS", 635, 260);
+
+    const sortedSectors = Object.entries(SECTORS)
+      .map(([id, meta]) => ({ id, name: meta.name, color: meta.color, amount: (candidate.sectorTotals && candidate.sectorTotals[id]) || 0 }))
+      .sort((a, b) => b.amount - a.amount)
+      .slice(0, 5);
+
+    let secY = 300;
+    const maxVal = Math.max(...sortedSectors.map(s => s.amount), 1);
+    sortedSectors.forEach(sec => {
+      ctx.fillStyle = sec.color;
+      ctx.fillRect(635, secY - 14, 10, 10);
+
+      ctx.fillStyle = "#e2e8f0";
+      ctx.font = "600 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+      ctx.fillText(sec.name, 655, secY - 5);
+
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = "bold 15px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText(formatMoneyFull(sec.amount), 1120, secY - 5);
+      ctx.textAlign = "left";
+
+      ctx.fillStyle = "rgba(255, 255, 255, 0.08)";
+      ctx.fillRect(655, secY + 5, 465, 8);
+      ctx.fillStyle = sec.color;
+      const barWidth = Math.max(4, (sec.amount / maxVal) * 465);
+      ctx.fillRect(655, secY + 5, barWidth, 8);
+
+      secY += 46;
+    });
+
+    // Independent Outside Spending Box (Lower Left)
+    ctx.fillStyle = "#131826";
+    ctx.fillRect(50, 400, 520, 140);
+    ctx.strokeRect(50, 400, 520, 140);
+
+    ctx.fillStyle = "#94a3b8";
+    ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText("LEGAL SEPARATION: INDEPENDENT OUTSIDE SPENDING", 70, 435);
+
+    ctx.fillStyle = "#38bdf8";
+    ctx.font = "bold 18px monospace";
+    ctx.fillText(`Outside Support: ${formatMoneyFull(candidate.outsideSpendingAmount || 0)}`, 70, 475);
+
+    ctx.fillStyle = "#ef4444";
+    ctx.font = "bold 18px monospace";
+    ctx.fillText(`Outside Opposition: ${formatMoneyFull(candidate.outsideOpposeAmount || 0)}`, 70, 510);
+
+    // Watermark Footer
+    ctx.fillStyle = "#94a3b8";
+    ctx.font = "14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    ctx.fillText("Built directly from official FEC bulk files (itpas2.txt) • Sworn scanned filing links on donorclass.info", 50, 595);
+
+    ctx.textAlign = "right";
+    ctx.fillStyle = "#e2b340";
+    ctx.font = "bold 15px monospace";
+    ctx.fillText("https://donorclass.info", 1150, 595);
+    ctx.textAlign = "left";
+
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      const safeName = (candidate.displayName || "lawmaker").replace(/[^a-zA-Z0-9_-]/g, "_");
+      a.download = `${safeName}_PAC_Receipts_DonorClass.png`;
+      a.href = url;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      copyTextToClipboard(
+        `${candidate.displayName} PAC Receipts Social Card downloaded. Built directly from official FEC bulk files: https://donorclass.info/?candidate=${encodeURIComponent(candidate.fecCandidateId || candidate.id)}`,
+        "Social Card downloaded & share text copied to clipboard!"
+      );
+    }, "image/png");
+  };
+
+  // Share Candidate on X
+  const shareCandidateOnX = (candidate) => {
+    if (!candidate) return;
+    const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
+    const candId = candidate.fecCandidateId || candidate.slug || candidate.id;
+    const text = `${candidate.displayName} (${candidate.party.slice(0, 1)}-${candidate.state}${candidate.district ? '-' + candidate.district : ''}) received ${formatMoneyFull(candidate.totalPacAmount)} in direct PAC contributions in the 2024 cycle. See their donor profile mapped directly from official FEC filings: ${origin}/?candidate=${encodeURIComponent(candId)}&ref=xshare`;
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+  };
+
+  // Share Candidate on Facebook
+  const shareCandidateOnFacebook = (candidate) => {
+    if (!candidate) return;
+    const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
+    const candId = candidate.fecCandidateId || candidate.slug || candidate.id;
+    const shareUrl = `${origin}/?candidate=${encodeURIComponent(candId)}&ref=fbshare`;
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, "_blank", "noopener,noreferrer");
+  };
+
+  // 1v1 Lawmaker Showdown Renderer
+  const render1v1Comparison = (candA, candB) => {
+    if (!candA || !candB) return;
+    const grid = document.getElementById("compare-profiles-grid");
+    if (!grid) return;
+
+    const renderCard = (cand) => `
+      <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <img src="${cand.photoUrl || ''}" alt="" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid ${cand.party === 'Democrat' ? '#3b82f6' : cand.party === 'Republican' ? '#ef4444' : '#10b981'};">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;">${cand.displayName}</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">${cand.party} • ${cand.state} • ${cand.chamber} (District ${cand.district || 'AL'})</div>
+          </div>
+        </div>
+        <div style="background: rgba(0,0,0,0.25); padding: 0.75rem; border-radius: 4px; margin-bottom: 0.5rem;">
+          <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Direct Multi-Candidate PACs</div>
+          <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; color: var(--accent-active);">${formatMoneyFull(cand.totalPacAmount)}</div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.25rem;">
+          <div>Outside Support: <strong style="color: #38bdf8; font-family: var(--font-mono);">${formatMoneyFull(cand.outsideSpendingAmount || 0)}</strong></div>
+          <div>Outside Opposition: <strong style="color: #ef4444; font-family: var(--font-mono);">${formatMoneyFull(cand.outsideOpposeAmount || 0)}</strong></div>
+        </div>
+      </div>
+    `;
+
+    grid.innerHTML = renderCard(candA) + renderCard(candB);
+
+    const barsContainer = document.getElementById("compare-sectors-bars");
+    if (!barsContainer) return;
+    barsContainer.innerHTML = "";
+
+    Object.entries(SECTORS).forEach(([secId, meta]) => {
+      const amtA = (candA.sectorTotals && candA.sectorTotals[secId]) || 0;
+      const amtB = (candB.sectorTotals && candB.sectorTotals[secId]) || 0;
+      const maxVal = Math.max(amtA, amtB, 1);
+      const pctA = Math.round((amtA / maxVal) * 100);
+      const pctB = Math.round((amtB / maxVal) * 100);
+
+      const row = document.createElement("div");
+      row.style.cssText = "background: rgba(255,255,255,0.02); padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-subtle);";
+      row.innerHTML = `
+        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.35rem;">
+          <span style="font-family: var(--font-mono); color: ${amtA >= amtB ? 'var(--accent-active)' : 'var(--text-muted)'};">${formatMoneyFull(amtA)}</span>
+          <span style="display: inline-flex; align-items: center; gap: 0.35rem;"><span style="width: 8px; height: 8px; border-radius: 50%; background: ${meta.color};"></span> ${meta.name}</span>
+          <span style="font-family: var(--font-mono); color: ${amtB >= amtA ? 'var(--accent-active)' : 'var(--text-muted)'};">${formatMoneyFull(amtB)}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 8px;">
+          <div style="display: flex; justify-content: flex-end; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden;">
+            <div style="width: ${pctA}%; background: ${meta.color}; border-radius: 2px;"></div>
+          </div>
+          <div style="display: flex; justify-content: flex-start; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden;">
+            <div style="width: ${pctB}%; background: ${meta.color}; border-radius: 2px;"></div>
+          </div>
+        </div>
+      `;
+      barsContainer.appendChild(row);
+    });
+  };
+
+  // Open 1v1 Showdown Modal
+  const openCompareModal = (candA, candB) => {
+    const modal = document.getElementById("compare-modal");
+    if (!modal) return;
+
+    const selectA = document.getElementById("compare-select-a");
+    const selectB = document.getElementById("compare-select-b");
+
+    if (selectA && selectB && selectA.options.length === 0) {
+      const sorted = [...state.candidates].sort((a, b) => a.displayName.localeCompare(b.displayName));
+      sorted.forEach(c => {
+        const id = c.fecCandidateId || c.id;
+        const optA = new Option(`${c.displayName} (${c.party[0]}-${c.state})`, id);
+        const optB = new Option(`${c.displayName} (${c.party[0]}-${c.state})`, id);
+        selectA.add(optA);
+        selectB.add(optB);
+      });
+    }
+
+    const defaultA = candA || state.activeModalCandidate || state.candidates[0];
+    let defaultB = candB;
+    if (!defaultB) {
+      // Pick another high-profile lawmaker from same state or other party
+      defaultB = state.candidates.find(c => c.id !== defaultA.id && (c.state === defaultA.state || c.party !== defaultA.party)) || state.candidates[1];
+    }
+
+    if (selectA) selectA.value = defaultA.fecCandidateId || defaultA.id;
+    if (selectB) selectB.value = defaultB.fecCandidateId || defaultB.id;
+
+    state.compareCandidateA = defaultA;
+    state.compareCandidateB = defaultB;
+
+    render1v1Comparison(defaultA, defaultB);
+
+    if (!modal.open) {
+      try {
+        modal.showModal();
+      } catch (e) {
+        modal.setAttribute("open", "");
+      }
+    }
+  };
+
   // State Selection Handler
   const selectState = (stateCode, isMapToggle = false) => {
     const prevState = state.selectedState;
@@ -1406,6 +1692,39 @@
       if (e.target === candModal && !state.isEmbedded) candModal.close();
     });
 
+    // Download & Social Share Actions in Candidate Modal
+    const btnDownloadCard = document.getElementById("btn-download-social-card");
+    if (btnDownloadCard) {
+      btnDownloadCard.addEventListener("click", () => {
+        if (!state.activeModalCandidate) return;
+        downloadCandidateSocialCard(state.activeModalCandidate);
+      });
+    }
+
+    const btnShareModalX = document.getElementById("btn-share-modal-x");
+    if (btnShareModalX) {
+      btnShareModalX.addEventListener("click", () => {
+        if (!state.activeModalCandidate) return;
+        shareCandidateOnX(state.activeModalCandidate);
+      });
+    }
+
+    const btnShareModalFb = document.getElementById("btn-share-modal-fb");
+    if (btnShareModalFb) {
+      btnShareModalFb.addEventListener("click", () => {
+        if (!state.activeModalCandidate) return;
+        shareCandidateOnFacebook(state.activeModalCandidate);
+      });
+    }
+
+    const btnModalCompare = document.getElementById("btn-modal-compare");
+    if (btnModalCompare) {
+      btnModalCompare.addEventListener("click", () => {
+        if (!state.activeModalCandidate) return;
+        openCompareModal(state.activeModalCandidate, null);
+      });
+    }
+
     // Embed & Share Actions in Candidate Modal
     const btnCopyLink = document.getElementById("btn-copy-dossier-link");
     if (btnCopyLink) {
@@ -1438,6 +1757,64 @@
         if (input && input.value) {
           copyTextToClipboard(input.value, "Embed HTML code copied to clipboard");
         }
+      });
+    }
+
+    // 1v1 Lawmaker Showdown Modal Listeners
+    const compModal = document.getElementById("compare-modal");
+    const btnCompareHeader = document.getElementById("btn-compare-header");
+    const btnCloseCompare = document.getElementById("btn-close-compare-modal");
+    const selectCompA = document.getElementById("compare-select-a");
+    const selectCompB = document.getElementById("compare-select-b");
+
+    if (btnCompareHeader) {
+      btnCompareHeader.addEventListener("click", () => openCompareModal(null, null));
+    }
+    if (btnCloseCompare && compModal) {
+      btnCloseCompare.addEventListener("click", () => compModal.close());
+    }
+
+    if (selectCompA) {
+      selectCompA.addEventListener("change", (e) => {
+        const found = findCandidateByQuery(e.target.value);
+        if (found) {
+          state.compareCandidateA = found;
+          render1v1Comparison(state.compareCandidateA, state.compareCandidateB);
+        }
+      });
+    }
+    if (selectCompB) {
+      selectCompB.addEventListener("change", (e) => {
+        const found = findCandidateByQuery(e.target.value);
+        if (found) {
+          state.compareCandidateB = found;
+          render1v1Comparison(state.compareCandidateA, state.compareCandidateB);
+        }
+      });
+    }
+
+    const btnShareCompX = document.getElementById("btn-share-compare-x");
+    if (btnShareCompX) {
+      btnShareCompX.addEventListener("click", () => {
+        if (!state.compareCandidateA || !state.compareCandidateB) return;
+        const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
+        const idA = state.compareCandidateA.fecCandidateId || state.compareCandidateA.id;
+        const idB = state.compareCandidateB.fecCandidateId || state.compareCandidateB.id;
+        const url = `${origin}/?compare=${encodeURIComponent(idA)},${encodeURIComponent(idB)}&ref=duel`;
+        const text = `1v1 PAC Showdown: ${state.compareCandidateA.displayName} (${formatMoneyFull(state.compareCandidateA.totalPacAmount)}) vs ${state.compareCandidateB.displayName} (${formatMoneyFull(state.compareCandidateB.totalPacAmount)}). Who takes more corporate and defense PAC money? Compare their full 2024 FEC disclosures side-by-side: ${url}`;
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+      });
+    }
+
+    const btnCopyCompLink = document.getElementById("btn-copy-compare-link");
+    if (btnCopyCompLink) {
+      btnCopyCompLink.addEventListener("click", () => {
+        if (!state.compareCandidateA || !state.compareCandidateB) return;
+        const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "https://donorclass.info";
+        const idA = state.compareCandidateA.fecCandidateId || state.compareCandidateA.id;
+        const idB = state.compareCandidateB.fecCandidateId || state.compareCandidateB.id;
+        const url = `${origin}/?compare=${encodeURIComponent(idA)},${encodeURIComponent(idB)}`;
+        copyTextToClipboard(url, "1v1 comparison link copied to clipboard");
       });
     }
 
@@ -1824,6 +2201,20 @@
         initialCandidateToOpen = matched;
       }
     }
+
+    // 1v1 Lawmaker Showdown Deep-Linking (?compare=ID1,ID2)
+    const compareParam = urlParams.get("compare");
+    var initialCompareToOpen = null;
+    if (compareParam) {
+      const parts = compareParam.split(",");
+      if (parts.length >= 2) {
+        const cA = findCandidateByQuery(parts[0].trim());
+        const cB = findCandidateByQuery(parts[1].trim());
+        if (cA && cB) {
+          initialCompareToOpen = [cA, cB];
+        }
+      }
+    }
   } catch (e) {}
 
   initNewsTicker();
@@ -1837,6 +2228,8 @@
     setTimeout(() => {
       openCandidateModal(initialCandidateToOpen);
     }, 60);
+  } else if (initialCompareToOpen) {
+    openCompareModal(initialCompareToOpen[0], initialCompareToOpen[1]);
   }
 
   // Handle browser back/forward or hash change while staying on page
@@ -1844,6 +2237,7 @@
     try {
       const params = new URLSearchParams(window.location.search);
       const cand = params.get("candidate") || params.get("member") || params.get("rep");
+      const comp = params.get("compare");
       if (cand) {
         const found = findCandidateByQuery(cand);
         if (found) {
@@ -1851,9 +2245,18 @@
           updateUI();
           openCandidateModal(found);
         }
+      } else if (comp) {
+        const parts = comp.split(",");
+        if (parts.length >= 2) {
+          const cA = findCandidateByQuery(parts[0].trim());
+          const cB = findCandidateByQuery(parts[1].trim());
+          if (cA && cB) openCompareModal(cA, cB);
+        }
       } else {
         const modal = document.getElementById("candidate-modal");
         if (modal && modal.open && !state.isEmbedded) modal.close();
+        const cModal = document.getElementById("compare-modal");
+        if (cModal && cModal.open) cModal.close();
       }
     } catch (e) {}
   });

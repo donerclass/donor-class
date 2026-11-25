@@ -162,6 +162,9 @@
         <button class="btn btn-primary" id="btn-walkthrough" title="How to Navigate &amp; FAQ" onclick="document.getElementById('walkthrough-modal').showModal()">
           How to Use &amp; FAQ
         </button>
+        <button class="btn btn-secondary" id="btn-compare-header" title="Compare 2 Lawmakers Head-to-Head">
+          Compare 1v1
+        </button>
         <button class="btn btn-secondary" id="btn-methodology" title="View FEC Data Methodology">
           Methodology
         </button>
@@ -561,15 +564,31 @@
       </div>
 
       <div style="background-color: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
-        <strong>Official FEC Paper-Trail Note:</strong> Rebuilding directly from official Federal Election Commission bulk transaction files (pas2, cm, cn, ccl). Line-item figures and filing links will populate upon pipeline completion.
+        <strong>Official FEC Public Record:</strong> Sourced directly from official Federal Election Commission bulk transaction files (2024 cycle through Dec 31, 2024). Click any "FEC Filing Proof &rarr;" link to inspect sworn filing images and line-item disclosures on fec.gov.
       </div>
 
       <!-- Modal Embed & Share Action Toolbar -->
       <div class="modal-embed-toolbar">
-        <div class="modal-toolbar-actions">
+        <div class="modal-toolbar-actions" style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+          <button type="button" class="btn-toolbar-action" id="btn-download-social-card" title="Download HD Social Card Graphic for X/Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span id="btn-download-card-text">Download Social Card</span>
+          </button>
+          <button type="button" class="btn-toolbar-action" id="btn-share-modal-x" title="Share Lawmaker Dossier to X (Twitter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>Post to X</span>
+          </button>
+          <button type="button" class="btn-toolbar-action" id="btn-share-modal-fb" title="Share to Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Facebook</span>
+          </button>
+          <button type="button" class="btn-toolbar-action" id="btn-modal-compare" title="Compare side-by-side with another lawmaker">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Compare 1v1</span>
+          </button>
           <button type="button" class="btn-toolbar-action" id="btn-copy-dossier-link" title="Copy shareable link to this lawmaker dossier">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-            <span id="btn-copy-dossier-text">Share Link</span>
+            <span id="btn-copy-dossier-text">Copy Link</span>
           </button>
           <button type="button" class="btn-toolbar-action" id="btn-toggle-embed-code" title="Embed interactive dossier card in articles, Substack, blogs">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
@@ -585,7 +604,7 @@
             <input type="text" class="embed-code-input" id="embed-code-input" readonly value="" aria-label="Embed HTML code">
             <button type="button" class="btn btn-secondary btn-copy-embed" id="btn-copy-embed-code">Copy HTML</button>
           </div>
-          <div class="embed-preview-note">Interactive Congressional Dossier. Rebuilding from official FEC filings. Zero trackers, responsive height.</div>
+          <div class="embed-preview-note">Interactive Congressional Dossier. Sourced from official FEC filings. Zero trackers, responsive height.</div>
         </div>
       </div>
     </div>
@@ -596,6 +615,58 @@
       <a href="https://donorclass.info/" target="_blank" rel="noopener noreferrer" class="embed-watermark-link">
         Explore Full 50-State Tracker on DONOR CLASS &rarr;
       </a>
+    </div>
+  </dialog>
+
+  <!-- 1v1 Lawmaker Showdown Modal -->
+  <dialog class="profile-modal" id="compare-modal" style="max-width: 900px;" onclick="if (event.target === this) this.close()">
+    <div class="modal-drag-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <div>
+        <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;">1v1 Lawmaker Showdown</h2>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">
+          Head-to-head campaign finance &amp; PAC sector comparison (Official FEC bulk records)
+        </div>
+      </div>
+      <button class="btn-close" id="btn-close-compare-modal" aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="modal-body" style="display: flex; flex-direction: column; gap: 1.25rem;">
+      <!-- Selector Row -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div>
+          <label for="compare-select-a" style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 0.35rem;">Lawmaker A</label>
+          <select id="compare-select-a" style="width: 100%; background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); color: var(--text-primary); padding: 0.6rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-family: var(--font-body);"></select>
+        </div>
+        <div>
+          <label for="compare-select-b" style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 0.35rem;">Lawmaker B</label>
+          <select id="compare-select-b" style="width: 100%; background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); color: var(--text-primary); padding: 0.6rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-family: var(--font-body);"></select>
+        </div>
+      </div>
+
+      <!-- Profiles Grid -->
+      <div id="compare-profiles-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;"></div>
+
+      <!-- Sector Comparison Bars -->
+      <div>
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: 0.75rem;">
+          7-Sector Head-to-Head Comparison
+        </h3>
+        <div id="compare-sectors-bars" style="display: flex; flex-direction: column; gap: 0.65rem;"></div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="modal-embed-toolbar">
+        <div class="modal-toolbar-actions">
+          <button type="button" class="btn-toolbar-action" id="btn-share-compare-x" title="Share Duel on X">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>Share Duel on X</span>
+          </button>
+          <button type="button" class="btn-toolbar-action" id="btn-copy-compare-link" title="Copy link to this head-to-head comparison">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span id="btn-copy-compare-text">Copy Duel Link</span>
+          </button>
+        </div>
+      </div>
     </div>
   </dialog>
 
