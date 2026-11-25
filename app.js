@@ -433,7 +433,7 @@
       });
     }
 
-    // 2. 7-Sector Contribution Proportion Stacked Bar
+    // 2. Sector Contribution Proportion Stacked Bar
     const multiBar = document.getElementById("sector-multi-distribution-bar");
     const legendMini = document.getElementById("sector-legend-mini");
     if (multiBar && legendMini) {
@@ -1044,7 +1044,7 @@
     }
     document.getElementById("modal-total-pac-header").innerHTML = breakdownHtml;
 
-    // Render 7-Sector Bars (No Emojis, Clean Colored Pips)
+    // Render Sector Bars (No Emojis, Clean Colored Pips)
     const barsContainer = document.getElementById("modal-sector-bars");
     barsContainer.innerHTML = "";
 
@@ -1219,15 +1219,11 @@
 
     ctx.fillStyle = "#94a3b8";
     ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-    ctx.fillText("DIRECT MULTI-CANDIDATE PAC RECEIPTS (CAPPED)", 70, 260);
+    ctx.fillText("DIRECT PAC AND COMMITTEE CONTRIBUTIONS", 70, 260);
 
     ctx.fillStyle = "#e2b340";
     ctx.font = "bold 46px monospace";
     ctx.fillText(formatMoneyFull(candidate.totalPacAmount), 70, 320);
-
-    ctx.fillStyle = "#64748b";
-    ctx.font = "14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-    ctx.fillText("Under 52 U.S.C. § 30116(a)(2)(A), capped at $5,000 per election", 70, 355);
 
     // Top Sectors Breakdown Box
     ctx.fillStyle = "#131826";
@@ -1483,7 +1479,7 @@
 
   // CSV Export Handler
   const exportCSV = () => {
-    const headers = ["Name", "Party", "State", "District", "Chamber", "Status", "Total_PAC_Money", "Direct_PAC_Capped", "Outside_SuperPAC_Spending", "Conduit_Earmarks", "Defense_PAC", "Pharma_PAC", "Finance_PAC", "Energy_PAC", "Tech_PAC", "ForeignPolicy_PAC", "Labor_PAC", "FEC_ID"];
+    const headers = ["Name", "Party", "State", "District", "Chamber", "Status", "Total_PAC_Money", "Direct_PAC_Contributions", "Outside_SuperPAC_Spending", "Conduit_Earmarks", "Defense_PAC", "Pharma_PAC", "Finance_PAC", "Energy_PAC", "Tech_PAC", "ForeignPolicy_PAC", "Labor_PAC", "Uncategorized_PAC", "FEC_ID"];
     const rows = [headers.join(",")];
 
     ALL_CANDIDATES.forEach(c => {
@@ -1801,7 +1797,7 @@
         const idA = state.compareCandidateA.fecCandidateId || state.compareCandidateA.id;
         const idB = state.compareCandidateB.fecCandidateId || state.compareCandidateB.id;
         const url = `${origin}/?compare=${encodeURIComponent(idA)},${encodeURIComponent(idB)}&ref=duel`;
-        const text = `1v1 PAC Showdown: ${state.compareCandidateA.displayName} (${formatMoneyFull(state.compareCandidateA.totalPacAmount)}) vs ${state.compareCandidateB.displayName} (${formatMoneyFull(state.compareCandidateB.totalPacAmount)}). Who takes more corporate and defense PAC money? Compare their full 2024 FEC disclosures side-by-side: ${url}`;
+        const text = `${state.compareCandidateA.displayName} (${formatMoneyFull(state.compareCandidateA.totalPacAmount)}) vs ${state.compareCandidateB.displayName} (${formatMoneyFull(state.compareCandidateB.totalPacAmount)}) in 2024 direct PAC and committee money. Same Congress, different donors. Compare their FEC filings side by side: ${url}`;
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
       });
     }

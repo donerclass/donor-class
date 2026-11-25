@@ -91,7 +91,7 @@ def generate_infographic(state_code, state_name, day_num):
         member_subtitle = "29 of Florida's 30 Members with 2024-Cycle FEC Records"
     else:
         member_subtitle = f"{member_count} Lawmakers"
-    draw.text((40, 74), f"Official FEC Primary-Source Bulk Records: ${direct_total/1e6:.2f}M Direct PAC Funds Across {member_subtitle}", font=font_sub, fill="#94a3b8")
+    draw.text((40, 74), f"Built from FEC Bulk Records: ${direct_total/1e6:.2f}M Direct PAC Funds Across {member_subtitle}", font=font_sub, fill="#94a3b8")
     
     badge = make_state_badge(state_code, size=74)
     img.paste(badge, (W - 195, 15), badge)
@@ -185,14 +185,18 @@ def generate_infographic(state_code, state_name, day_num):
     draw.text((btn_x1 + (btn_x2 - btn_x1 - w2) // 2, btn_y1 + 30), cta_line2, font=font_cta_sub, fill="#e0f2fe")
     
     draw.line([(40, 630), (W - 40, 630)], fill="#1e293b", width=1)
-    draw.text((40, 642), "Official FEC Bulk Records (pas2, cm, cn, ccl) Through Dec 31, 2024 • Nonpartisan Public Interest Dataset • DONOR CLASS", font=font_footer, fill="#64748b")
-    draw.text((W - 270, 642), f"VERIFIED: donorclass.info/?state={state_code}&ref=bp", font=font_footer, fill="#10b981")
+    draw.text((40, 642), "Built from FEC Bulk Records (pas2, cm, cn, ccl) Through Dec 31, 2024 • Nonpartisan Public Interest Dataset • DONOR CLASS", font=font_footer, fill="#64748b")
+    draw.text((W - 270, 642), f"DATA: donorclass.info/?state={state_code}&ref=bp", font=font_footer, fill="#10b981")
     
     out_file = os.path.join(OUTPUT_DIR, f"{state_code.lower()}-infographic.png")
     img.save(out_file, "PNG")
     print(f"Generated {state_code}: {out_file}")
 
 if __name__ == "__main__":
-    generate_infographic("FL", "Florida", 3)
-    generate_infographic("CA", "California", 2)
-    generate_infographic("TX", "Texas", 1)
+    if len(sys.argv) > 1 and sys.argv[1].upper() == "PA":
+        generate_infographic("PA", "Pennsylvania", 4)
+    else:
+        generate_infographic("PA", "Pennsylvania", 4)
+        generate_infographic("FL", "Florida", 3)
+        generate_infographic("CA", "California", 2)
+        generate_infographic("TX", "Texas", 1)

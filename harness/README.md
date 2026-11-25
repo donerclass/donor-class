@@ -40,7 +40,7 @@ python3 -m harness.runner status
 # 2. Lint draft post against zero-emoji, URL unfurl, and character limits
 python3 -m harness.runner lint "Here are the receipts: https://donorclass.info/?ref=x"
 
-# 3. Verify FEC dataset bundle integrity (539 members, 7 sectors)
+# 3. Verify FEC dataset bundle integrity (539 members, 8 sectors)
 python3 -m harness.runner verify-dataset
 ```
 

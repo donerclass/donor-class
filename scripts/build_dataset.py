@@ -490,7 +490,7 @@ def main():
             "primaryLimit": 5000,
             "generalLimit": 5000,
             "foreignNationalsProhibited": True,
-            "statuteCitation": "52 U.S.C. § 30116(a)(2)(A), 52 U.S.C. § 30121, 11 CFR § 110.2",
+            "statuteCitation": "52 U.S.C. § 30121, 11 CFR § 110.2",
             "notice": "All figures computed from official Federal Election Commission bulk records (pas2, cm, cn, ccl). Zero modeled data."
         },
         "stateNames": geo.get("stateNames", {}),

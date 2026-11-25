@@ -75,7 +75,7 @@ def generate_florida_sankey():
     plt.text(0.5, 0.94, "WHERE DOES FLORIDA'S PAC MONEY FLOW?", 
              color='#f8fafc', fontsize=26, fontweight='bold', ha='center', va='center',
              fontfamily='sans-serif')
-    plt.text(0.5, 0.90, "Tracking $18.28M in Direct Multi-Candidate PAC Contributions Across 29 Members of Congress", 
+    plt.text(0.5, 0.90, "Tracking $18.28M in Direct PAC and Committee Contributions Across 29 Members of Congress", 
              color='#94a3b8', fontsize=14, ha='center', va='center')
     plt.text(0.5, 0.87, "Built directly from official FEC bulk files (2024 cycle through Dec 31, 2024) • donorclass.info", 
              color='#e2b340', fontsize=12, fontweight='bold', ha='center', va='center')
@@ -102,7 +102,7 @@ def generate_florida_sankey():
     y_hub = 0.51
     ax.plot([x_hub - 0.08, x_hub + 0.08], [y_hub, y_hub], color='#e2b340', lw=50, solid_capstyle='round', alpha=0.95)
     ax.text(x_hub, y_hub + 0.012, "DIRECT CAMPAIGN PACs", color='#0b0f19', fontsize=13, fontweight='black', ha='center', va='center')
-    ax.text(x_hub, y_hub - 0.012, f"${total_direct/1e6:.2f}M (52 U.S.C. § 30116 Capped)", color='#0b0f19', fontsize=10, fontweight='bold', ha='center', va='center')
+    ax.text(x_hub, y_hub - 0.012, f"${total_direct/1e6:.2f}M direct PAC and committee contributions", color='#0b0f19', fontsize=9, fontweight='bold', ha='center', va='center')
     
     # Connect Left to Middle via bezier curves
     for (sx, sy, sval, scolor) in sector_boxes:

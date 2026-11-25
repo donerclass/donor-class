@@ -229,5 +229,5 @@ mapped_dollars = sum(cmte_dollars[cid] for cid in combined_map)
 uncat_dollars = total_direct - mapped_dollars
 
 print(f"Total direct PAC dollars to sitting members: ${total_direct:,.2f}")
-print(f"Covered PAC dollars in 7 sectors:         ${mapped_dollars:,.2f} ({mapped_dollars/total_direct*100:.1f}%)")
+print(f"Covered PAC dollars in 8 sectors:         ${mapped_dollars:,.2f} ({mapped_dollars/total_direct*100:.1f}%)")
 print(f"Uncategorized PAC dollars:                 ${uncat_dollars:,.2f} ({uncat_dollars/total_direct*100:.1f}%)")

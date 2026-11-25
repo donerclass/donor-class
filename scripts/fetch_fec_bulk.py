@@ -21,7 +21,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 RAW_DIR = os.path.join(DATA_DIR, "fec_raw")
 CYCLE = "2024"
 
-# Official FEC Bulk Data Endpoints (Cycle 2024: 2023-2024 general election cycle)
+# Federal Election Commission Bulk Data Endpoints (Cycle 2024: 2023-2024 general election cycle)
 FEC_FILES = {
     "pas2": {
         "url": f"https://www.fec.gov/files/bulk-downloads/{CYCLE}/pas2{CYCLE[-2:]}.zip",

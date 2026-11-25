@@ -63,3 +63,16 @@ These rules govern all data, asset generation, social distribution, and audience
   2. Execute the complete reconciliation comparison across all sitting members against the new cycle summary.
   3. Catalog 100% of new variances in `data/documented_variances.json`.
   4. Update every cycle and date label across the platform, metadata, and methodology documents before publishing new cycle data.
+
+---
+
+### Rule 8: Voice and Snark (Sharper Engagement with Objective Truth)
+1. **Mock the money, not the member.** Fine: "Florida's delegation pulled in $18.28M from PACs last cycle." Never: "bought," "owned," "paid off," "in the pocket of," or anything implying a quid pro quo. The data shows contributions, not wrongdoing. (Defamation risk.)
+2. **Hit both parties evenly.** Snark that only lands on one side destroys the nonpartisan credibility that makes the data believable. Rotate targets; top-5 lists show both parties as the data falls.
+3. **Every number carries its source link.** Snarky or not.
+4. **Snark lives in original posts only.** Replies to critics, corrections, reporters, and "so it was fake?" stay straight (Rule 4 unchanged). Anything argumentative still goes to Owner first.
+5. **No snark on caveated numbers.** Any member listed in `data/documented_variances.json` (e.g., McCormick, Mackenzie) gets plain wording plus the caveat, or is left out of rankings.
+6. **Leading questions: allowed but keep them open.** Prefer prompts that send people to the data over ones that hand them a conclusion.
+   - Weaker: "Who takes more corporate and defense PAC money?"
+   - Stronger: "Same state, same Congress, very different donors. See for yourself: [link]"
+7. **Rule 5 amendment:** Rule 5's banned-word list stays. Editorial language is now permitted in tone (wit, sarcasm about the system) but never in factual claims or labels.
