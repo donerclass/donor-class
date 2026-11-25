@@ -150,11 +150,11 @@
       { tag: "GLOBAL HOTSPOTS // MILITARY BASES", text: "Pentagon expands forward basing posture in INDOPACOM & Middle East; defense contractors accelerate munition replenishment contracts" },
       { tag: "STRATEGIC WATERWAYS // MARITIME", text: "Strait of Hormuz & Suez Canal commercial transit re-routing exceeds 65%; global shipping rates surge amid escort deployments" },
       { tag: "ECONOMIC & SANCTIONS // OFAC", text: "U.S. Treasury implements targeted secondary sanctions enforcing crude oil price caps and interdicting shadow fleet maritime networks" },
-      { tag: "FEC BENCHMARK // DEFENSE PACS", text: "Top defense aerospace PACs disburse contributions strictly within statutory $10K cycle caps across House & Senate Armed Services committees" },
+      { tag: "FEC BENCHMARK // DEFENSE PACS", text: "Top defense aerospace PACs disburse contributions across House & Senate Armed Services committees" },
       { tag: "NUCLEAR INFRASTRUCTURE // MONITOR", text: "IAEA verification teams monitor enrichment facilities amid heightened security postures across international defense installations" },
       { tag: "INFRASTRUCTURE & OUTAGES // ALERT", text: "North American & European energy grids heighten cyber-defense protocols around pipeline arteries and military logistics nodes" },
       { tag: "BIG PHARMA // CONGRESSIONAL HELP", text: "Healthcare & pharmaceutical PACs report $42.1M across House Energy & Commerce and Senate HELP committee leadership" },
-      { tag: "WALL STREET // FINANCIAL SERVICES", text: "Banking & private equity PACs maintain fully capped contributions across key House Financial Services and Senate Banking leaders" },
+      { tag: "WALL STREET // FINANCIAL SERVICES", text: "Banking & private equity PACs maintain major direct contributions across key House Financial Services and Senate Banking leaders" },
       { tag: "FOREIGN POLICY ADVOCACY // COMPLIANCE", text: "All tracked advocacy PACs are domestic U.S. entities; federal law (52 U.S.C. § 30121) strictly prohibits foreign national contributions" },
       { tag: "OUTSIDE SPENDING // SUPER PACS", text: "Independent expenditure Super PACs register $110M+ in non-coordinated broadcast and digital ad disbursements" }
     ];
@@ -1344,7 +1344,7 @@
           </div>
         </div>
         <div style="background: rgba(0,0,0,0.25); padding: 0.75rem; border-radius: 4px; margin-bottom: 0.5rem;">
-          <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Direct Multi-Candidate PACs</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Direct PAC and Committee Contributions</div>
           <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; color: var(--accent-active);">${formatMoneyFull(cand.totalPacAmount)}</div>
         </div>
         <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.25rem;">

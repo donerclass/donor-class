@@ -12,26 +12,28 @@
 
 ### Master Pennsylvania Campaign Thread (Staged for Review)
 
-#### Tweet 1/5 [Hook & Delegation Overview] (277 / 280 Characters)
+#### Tweet 1/5 [Hook & Delegation Overview] (269 / 280 Characters)
 ```text
-Day 4: PENNSYLVANIA CONGRESSIONAL DELEGATION
+Day 4: PENNSYLVANIA (FEC RECORDS)
 
-19 of Pennsylvania's 19 members with 2024-cycle FEC records: $19.60M in direct PAC and committee money and $117.14M in outside spending.
+19 of Pennsylvania's 19 members with 2024-cycle records: $19.60M in direct PAC and committee money.
 
-Where political committee cash flows across Keystone State lawmakers:
+Outside groups spent $13.36M supporting and $103.79M opposing them.
+
+Compare all 19 members:
 https://donorclass.info/?state=PA&ref=bp
 ```
 * **Media Attachment:** `assets/infographics/pa-infographic.png`
-* **Objective:** Establish scope (19 of 19 members with 2024 records), total direct vs outside scale, attach circular badge graphic.
+* **Objective:** Establish scope (19 of 19 members with 2024 records), total direct vs outside support/opposition, attach circular badge graphic.
 
 ---
 
-#### Tweet 2/5 [Sector Hierarchy] (276 / 280 Characters)
+#### Tweet 2/5 [Sector Hierarchy] (264 / 280 Characters)
 ```text
-Where did Pennsylvania's $19.60M direct PAC funds go?
+Where did PA's $19.60M in direct PAC money come from?
 
-Sector breakdown (19 members with 2024 records):
-- Uncategorized: $11.37M
+Sector breakdown (19 members):
+- Uncategorized: $11.37M (58%)
 - Finance: $2.56M
 - Labor: $1.99M
 - Pharma: $1.59M
@@ -58,7 +60,7 @@ Direct committee funds and outside spending are kept strictly separate.
 
 ---
 
-#### Tweet 4/5 [Top Recipients & Caveated Numbers] (273 / 280 Characters)
+#### Tweet 4/5 [Top Recipients & Caveated Numbers] (262 / 280 Characters)
 ```text
 Top PA direct PAC recipients (2024 records):
 
@@ -69,7 +71,7 @@ Top PA direct PAC recipients (2024 records):
 
 *FEC summary lists $1.07M direct; difference likely reflects joint fundraising transfers.
 ```
-* **Objective:** Bipartisan top recipients with mandatory Rule 8 Section 5 caveat explicitly included for Sen. Dave McCormick.
+* **Objective:** Top recipients with mandatory Rule 8 Section 5 caveat explicitly included for Sen. Dave McCormick.
 
 ---
 
@@ -88,7 +90,7 @@ https://donorclass.info/?state=PA&ref=bp
 
 ### Live Verification Protocol (First 48 Hours)
 
-If anyone replies questioning a Pennsylvania candidate figure, respond neutrally with their official FEC committee page:
+If anyone replies questioning a Pennsylvania candidate figure, respond neutrally with their FEC committee page:
 - **Rep. Brian Fitzpatrick:** https://www.fec.gov/data/committee/C00607416/
 - **Sen. Dave McCormick:** https://www.fec.gov/data/committee/C00851980/
 - **Rep. Glenn Thompson:** https://www.fec.gov/data/committee/C00444620/

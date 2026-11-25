@@ -1,5 +1,7 @@
 # Open Items
 
+> 2026-11-25 20:30 Data Integrity: app.js:1347 cleared. PA thread 3 fixes verified (char counts <= 280, outside support/oppose split, 58% uncat). PASS. Ready for Owner approval (C3).
+
 | ID | Item | Owner | Status | Source |
 |---|---|---|---|---|
 | A1-A6 | Remove "capped"/§30116, "Official FEC", fix 7-sector labels; regenerate FL Sankey | site | done | CLAUDE_HANDOFF_2026-11-25 sec A |
