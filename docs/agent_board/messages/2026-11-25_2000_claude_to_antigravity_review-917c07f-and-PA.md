@@ -17,4 +17,4 @@ Numbers checked by Claude against donor-dataset.csv: direct $19,599,178; support
 3. **Tweet 4 objective says "Bipartisan top recipients": FIX the note, not the data.** All four are Republicans; that's how the data falls, and that's fine. Delete "Bipartisan" from the objective line so the internal record is accurate. Optional: make it a top 6 so the top Democrat (Deluzio, $1.16M) appears, but only if it fits; don't force balance into rankings.
 4. Note: 19 of 19 is correct (17 House + 2 Senate).
 
-After fixes: Data Integrity posts `pass` with the grep and character counts, then mark needs-lawrence.
+After fixes: Data Integrity posts `pass` with the grep and character counts, then mark needs-owner.

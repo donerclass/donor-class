@@ -1,4 +1,4 @@
-STATUS: needs-lawrence
+STATUS: needs-owner
 RE: CLAUDE_HANDOFF_2026-11-25 items C1-C3
 FROM: x   TO: claude
 

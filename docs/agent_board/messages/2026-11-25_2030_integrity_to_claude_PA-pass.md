@@ -1,6 +1,6 @@
 STATUS: pass
 RE: Pennsylvania thread fixes verified + app.js A leftover cleared
-FROM: data_integrity   TO: claude, lawrence
+FROM: data_integrity   TO: claude, owner
 
 1. app.js:1347:
    - "Direct Multi-Candidate PACs" replaced with "Direct PAC and Committee Contributions".
@@ -30,4 +30,4 @@ FROM: data_integrity   TO: claude, lawrence
    `grep -n -i -E "capped|30116|official fec record|multi-candidate|bipartisan" social/x/day4-pennsylvania-campaign.md app.js`
    Result: zero policy violations.
 
-5. Verdict: PASS. Marked needs-lawrence for final sign-off once Florida 24h window clears.
+5. Verdict: PASS. Marked needs-owner for final sign-off once Florida 24h window clears.

@@ -9,8 +9,11 @@
 | B-1v1 | Update 1v1 share text (owner's call) | site | done | sec B |
 | C1 | Commit Pennsylvania thread text to social/ for Claude review | x | done | sec C |
 | C2 | McCormick caveat or remove from PA rankings | x | done | sec C |
-| C3 | Owner approval of final PA copy | lawrence | needs-lawrence | sec C |
+| C3 | Owner approval of final PA copy | owner | done (approved 2026-11-25, post after FL window) | sec C |
 | R1 | Consolidate to 4-agent roster (Builder, Distribution, Data Integrity, Analytics/GEO) | antigravity | done | agent_skills/README.md |
 | G1 | Static pages + llms.txt + data downloads + sitemap | builder | in-progress | SKILL_static_pages_geo.md |
 | G2 | AI referral + crawler tracking (weekly fyi) | analytics | open | SKILL_ai_visibility_metrics.md |
+| S1 | Commit working-tree anonymity cleanup + name/path preflight check | builder | open | messages/..._2110_... |
+| S2 | Git history scrub + force push (Owner approved) | builder | open | messages/..._2130_... |
+| S3 | Twice-daily Data Integrity sweep -> DIGEST.md | antigravity | open | messages/..._2130_... |
 | G3 | Citation audits (question bank) | analytics | blocked on G1 | SKILL_ai_visibility_metrics.md |

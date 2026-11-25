@@ -183,7 +183,7 @@ draw.line([(40, 620), (W - 40, 620)], fill="#1e293b", width=1)
 draw.text((40, 635), "DONOR CLASS  |  OFFICIAL 2024-2026 FEC FILINGS  |  100% NONPARTISAN CLIENT-SIDE CIVIC ENGINE", font=font_footer, fill="#64748b")
 draw.text((W - 250, 635), "EXPLORE LIVE: donorclass.info/?state=CA", font=font_footer, fill="#10b981")
 
-out_dir = "~/.gemini/antigravity/brain/a9dd7135-f05e-45c6-b160-b7d791ff4202"
+out_dir = "./build_tmp"
 out_path = os.path.join(out_dir, "california-infographic.png")
 img.save(out_path, "PNG")
 

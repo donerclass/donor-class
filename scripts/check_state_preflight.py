@@ -195,7 +195,50 @@ def check_state(state_code, weball, variances):
     else:
         print(f"[Gate 4: Copy Linting] Notice: No staged campaign draft found for {state_code}. Ready for creation.")
 
+    # 5. Check Team Anonymity
+    if not check_anonymity():
+        return False
+
     print(f"\nSTATUS: {state_code} PASSES PRE-FLIGHT. Clear to prepare rollout.")
+    return True
+
+def check_anonymity():
+    """Verify that no tracked file outside data/ contains personal names or local home paths."""
+    import subprocess
+    import re
+    res = subprocess.run(["git", "ls-files"], cwd=BASE_DIR, capture_output=True, text=True)
+    if res.returncode != 0:
+        return True
+
+    files = res.stdout.splitlines()
+    violations = []
+    import base64
+    u_pat = re.compile(base64.b64decode(b"").decode(), re.IGNORECASE)
+    l_pat = re.compile(rf"\b{base64.b64decode(b'').decode()}\b", re.IGNORECASE)
+    patterns = [u_pat, l_pat]
+    for rel in files:
+        if rel.startswith("data/") or "scrub" in rel or rel == "scripts/check_state_preflight.py":
+            continue
+        full_p = os.path.join(BASE_DIR, rel)
+        if not os.path.isfile(full_p):
+            continue
+        try:
+            with open(full_p, "r", encoding="utf-8", errors="ignore") as f:
+                for lno, line in enumerate(f, 1):
+                    for pat in patterns:
+                        if pat.search(line):
+                            violations.append((rel, lno, line.strip()))
+                            break
+        except Exception:
+            pass
+
+    if violations:
+        print(f"[Gate 5: Team Anonymity] FAILED: {len(violations)} personal identity references found outside data/:")
+        for rel, lno, l in violations[:5]:
+            print(f"  - {rel}:{lno}: {l}")
+        return False
+
+    print("[Gate 5: Team Anonymity] PASSED: Zero personal names or home paths in tracked files outside data/.")
     return True
 
 def main():
