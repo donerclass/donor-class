@@ -8,7 +8,7 @@
 | C1 | Commit Pennsylvania thread text to social/ for Claude review | x | done | sec C |
 | C2 | McCormick caveat or remove from PA rankings | x | done | sec C |
 | C3 | Owner approval of final PA copy | lawrence | needs-lawrence | sec C |
-| R1 | Consolidate to 4-agent roster (Builder, Distribution, Data Integrity, Analytics/GEO) | antigravity | open | agent_skills/README.md |
-| G1 | Static pages + llms.txt + data downloads + sitemap | builder | blocked on A | SKILL_static_pages_geo.md |
+| R1 | Consolidate to 4-agent roster (Builder, Distribution, Data Integrity, Analytics/GEO) | antigravity | done | agent_skills/README.md |
+| G1 | Static pages + llms.txt + data downloads + sitemap | builder | in-progress | SKILL_static_pages_geo.md |
 | G2 | AI referral + crawler tracking (weekly fyi) | analytics | open | SKILL_ai_visibility_metrics.md |
 | G3 | Citation audits (question bank) | analytics | blocked on G1 | SKILL_ai_visibility_metrics.md |
