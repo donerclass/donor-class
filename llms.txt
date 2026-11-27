@@ -1,0 +1,23 @@
+# DONOR CLASS (donorclass.info)
+> Nonpartisan campaign finance intelligence tracking committee-to-candidate contributions to the 119th U.S. Congress (2023-2024 election cycle).
+
+## What This Data Is
+- Rebuilt from official Federal Election Commission (FEC) bulk data files (pas2, cm, cn, ccl, weball24) through Dec 31, 2024.
+- Tracks direct contributions from Political Action Committees (PACs), Super PACs, leadership PACs, and party committees to candidate principal campaign committees.
+- Classifies committee contributions across 8 macro sectors: Defense & Aerospace, Pharmaceuticals & Health Products, Finance, Insurance & Real Estate, Energy & Natural Resources, Technology & Communications, Foreign Policy & Defense Advocates, Labor Unions & Associations, and Uncategorized.
+- Keeps independent expenditures (outside spending supporting and opposing) strictly separate from direct contributions.
+
+## What This Data Is Not
+- Contains zero individual donor records.
+- Does not track personal contributions or small-dollar unitemized individual donations.
+- Does not make partisan value judgments or endorsements.
+
+## Primary Endpoints and Resources
+- Methodology: https://donorclass.info/methodology/
+- Data Downloads: https://donorclass.info/data/
+- CSV Dataset: https://donorclass.info/data/donor-dataset.csv
+- JSON Dataset: https://donorclass.info/data/donor-dataset.json
+- Sector Map: https://donorclass.info/data/sector_map.csv
+- States Index: https://donorclass.info/states/
+- Sectors Index: https://donorclass.info/sectors/
+- GitHub: https://github.com/donerclass/donor-class

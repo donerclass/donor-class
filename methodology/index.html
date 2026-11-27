@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology & FEC Data Pipeline | DONOR CLASS</title>
+  <meta name="description" content="Official methodology, reconciliation audit details, and FEC bulk data processing pipeline for DONOR CLASS.">
+  <meta name="author" content="Donor Class Team">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://donorclass.info/methodology/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/styles.css">
+  
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #0b0f19; color: #f1f5f9; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header.static-header { border-bottom: 1px solid #1e293b; padding-bottom: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    header.static-header a.logo { font-weight: 800; font-size: 1.25rem; color: #38bdf8; text-decoration: none; letter-spacing: -0.025em; }
+    nav.static-nav a { color: #94a3b8; text-decoration: none; margin-left: 1.25rem; font-size: 0.95rem; font-weight: 500; }
+    nav.static-nav a:hover { color: #f8fafc; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #ffffff; letter-spacing: -0.02em; }
+    .meta-tag { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background: #1e293b; color: #94a3b8; font-size: 0.875rem; font-weight: 600; margin-right: 0.5rem; margin-bottom: 1rem; }
+    table.data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #0f172a; border-radius: 0.5rem; overflow: hidden; border: 1px solid #1e293b; }
+    table.data-table th, table.data-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #1e293b; font-size: 0.95rem; }
+    table.data-table th { background: #1e293b; color: #cbd5e1; font-weight: 600; }
+    table.data-table td.amount { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
+    table.data-table th.amount { text-align: right; }
+    .callout { background: #131d31; border-left: 4px solid #38bdf8; padding: 1rem 1.25rem; border-radius: 0.25rem; margin: 1.5rem 0; font-size: 0.95rem; color: #cbd5e1; }
+    .callout.variance { border-left-color: #f59e0b; background: #261d11; }
+    footer.static-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-size: 0.875rem; color: #64748b; text-align: center; }
+    footer.static-footer a { color: #94a3b8; text-decoration: none; }
+    footer.static-footer a:hover { text-decoration: underline; }
+    a.btn-interactive { display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #0284c7; color: #ffffff; font-weight: 600; border-radius: 0.375rem; text-decoration: none; transition: background 0.2s; }
+    a.btn-interactive:hover { background: #0369a1; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="static-header">
+      <a href="/" class="logo">DONOR CLASS</a>
+      <nav class="static-nav">
+        <a href="/">Interactive Map</a>
+        <a href="/methodology/">Methodology</a>
+        <a href="/data/">Data</a>
+      </nav>
+    </header>
+    <main>
+      
+    <h1>Methodology & Data Sources</h1>
+    <p>FEC 2023-2024 cycle data through Dec 31, 2024. Built directly from official FEC bulk files, with links to the source filings.</p>
+
+    <h2>Data Pipeline & Verification</h2>
+    <p>DONOR CLASS processes official Federal Election Commission bulk data releases covering the complete 2023–2024 federal election cycle. Data files ingested include:</p>
+    <ul>
+      <li><strong>pas224:</strong> Contributions from committees to candidates and other committees.</li>
+      <li><strong>cm24:</strong> Committee master records (committee type, connected organization, designations).</li>
+      <li><strong>cn24:</strong> Candidate master records.</li>
+      <li><strong>ccl24:</strong> Candidate-to-committee linkage records.</li>
+      <li><strong>weball24:</strong> Campaign summary figures reported directly by candidate principal campaign committees.</li>
+    </ul>
+
+    <h2>Reconciliation Audit</h2>
+    <p>433 of 517 members match the FEC's own summary within 10%; every larger variance is individually documented in our reconciliation audit. Key accounting distinctions include:</p>
+    <ul>
+      <li><strong>Joint Fundraising Committee (JFC) Transfers:</strong> Bulk committee filings report direct disbursements to campaigns, whereas campaign summaries frequently aggregate these under transfers from authorized committees.</li>
+      <li><strong>Chamber Transitions:</strong> Candidates transitioning from House to Senate campaigns account for split filings across committee IDs.</li>
+      <li><strong>Independent Spending Separation:</strong> Independent expenditures (24E support, 24A oppose) are kept strictly distinct and are never summed with direct campaign contributions.</li>
+    </ul>
+
+    <h2>Classification Framework</h2>
+    <p>Committees are assigned to one of eight macro sectors based on their FEC connected organization, economic interest, and primary industry filings. Uncategorized PACs (comprising ~56% of direct committee disbursements) are reported transparently as their own distinct category.</p>
+    
+    </main>
+    <footer class="static-footer">
+      <p>Built from FEC public records. Data through Dec 31, 2024. Independent research and nonpartisan campaign finance transparency.</p>
+      <p><a href="/">Home</a> | <a href="/methodology/">Methodology</a> | <a href="/data/">Data Downloads</a> | <a href="/privacy.html">Privacy</a></p>
+    </footer>
+  </div>
+</body>
+</html>
