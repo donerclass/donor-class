@@ -1,0 +1,36 @@
+{
+  "title": "DONOR CLASS: Committee-to-Candidate Contributions to the 119th Congress, 2023-2024 FEC Cycle",
+  "creators": [
+    {
+      "name": "Donor Class Team"
+    }
+  ],
+  "description": "Itemized political action committee (PAC) contributions to members of the 119th United States Congress, reconstructed from Federal Election Commission bulk files for the 2023-2024 election cycle. Covers 539 House and Senate members, with contributions classified into eight industry sectors: Defense, Pharma/Health, Finance, Energy, Tech, Foreign Policy, Labor, and Uncategorized. Independent expenditure totals are reported separately and are never summed with direct contributions.",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "campaign finance",
+    "FEC",
+    "Congress",
+    "PAC",
+    "political action committee",
+    "119th Congress",
+    "federal elections",
+    "2024 election cycle"
+  ],
+  "version": "1.0.0-data-2024",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/donerclass/donor-class",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://donorclass.info",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

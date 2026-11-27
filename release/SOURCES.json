@@ -1,0 +1,58 @@
+{
+  "fetched_at": "2026-11-23T12:13:58.782798+00:00",
+  "cycle": "2024",
+  "files": {
+    "pas2": {
+      "url": "https://www.fec.gov/files/bulk-downloads/2024/pas224.zip",
+      "description": "Contributions from committees to candidates and independent expenditures (itemized)",
+      "zip_filename": "pas224.zip",
+      "zip_size_bytes": 24509153,
+      "zip_sha256": "0e8f093a7ccf4bbb4d6176f134c196a7fb828bf53b6ff2fb8deb83408fa9c91b",
+      "extracted_file": "itpas2.txt",
+      "extracted_sha256": "cb6c16efce413e90e3aa9991be93cba6c40e8e4559828936e7644a9d8b018368"
+    },
+    "cm": {
+      "url": "https://www.fec.gov/files/bulk-downloads/2024/cm24.zip",
+      "description": "Committee Master: ID, Name, Type, Designation, Connected Org",
+      "zip_filename": "cm24.zip",
+      "zip_size_bytes": 883375,
+      "zip_sha256": "954d9df31d10b8790aa54c0883be97da4afabf53d2bdcdd651536b3faf6aea0c",
+      "extracted_file": "cm.txt",
+      "extracted_sha256": "78283c890ddaeb086bcebb008a9a50d831b99a84b6081c857346b434f0f6f64d"
+    },
+    "cn": {
+      "url": "https://www.fec.gov/files/bulk-downloads/2024/cn24.zip",
+      "description": "Candidate Master: Candidate ID, Name, Party, Office, State, District",
+      "zip_filename": "cn24.zip",
+      "zip_size_bytes": 356337,
+      "zip_sha256": "2ad4a38fe8e0a3536ef02864415ed4b7ed2ee3dedbf774ebf97955a84c62e953",
+      "extracted_file": "cn.txt",
+      "extracted_sha256": "5463059e7db805aea3a870e09f689735f533fdd1f3ec22e84e376222d22b026d"
+    },
+    "ccl": {
+      "url": "https://www.fec.gov/files/bulk-downloads/2024/ccl24.zip",
+      "description": "Candidate-Committee Linkage",
+      "zip_filename": "ccl24.zip",
+      "zip_size_bytes": 94262,
+      "zip_sha256": "ba388ab487cf3fd8a8a924e4ef26eb2d3b7cfe1d57eb2f489c2c74a414190054",
+      "extracted_file": "ccl.txt",
+      "extracted_sha256": "899bfbd4f3de02d11a105dbe4760771aaea0f16057084c5e169c3fa74981e2b4"
+    },
+    "weball": {
+      "url": "https://www.fec.gov/files/bulk-downloads/2024/weball24.zip",
+      "description": "All Candidates Summary: total contributions from other political committees",
+      "zip_filename": "weball24.zip",
+      "zip_size_bytes": 174296,
+      "zip_sha256": "64e737bb135db6289158e69b0a3702027ccd32e83fb15043d3e7d432e2241e2c",
+      "extracted_file": "weball24.txt",
+      "extracted_sha256": "1c39beac9c1626508b2bcb48fa0b7b6de948fc566b7eaff99957df0bfd170ed2"
+    }
+  },
+  "roster": {
+    "url": "https://raw.githubusercontent.com/unitedstates/congress-legislators/main/legislators-current.yaml",
+    "description": "unitedstates/congress-legislators sitting members roster with FEC candidate IDs",
+    "member_count": 539,
+    "yaml_sha256": "e805231b79539bf1a0d2ae2fc0698f41a60165ee28ec1f467ba7730884e5e753",
+    "json_file": "legislators-current.json"
+  }
+}
